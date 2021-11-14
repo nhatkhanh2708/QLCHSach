@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\HoaDonDTOs\" />
+    <Folder Include="DTOs\TaiKhoanDTOs\" />
+    <Folder Include="IServices\ITaiKhoanServices\" />
+    <Folder Include="IServices\IHoaDonServices\" />
+    <Folder Include="Services\HoaDonServices\" />
+    <Folder Include="Services\TaiKhoanServices\" />
+  </ItemGroup>
+
+</Project>
