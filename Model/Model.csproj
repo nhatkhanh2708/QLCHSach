@@ -4,11 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="IRepositories\IHoaDonRepositories\" />
-    <Folder Include="IRepositories\INccRepositories\" />
-    <Folder Include="IRepositories\ITaiKhoanRepositories\" />
-    <Folder Include="IRepositories\INhanVienRepositories\" />
-  </ItemGroup>
-
 </Project>

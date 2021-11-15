@@ -1,5 +1,5 @@
 ﻿using Model.IRepositories.ISachRepositories;
-using Service.DTOs.SachDTOs;
+using Service.DTOs;
 using Service.IServices.ISachServices;
 using Service.Mapping;
 using System;

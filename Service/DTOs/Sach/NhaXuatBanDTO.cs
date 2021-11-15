@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.DTOs.SachDTOs
+namespace Service.DTOs
 {
     public class NhaXuatBanDTO : BaseDTO
     {

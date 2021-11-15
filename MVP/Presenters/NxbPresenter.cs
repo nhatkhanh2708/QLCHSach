@@ -1,5 +1,5 @@
 ﻿using Model.Entities.IViews;
-using Service.DTOs.SachDTOs;
+using Service.DTOs;
 using Service.IServices.ISachServices;
 using System;
 using System.Collections.Generic;
