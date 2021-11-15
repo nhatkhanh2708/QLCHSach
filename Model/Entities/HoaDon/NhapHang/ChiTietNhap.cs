@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Entities.Sach
+namespace Model.Entities
 {
-    public class LichSuGia : BaseEntity
+    public class ChiTietNhap : BaseEntity
     {
         public int SachId { get; set; }
-        public bool LoaiGia { get; set; }
-        public decimal Gia { get; set; }
         public Sach Sach { get; set; }
+        public int HdNhapId { get; set; }
+        public HoaDonNhap HoaDonNhap { get; set; }
+        public int SoLuong { get; set; }
     }
 }

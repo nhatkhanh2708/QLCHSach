@@ -40,8 +40,6 @@ namespace Model.Entities
             services.AddScoped<INxbRepository, NxbRepository>();
             services.AddScoped<INxbService, NxbService>();
 
-            services.AddScoped<ILichSuGiaRepository, LichSuGiaRepository>();
-
             ServiceProvider = services.BuildServiceProvider();
         }
 

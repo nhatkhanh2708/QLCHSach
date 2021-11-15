@@ -23,7 +23,6 @@
   <ItemGroup>
     <Folder Include="Repositories\HoaDonRepositories\" />
     <Folder Include="Repositories\NccRepositories\" />
-    <Folder Include="Repositories\KhuyenMaiRepositories\" />
     <Folder Include="Repositories\TaiKhoanRepositories\" />
     <Folder Include="Repositories\NhanVienRepositories\" />
   </ItemGroup>

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model.ValueObjects
 {
-    class DiaChi
+    public class DiaChi
     {
+        public string Duong { get; set; }
+        public string Quan { get; set; }
+        public string ThanhPho { get; set; }
     }
 }

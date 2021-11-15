@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 
 namespace Repository.Config
 {
-    public class SachConfig : IEntityTypeConfiguration<Sach>
+    public class NhanVienConfig : IEntityTypeConfiguration<NhanVien>
     {
-        public void Configure(EntityTypeBuilder<Sach> builder)
+        public void Configure(EntityTypeBuilder<NhanVien> builder)
         {
-            builder.Property(s => s.Thumbnail).HasColumnType("image");
+            builder.OwnsOne(s => s.DiaChi);
+            builder.Property(s => s.SDT)
+                .HasMaxLength(10)
+                .IsRequired();            
         }
     }
 }

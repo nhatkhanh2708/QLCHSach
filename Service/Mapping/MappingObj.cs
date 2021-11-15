@@ -1,4 +1,4 @@
-﻿using Model.Entities.Sach;
+﻿using Model.Entities;
 using Service.DTOs.SachDTOs;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using Model.Entities.Sach;
+﻿using Model.Entities;
 using Model.IRepositories.ISachRepositories;
 using System;
 using System.Collections.Generic;

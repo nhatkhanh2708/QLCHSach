@@ -12,7 +12,7 @@ namespace Model.Entities.Presenters
     public class NxbPresenter
     {
         private readonly INxbView nxbView;
-        private readonly INxbService nxbService;
+        private INxbService nxbService;
 
         public NxbPresenter(INxbView nxbView)
         {
