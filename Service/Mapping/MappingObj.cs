@@ -1,5 +1,5 @@
 ﻿using Model.Entities;
-using Service.DTOs.SachDTOs;
+using Service.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

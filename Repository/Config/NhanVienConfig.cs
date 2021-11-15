@@ -16,7 +16,9 @@ namespace Repository.Config
             builder.OwnsOne(s => s.DiaChi);
             builder.Property(s => s.SDT)
                 .HasMaxLength(10)
-                .IsRequired();            
+                .IsRequired();
+            //builder.Property(s => s.NgaySinh)
+              //  .HasColumnType
         }
     }
 }

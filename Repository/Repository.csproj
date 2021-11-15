@@ -20,11 +20,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\HoaDonRepositories\" />
-    <Folder Include="Repositories\NccRepositories\" />
-    <Folder Include="Repositories\TaiKhoanRepositories\" />
-    <Folder Include="Repositories\NhanVienRepositories\" />
-  </ItemGroup>
-
 </Project>

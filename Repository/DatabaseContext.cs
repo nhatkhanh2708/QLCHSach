@@ -10,16 +10,18 @@ namespace Repository
 {
     public class DatabaseContext : DbContext
     {
-        /*public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
 
-        }*/
-
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=QLCHSach;Trusted_Connection=True");
         }
 
+        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=QLCHSach;Trusted_Connection=True");
+        }*/
+
+        // Các table trong database
+        #region
         public DbSet<Sach> Sachs { get; set; }
         public DbSet<TacGia> TacGias { get; set; }
         public DbSet<SachTacGia> SachTacGias { get; set; }
@@ -35,6 +37,7 @@ namespace Repository
         public DbSet<HoaDonXuat> HoaDonXuats { get; set; }
         public DbSet<ChiTietXuat> ChiTietXuats { get; set; }
 
+        #endregion
         protected override void OnModelCreating(ModelBuilder builder)
         {
             
