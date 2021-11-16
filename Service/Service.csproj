@@ -9,14 +9,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IServices\ITaiKhoanServices\" />
-    <Folder Include="IServices\IHoaDonServices\" />
     <Folder Include="Services\HoaDonServices\" />
+    <Folder Include="Services\NhanVienServices\" />
     <Folder Include="Services\TaiKhoanServices\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Envoc.Core.Mapping.Automapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
 </Project>

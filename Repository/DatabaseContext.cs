@@ -10,15 +10,15 @@ namespace Repository
 {
     public class DatabaseContext : DbContext
     {
-        /*public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
 
-        }*/
+        }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=QLCHSach;Trusted_Connection=True");
-        }
+        }*/
 
         // Các table trong database
         #region

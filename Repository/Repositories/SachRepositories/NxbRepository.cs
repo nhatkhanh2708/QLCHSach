@@ -14,7 +14,7 @@ namespace Repository.Repositories.SachRepositories
 
         public IEnumerable<NhaXuatBan> GetsByTenNXB(string tenNXB)
         {
-            return context.NhaXuatBans.Where(q => q.TenNxb.StartsWith(tenNXB));
+            return _context.NhaXuatBans.Where(q => q.TenNxb.StartsWith(tenNXB)).ToList();
         }
     }
 }
