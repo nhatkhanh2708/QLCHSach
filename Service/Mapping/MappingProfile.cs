@@ -1,4 +1,5 @@
-﻿using Model.Entities;
+﻿using AutoMapper;
+using Model.Entities;
 using Service.DTOs;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,19 @@ using System.Threading.Tasks;
 
 namespace Service.Mapping
 {
-    public static class MappingObj
+    public class MappingProfile : Profile
     {
-        //Mapping Nxb
-        #region
-        public static NhaXuatBanDTO MappingDTO(this NhaXuatBan entity)
+        public MappingProfile()
         {
+
+        }
+
+
+        //Mapping Nxb
+      /*  #region
+        public NhaXuatBanDTO MappingDTO(this NhaXuatBan entity)
+        {
+            
             return new NhaXuatBanDTO
             {
                 Id = entity.Id,
@@ -21,7 +29,7 @@ namespace Service.Mapping
                 VietTat = entity.VietTat
             };
         }
-        public static NhaXuatBan MappingEntity(this NhaXuatBanDTO dto)
+        public NhaXuatBan MappingEntity(this NhaXuatBanDTO dto)
         {
             return new NhaXuatBan
             {
@@ -30,19 +38,21 @@ namespace Service.Mapping
                 VietTat = dto.VietTat
             };
         }
-        public static void MappingEntity(this NhaXuatBanDTO dto, NhaXuatBan entity)
+        public void MappingEntity(this NhaXuatBanDTO dto, NhaXuatBan entity)
         {
             entity.Id = dto.Id;
             entity.TenNxb = dto.TenNxb;
             entity.VietTat = dto.VietTat;
         }
-        public static IEnumerable<NhaXuatBanDTO> MappingDTOs(this IEnumerable<NhaXuatBan> entities)
+        public IEnumerable<NhaXuatBanDTO> MappingDTOs(this IEnumerable<NhaXuatBan> entities)
         {
             foreach(var entity in entities)
             {
-                yield return entity.MappingDTO();
+                //yield return entity.MappingDTO();
             }
         }
         #endregion
+      */
+        //
     }
 }

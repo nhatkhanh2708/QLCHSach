@@ -19,8 +19,8 @@ namespace Service.Services.SachServices
         }
         public void Add(NhaXuatBanDTO dto)
         {
-            var entity = dto.MappingEntity();
-            nxbRepository.Add(entity);
+            //var entity = dto.MappingEntity();
+            //nxbRepository.Add(entity);
         }
 
         public void Delete(int id)
@@ -31,23 +31,26 @@ namespace Service.Services.SachServices
 
         public IEnumerable<NhaXuatBanDTO> GetsAll()
         {
-            return nxbRepository.GetsAll().MappingDTOs();
+            return null;
+            //return nxbRepository.GetsAll().MappingDTOs();
         }
 
         public NhaXuatBanDTO GetById(int id)
         {
-            return nxbRepository.GetById(id).MappingDTO();
+            return null;
+            //return nxbRepository.GetById(id).MappingDTO();
         }
 
         public IEnumerable<NhaXuatBanDTO> GetsByTenNXB(string tenNXB)
         {
-            return nxbRepository.GetsByTenNXB(tenNXB).MappingDTOs();
+            return null;
+            //return nxbRepository.GetsByTenNXB(tenNXB).MappingDTOs();
         }
 
         public void Update(NhaXuatBanDTO dto)
         {
             var entity = nxbRepository.GetById(dto.Id);
-            dto.MappingEntity(entity);
+            //dto.MappingEntity(entity);
             nxbRepository.Update(entity);
         }
     }

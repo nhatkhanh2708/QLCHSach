@@ -9,6 +9,8 @@ namespace Model.Entities
 {
     public class NhaXuatBan : BaseEntity
     {
+        [StringLength(100)]
+        [Required]
         public string TenNxb { get; set; }
         public string VietTat { get; set; }
         public ICollection<Sach> Sachs { get; set; }

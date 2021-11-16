@@ -131,6 +131,7 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NgayHopTac")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SDT")
@@ -142,7 +143,9 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("TenNCC")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("VietTat")
                         .HasColumnType("nvarchar(max)");
@@ -473,7 +476,8 @@ namespace Repository.Migrations
                                 .HasForeignKey("NhaCungCapId");
                         });
 
-                    b.Navigation("DiaChi");
+                    b.Navigation("DiaChi")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Model.Entities.NhanVien", b =>

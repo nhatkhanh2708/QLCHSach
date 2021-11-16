@@ -10,8 +10,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211115090934_initialCreate")]
-    partial class initialCreate
+    [Migration("20211116035927_initCreate")]
+    partial class initCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -133,6 +133,7 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NgayHopTac")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SDT")
@@ -144,7 +145,9 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("TenNCC")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("VietTat")
                         .HasColumnType("nvarchar(max)");
@@ -475,7 +478,8 @@ namespace Repository.Migrations
                                 .HasForeignKey("NhaCungCapId");
                         });
 
-                    b.Navigation("DiaChi");
+                    b.Navigation("DiaChi")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Model.Entities.NhanVien", b =>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Service.DTOs
         public int TaiKhoanId { get; set; }
         [Required]
         public int NccId { get; set; }
+        [DefaultValue(0)]
         [Required]
         public decimal TongTien { get; set; }
         [DataType(DataType.DateTime)]
