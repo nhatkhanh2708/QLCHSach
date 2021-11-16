@@ -1,9 +1,4 @@
-﻿using Service.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Service.IServices
 {
@@ -13,6 +8,6 @@ namespace Service.IServices
         T GetById(int id);
         void Add(T dto);
         void Update(T dto);
-        void Delete(T dto);
+        void Delete(int id);
     }
 }

@@ -2,11 +2,7 @@
 using Service.DTOs;
 using Service.IServices.ISachServices;
 using Service.Mapping;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Services.SachServices
 {
@@ -19,14 +15,13 @@ namespace Service.Services.SachServices
         }
         public void Add(NhaXuatBanDTO dto)
         {
-            //var entity = dto.MappingEntity();
-            //nxbRepository.Add(entity);
+            _nxbRepository.Add(dto.MappingEntity());
         }
 
-        public void Delete(NhaXuatBanDTO dto)
+        public void Delete(int id)
         {
-            //var entity = dto.MappingEntity();
-            //_nxbRepository.Delete(entity);
+            var entity = _nxbRepository.GetById(id);
+            _nxbRepository.Delete(entity);
         }
 
         public IEnumerable<NhaXuatBanDTO> GetsAll()
@@ -37,8 +32,7 @@ namespace Service.Services.SachServices
 
         public NhaXuatBanDTO GetById(int id)
         {
-            return null;
-            //return _nxbRepository.GetById(id).MappingDTO();
+            return _nxbRepository.GetById(id).MappingDTO();
         }
 
         public IEnumerable<NhaXuatBanDTO> GetsByTenNXB(string tenNXB)

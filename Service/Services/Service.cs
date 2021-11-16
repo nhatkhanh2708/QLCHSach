@@ -21,7 +21,7 @@ namespace Service.Services
             
         }
 
-        public void Delete(T dto)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }

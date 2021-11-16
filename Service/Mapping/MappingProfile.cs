@@ -9,19 +9,12 @@ using System.Threading.Tasks;
 
 namespace Service.Mapping
 {
-    public class MappingProfile : Profile
+    public static class MappingProfile
     {
-        public MappingProfile()
-        {
-
-        }
-
-
         //Mapping Nxb
-      /*  #region
-        public NhaXuatBanDTO MappingDTO(this NhaXuatBan entity)
+        #region
+        public static NhaXuatBanDTO MappingDTO(this NhaXuatBan entity)
         {
-            
             return new NhaXuatBanDTO
             {
                 Id = entity.Id,
@@ -29,7 +22,7 @@ namespace Service.Mapping
                 VietTat = entity.VietTat
             };
         }
-        public NhaXuatBan MappingEntity(this NhaXuatBanDTO dto)
+        public static NhaXuatBan MappingEntity(this NhaXuatBanDTO dto)
         {
             return new NhaXuatBan
             {
@@ -38,21 +31,19 @@ namespace Service.Mapping
                 VietTat = dto.VietTat
             };
         }
-        public void MappingEntity(this NhaXuatBanDTO dto, NhaXuatBan entity)
+        public static void MappingEntity(this NhaXuatBanDTO dto, NhaXuatBan entity)
         {
             entity.Id = dto.Id;
             entity.TenNxb = dto.TenNxb;
             entity.VietTat = dto.VietTat;
         }
-        public IEnumerable<NhaXuatBanDTO> MappingDTOs(this IEnumerable<NhaXuatBan> entities)
+        public static IEnumerable<NhaXuatBanDTO> MappingDTOs(this IEnumerable<NhaXuatBan> entities)
         {
             foreach(var entity in entities)
             {
-                //yield return entity.MappingDTO();
+                yield return entity.MappingDTO();
             }
         }
         #endregion
-      */
-        //
     }
 }

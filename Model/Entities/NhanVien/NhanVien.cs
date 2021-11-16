@@ -11,6 +11,16 @@ namespace Model.Entities
 {
     public class NhanVien : Person
     {
+        public NhanVien(int id, string hoTen, DateTime ngaySinh, bool gioiTinh, string email, string sDT, DateTime ngayBatDau, string chucVu, bool status)
+            : base(id, hoTen, ngaySinh, gioiTinh)
+        {
+            Email = email;
+            SDT = sDT;
+            NgayBatDau = ngayBatDau;
+            ChucVu = chucVu;
+            Status = status;
+        }
+
         [Required]
         public string Email { get; set; }
         [Required]

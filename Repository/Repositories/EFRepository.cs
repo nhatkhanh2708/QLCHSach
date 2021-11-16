@@ -34,9 +34,9 @@ namespace Repository.Repositories
         }
 
         public void Delete(T entity)
-        {            
+        {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            _context.SaveChanges();            
         }
 
         public void Update(T entity)

@@ -1,6 +1,7 @@
 ﻿using Model.Entities.Common;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,5 +24,10 @@ namespace Model.Entities
         public TaiKhoan TaiKhoan { get; set; }
         public NhaCungCap NCC { get; set; }
         public ICollection<ChiTietNhap> ChiTietNhaps { get; set; }
+
+        public HoaDonNhap()
+        {
+            ChiTietNhaps = new Collection<ChiTietNhap>();
+        }
     }
 }

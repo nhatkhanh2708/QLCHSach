@@ -2,6 +2,7 @@
 using Model.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,9 @@ namespace Model.Entities
         [Required]
         public bool Status { get; set; }
         public ICollection<HoaDonNhap> HoaDonNhaps { get; set; }
+        public NhaCungCap()
+        {
+            HoaDonNhaps = new Collection<HoaDonNhap>();
+        }
     }
 }

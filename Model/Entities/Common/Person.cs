@@ -18,5 +18,12 @@ namespace Model.Entities.Common
         public DateTime NgaySinh { get; set; }
         [Required]
         public bool GioiTinh { get; set; }
+
+        protected Person(int id, string hoTen, DateTime ngaySinh, bool gioiTinh) : base(id)
+        {
+            HoTen = hoTen;
+            NgaySinh = ngaySinh;
+            GioiTinh = gioiTinh;
+        }
     }
 }
