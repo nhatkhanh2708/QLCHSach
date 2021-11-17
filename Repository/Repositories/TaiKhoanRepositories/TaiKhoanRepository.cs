@@ -1,10 +1,5 @@
 ﻿using Model.Entities;
-using Model.IRepositories.ITaiKhoanRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Model.IRepositories;
 
 namespace Repository.Repositories.TaiKhoanRepositories
 {

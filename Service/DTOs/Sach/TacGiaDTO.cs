@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.DTOs
 {
@@ -11,5 +7,7 @@ namespace Service.DTOs
     {
         [Required]
         public string ButDanh { get; set; }
+
+        public ICollection<SachTacGiaDTO> SachTacGias { get; set; }
     }
 }

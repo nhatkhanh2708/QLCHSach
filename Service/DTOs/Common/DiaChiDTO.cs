@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -12,9 +7,11 @@ namespace Service.DTOs
         [StringLength(20)]
         [Required]
         public string Duong { get; set; }
+
         [StringLength(20)]
         [Required]
         public string Quan { get; set; }
+
         [StringLength(20)]
         [Required]
         public string ThanhPho { get; set; }
