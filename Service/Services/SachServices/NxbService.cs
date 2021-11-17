@@ -32,8 +32,8 @@ namespace Service.Services
 
         public IEnumerable<NhaXuatBanDTO> GetsAll()
         {
-            var listEntity = _nxbRepository.GetsAll();
-            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(listEntity);
+            var entities = _nxbRepository.GetsAll();
+            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(entities);
         }
 
         public NhaXuatBanDTO GetById(int id)
@@ -44,8 +44,8 @@ namespace Service.Services
 
         public IEnumerable<NhaXuatBanDTO> GetsByTenNXB(string tenNXB)
         {
-            var listEntity = _nxbRepository.GetsByTenNXB(tenNXB);
-            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(listEntity);
+            var entities = _nxbRepository.GetsByTenNXB(tenNXB);
+            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(entities);
         }
 
         public void Update(NhaXuatBanDTO dto)
