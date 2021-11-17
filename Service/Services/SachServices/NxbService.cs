@@ -1,21 +1,32 @@
-﻿using Model.IRepositories.ISachRepositories;
+﻿using AutoMapper;
+using Model.Entities;
+using Model.IRepositories.ISachRepositories;
 using Service.DTOs;
 using Service.IServices.ISachServices;
 using Service.Mapping;
 using System.Collections.Generic;
 
-namespace Service.Services.SachServices
+namespace Service.Services
 {
     public class NxbService : INxbService
     {
         private readonly INxbRepository _nxbRepository;
+        private IMapper _mapper;
+
         public NxbService(INxbRepository nxbRepository)
         {
             _nxbRepository = nxbRepository;
         }
         public void Add(NhaXuatBanDTO dto)
         {
-            _nxbRepository.Add(dto.MappingEntity());
+            //_nxbRepository.Add(dto.MappingEntity());
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperConfig());
+            });
+            _mapper = config.CreateMapper();
+            var entity = _mapper.Map<NhaXuatBanDTO, NhaXuatBan>(dto);
+            _nxbRepository.Add(entity);
         }
 
         public void Delete(int id)
@@ -46,6 +57,11 @@ namespace Service.Services.SachServices
             var entity = _nxbRepository.GetById(dto.Id);
             //dto.MappingEntity(entity);
             _nxbRepository.Update(entity);
+        }
+
+        public bool isExistById(int id)
+        {
+            return _nxbRepository.GetById(id) != null;
         }
     }
 }

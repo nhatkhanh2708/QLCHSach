@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Entities.Common
+namespace MVP.Presenters
 {
-    public abstract class BaseEntity
+    public interface INxbPresenter
     {
-        public int Id { get; set; }
+        void checkThem(string tenNxb, string vietTat);
     }
 }

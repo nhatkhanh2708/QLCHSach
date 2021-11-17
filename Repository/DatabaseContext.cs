@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Model.Entities;
 using System;
 using System.Linq;
@@ -12,13 +13,7 @@ namespace Repository
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-
         }
-
-        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=QLCHSach;Trusted_Connection=True");
-        }*/
 
         // Các table trong database
         #region
@@ -143,6 +138,16 @@ namespace Repository
 
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+    }
+
+    public class DesignTimeDatabaseContext : IDesignTimeDbContextFactory<DatabaseContext>
+    {
+        public DatabaseContext CreateDbContext(string[] args)
+        {
+            var builder = new DbContextOptionsBuilder<DatabaseContext>();
+            builder.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=QLCHSach;Trusted_Connection=True");
+            return new DatabaseContext(builder.Options);
         }
     }
 }

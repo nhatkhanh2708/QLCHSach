@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    public class Service<T, E> : IService<T> where T : BaseDTO
+    public class Service<T, E> : IService<T> where T : class
     {
         private readonly E _repository;
         public Service(E repository)
@@ -32,6 +32,11 @@ namespace Service.Services
         }
 
         public IEnumerable<T> GetsAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isExistById(int id)
         {
             throw new NotImplementedException();
         }

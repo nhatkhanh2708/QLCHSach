@@ -13,5 +13,8 @@ namespace Service.DTOs
         [Required]
         public string TenNxb { get; set; }
         public string VietTat { get; set; }
+
+        //Test
+        public ICollection<SachDTO> Sachs { get; set; }
     }
 }

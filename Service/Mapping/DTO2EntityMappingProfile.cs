@@ -11,10 +11,13 @@ namespace Service.Mapping
 {
     public class DTO2EntityMappingProfile : Profile
     {
-        public DTO2EntityMappingProfile()
+        public IMapper Mapper()
         {
-            //CreateMap<NhaXuatBanDTO, NhaXuatBan>()
-              //  .ConstructUsing(c => new NhaXuatBan())
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperConfig());
+            });
+            return config.CreateMapper();
         }
     }
 }

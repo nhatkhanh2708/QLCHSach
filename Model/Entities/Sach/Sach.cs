@@ -38,8 +38,6 @@ namespace Model.Entities
         {
             SachTheLoais = new Collection<SachTheLoai>();
             SachTacGias = new Collection<SachTacGia>();
-            ChiTietNhaps = new Collection<ChiTietNhap>();
-            ChiTietXuats = new Collection<ChiTietXuat>();
         }
     }
 }

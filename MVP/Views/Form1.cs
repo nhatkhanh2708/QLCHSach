@@ -1,5 +1,5 @@
-﻿using Model.Entities.IViews;
-using Model.Entities.Presenters;
+﻿using MVP.IViews;
+using MVP.Presenters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
