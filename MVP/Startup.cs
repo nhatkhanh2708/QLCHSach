@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Model.IRepositories;
-using Model.IRepositories.ISachRepositories;
 using Repository;
 using Repository.Repositories;
 using Repository.Repositories.SachRepositories;
-using Service.IServices.ISachServices;
+using Service.IServices;
 using Service.Mapping;
 using Service.Services;
 using System;
