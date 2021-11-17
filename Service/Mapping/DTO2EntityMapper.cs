@@ -8,7 +8,20 @@ namespace Service.Mapping
     {
         public DTO2EntityMapper()
         {
+            CreateMap<CtNhapDTO, ChiTietNhap>();
+            CreateMap<CtXuatDTO, ChiTietXuat>();
+            CreateMap<HdNhapDTO, HoaDonNhap>();
+            CreateMap<HdXuatDTO, HoaDonXuat>();
+            CreateMap<NccDTO, NhaCungCap>();
+            CreateMap<NhanVienDTO, NhanVien>();
             CreateMap<NhaXuatBanDTO, NhaXuatBan>();
+            CreateMap<SachDTO, Sach>();
+            CreateMap<SachTacGiaDTO, SachTacGia>();
+            CreateMap<SachTheLoaiDTO, SachTheLoai>();
+            CreateMap<TacGiaDTO, TacGia>();
+            CreateMap<TheLoaiDTO, TheLoai>();
+            CreateMap<QuyenDTO, Quyen>();
+            CreateMap<TaiKhoanDTO, TaiKhoan>();
         }
     }
 }
