@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using Model.Entities;
-using Model.IRepositories.ISachRepositories;
+using Model.IRepositories;
 using Service.DTOs;
-using Service.IServices.ISachServices;
-using Service.Mapping;
+using Service.IServices;
 using System.Collections.Generic;
 
 namespace Service.Services
@@ -11,20 +10,16 @@ namespace Service.Services
     public class NxbService : INxbService
     {
         private readonly INxbRepository _nxbRepository;
-        private IMapper _mapper;
+        private readonly IMapper _mapper;
 
-        public NxbService(INxbRepository nxbRepository)
+        public NxbService(INxbRepository nxbRepository, IMapper mapper)
         {
             _nxbRepository = nxbRepository;
+            _mapper = mapper;
         }
+
         public void Add(NhaXuatBanDTO dto)
         {
-            //_nxbRepository.Add(dto.MappingEntity());
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperConfig());
-            });
-            _mapper = config.CreateMapper();
             var entity = _mapper.Map<NhaXuatBanDTO, NhaXuatBan>(dto);
             _nxbRepository.Add(entity);
         }
@@ -37,25 +32,26 @@ namespace Service.Services
 
         public IEnumerable<NhaXuatBanDTO> GetsAll()
         {
-            return null;
-            //return _nxbRepository.GetsAll().MappingDTOs();
+            var listEntity = _nxbRepository.GetsAll();
+            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(listEntity);
         }
 
         public NhaXuatBanDTO GetById(int id)
         {
-            return _nxbRepository.GetById(id).MappingDTO();
+            var entity = _nxbRepository.GetById(id);
+            return _mapper.Map<NhaXuatBan, NhaXuatBanDTO>(entity);
         }
 
         public IEnumerable<NhaXuatBanDTO> GetsByTenNXB(string tenNXB)
         {
-            return null;
-            //return _nxbRepository.GetsByTenNXB(tenNXB).MappingDTOs();
+            var listEntity = _nxbRepository.GetsByTenNXB(tenNXB);
+            return _mapper.Map<IEnumerable<NhaXuatBan>, IEnumerable<NhaXuatBanDTO>>(listEntity);
         }
 
         public void Update(NhaXuatBanDTO dto)
         {
             var entity = _nxbRepository.GetById(dto.Id);
-            //dto.MappingEntity(entity);
+            _mapper.Map<NhaXuatBanDTO, NhaXuatBan>(dto, entity);
             _nxbRepository.Update(entity);
         }
 

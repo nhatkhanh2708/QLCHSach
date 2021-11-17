@@ -2,18 +2,13 @@
 using MVP.IViews;
 using Service.DTOs;
 using Service.IServices.ISachServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVP.Presenters
 {
     public class NxbPresenter : INxbPresenter
     {
         private readonly INxbView _nxbView;
-        private INxbService _nxbService;
+        private readonly INxbService _nxbService;
 
         public NxbPresenter(INxbView nxbView)
         {
@@ -27,10 +22,12 @@ namespace MVP.Presenters
             {
                 var nxbDTO = new NhaXuatBanDTO
                 {
+                    Id = 3,
                     TenNxb = tenNxb,
                     VietTat = vietTat
                 };
-                _nxbService.Add(nxbDTO);
+                //_nxbService.Add(nxbDTO);
+                //_nxbService.Update(nxbDTO);
                 _nxbView.ThemThanhCong();
             }
             else

@@ -2,13 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using Model.IRepositories;
 using Model.IRepositories.ISachRepositories;
-using MVP;
-using MVP.IViews;
-using MVP.Presenters;
 using Repository;
 using Repository.Repositories;
 using Repository.Repositories.SachRepositories;
 using Service.IServices.ISachServices;
+using Service.Mapping;
 using Service.Services;
 using System;
 
@@ -37,6 +35,8 @@ namespace Model.Entities
 
             services.AddScoped<INxbRepository, NxbRepository>();
             services.AddScoped<INxbService, NxbService>();
+
+            services.AddAutoMapper(typeof(AutoMapperConfig).Assembly);
 
             ServiceProvider = services.BuildServiceProvider();
         }

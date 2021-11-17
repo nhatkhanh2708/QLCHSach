@@ -1,20 +1,16 @@
 ﻿using AutoMapper;
-using Model.Entities;
-using Service.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Mapping
 {
-    public class AutoMapperConfig : Profile
+    public class AutoMapperConfig
     {
-        public AutoMapperConfig()
+        public IMapper RegisterMapper()
         {
-            CreateMap<NhaXuatBan, NhaXuatBanDTO>();
-            CreateMap<NhaXuatBanDTO, NhaXuatBan>();
+            return new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new DTO2EntityMapper());
+                cfg.AddProfile(new Entity2DTOMapper());
+            }).CreateMapper();
         }
     }
 }
