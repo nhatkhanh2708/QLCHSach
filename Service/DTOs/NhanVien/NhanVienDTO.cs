@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Service.DTOs
 {
-    public class NhanVienDTO : Person
+    public class NhanVienDTO : PersonDTO
     {
+        [Required]
         public string Email { get; set; }
         [Required]
         [StringLength(10, MinimumLength = 10)]
@@ -20,7 +21,7 @@ namespace Service.DTOs
         [Required]
         public string ChucVu { get; set; }
         [Required]
-        public DiaChi DiaChi { get; set; }
+        public DiaChiDTO DiaChi { get; set; }
         [Required]
         public bool Status { get; set; }
     }

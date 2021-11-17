@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Service.DTOs
 {
-    public abstract class Person : BaseDTO
+    public abstract class PersonDTO : BaseDTO
     {
+        [StringLength(60)]
         [Required]
         public string HoTen { get; set; }
         [DataType(DataType.Date)]

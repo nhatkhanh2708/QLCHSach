@@ -10,8 +10,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211115090934_initialCreate")]
-    partial class initialCreate
+    [Migration("20211116110649_initCreate")]
+    partial class initCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -133,6 +133,7 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NgayHopTac")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SDT")
@@ -144,7 +145,9 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("TenNCC")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("VietTat")
                         .HasColumnType("nvarchar(max)");
@@ -162,7 +165,9 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("TenNxb")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("VietTat")
                         .HasColumnType("nvarchar(max)");
@@ -180,16 +185,20 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("ChucVu")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("GioiTinh")
                         .HasColumnType("bit");
 
                     b.Property<string>("HoTen")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<DateTime>("NgayBatDau")
                         .HasColumnType("datetime2");
@@ -218,10 +227,13 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("MoTa")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("TenQuyen")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
@@ -242,6 +254,7 @@ namespace Repository.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("MaSach")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NxbId")
@@ -251,7 +264,8 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("TenSach")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<byte[]>("Thumbnail")
                         .HasColumnType("image");
@@ -315,13 +329,16 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("ButDanh")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("GioiTinh")
                         .HasColumnType("bit");
 
                     b.Property<string>("HoTen")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<DateTime>("NgaySinh")
                         .HasColumnType("datetime2");
@@ -342,9 +359,11 @@ namespace Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<int>("QuyenId")
@@ -354,7 +373,9 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -374,6 +395,7 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("TenTheLoai")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -459,13 +481,19 @@ namespace Repository.Migrations
                                 .UseIdentityColumn();
 
                             b1.Property<string>("Duong")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.Property<string>("Quan")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.Property<string>("ThanhPho")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.HasKey("NhaCungCapId");
 
@@ -475,7 +503,8 @@ namespace Repository.Migrations
                                 .HasForeignKey("NhaCungCapId");
                         });
 
-                    b.Navigation("DiaChi");
+                    b.Navigation("DiaChi")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Model.Entities.NhanVien", b =>
@@ -488,13 +517,19 @@ namespace Repository.Migrations
                                 .UseIdentityColumn();
 
                             b1.Property<string>("Duong")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.Property<string>("Quan")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.Property<string>("ThanhPho")
-                                .HasColumnType("nvarchar(max)");
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)");
 
                             b1.HasKey("NhanVienId");
 
@@ -504,7 +539,8 @@ namespace Repository.Migrations
                                 .HasForeignKey("NhanVienId");
                         });
 
-                    b.Navigation("DiaChi");
+                    b.Navigation("DiaChi")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Model.Entities.Sach", b =>

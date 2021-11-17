@@ -17,8 +17,6 @@ namespace Repository.Config
             builder.Property(s => s.SDT)
                 .HasMaxLength(10)
                 .IsRequired();
-            //builder.Property(s => s.NgaySinh)
-              //  .HasColumnType
         }
     }
 }

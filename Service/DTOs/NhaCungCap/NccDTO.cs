@@ -9,13 +9,13 @@ namespace Service.DTOs
 {
     public class NccDTO : BaseDTO
     {
+        [StringLength(60)]
         [Required]
         public string TenNCC { get; set; }
         public string VietTat { get; set; }
         [Required]
-        public DiaChi DiaChi { get; set; }
+        public DiaChiDTO DiaChi { get; set; }
         [Required]
-        [RegularExpression("")]
         [StringLength(10, MinimumLength = 10)]
         public string SDT { get; set; }
         public string Email { get; set; }

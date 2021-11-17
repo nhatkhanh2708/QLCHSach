@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Repository.Migrations
 {
-    public partial class initialCreate : Migration
+    public partial class initCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,14 +13,14 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenNCC = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TenNCC = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     VietTat = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_Duong = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_Quan = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_ThanhPho = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DiaChi_Duong = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    DiaChi_Quan = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    DiaChi_ThanhPho = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     SDT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NgayHopTac = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NgayHopTac = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -34,15 +34,15 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SDT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     NgayBatDau = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ChucVu = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_Duong = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_Quan = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DiaChi_ThanhPho = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ChucVu = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DiaChi_Duong = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    DiaChi_Quan = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    DiaChi_ThanhPho = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
-                    HoTen = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HoTen = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
                     GioiTinh = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -57,7 +57,7 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenNxb = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TenNxb = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     VietTat = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -71,8 +71,8 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenQuyen = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MoTa = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    TenQuyen = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    MoTa = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -85,8 +85,8 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ButDanh = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HoTen = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ButDanh = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    HoTen = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
                     GioiTinh = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -101,7 +101,7 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenTheLoai = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    TenTheLoai = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -114,8 +114,8 @@ namespace Repository.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenSach = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MaSach = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TenSach = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    MaSach = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NxbId = table.Column<int>(type: "int", nullable: false),
                     Thumbnail = table.Column<byte[]>(type: "image", nullable: true),
                     GiaNhap = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -141,9 +141,9 @@ namespace Repository.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NhanVienId = table.Column<int>(type: "int", nullable: false),
                     QuyenId = table.Column<int>(type: "int", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    Username = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

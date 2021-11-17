@@ -1,4 +1,5 @@
-﻿using Model.Entities;
+﻿using AutoMapper;
+using Model.Entities;
 using Service.DTOs;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Service.Mapping
 {
-    public static class MappingObj
+    public static class MappingProfile
     {
         //Mapping Nxb
         #region

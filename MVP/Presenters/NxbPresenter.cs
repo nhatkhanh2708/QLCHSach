@@ -11,30 +11,30 @@ namespace Model.Entities.Presenters
 {
     public class NxbPresenter
     {
-        private readonly INxbView nxbView;
-        private INxbService nxbService;
+        private readonly INxbView _nxbView;
+        private INxbService _nxbService;
 
         public NxbPresenter(INxbView nxbView)
         {
-            this.nxbView = nxbView;
-            nxbService = (INxbService)Startup.ServiceProvider.GetService(typeof(INxbService));
+            _nxbView = nxbView;
+            _nxbService = (INxbService)Startup.ServiceProvider.GetService(typeof(INxbService));
         }
 
         public void checkThem(string tenNxb, string vietTat)
         {
             if(tenNxb.Length < 100 && vietTat.Length < 20)
             {
-                var nxbDTO = new NhaXuatBanDTO
+                /*var nxbDTO = new NhaXuatBanDTO
                 {
                     TenNxb = tenNxb,
                     VietTat = vietTat
-                };
-                nxbService.Add(nxbDTO);
-                nxbView.ThemThanhCong();
+                };*/
+                //_nxbService.Add(nxbDTO);
+                _nxbView.ThemThanhCong();
             }
             else
             {
-                nxbView.ThemThatBai();
+                _nxbView.ThemThatBai();
             }
         }
     }
