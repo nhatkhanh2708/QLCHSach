@@ -2,17 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using Model.IRepositories;
 using Model.IRepositories.ISachRepositories;
+using MVP;
+using MVP.IViews;
+using MVP.Presenters;
 using Repository;
 using Repository.Repositories;
 using Repository.Repositories.SachRepositories;
 using Service.IServices.ISachServices;
-using Service.Services.SachServices;
+using Service.Services;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.Entities
 {

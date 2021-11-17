@@ -1,4 +1,5 @@
-﻿using Model.Entities.IViews;
+﻿using Model.Entities;
+using MVP.IViews;
 using Service.DTOs;
 using Service.IServices.ISachServices;
 using System;
@@ -7,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Entities.Presenters
+namespace MVP.Presenters
 {
-    public class NxbPresenter
+    public class NxbPresenter : INxbPresenter
     {
         private readonly INxbView _nxbView;
         private INxbService _nxbService;
@@ -24,12 +25,12 @@ namespace Model.Entities.Presenters
         {
             if(tenNxb.Length < 100 && vietTat.Length < 20)
             {
-                /*var nxbDTO = new NhaXuatBanDTO
+                var nxbDTO = new NhaXuatBanDTO
                 {
                     TenNxb = tenNxb,
                     VietTat = vietTat
-                };*/
-                //_nxbService.Add(nxbDTO);
+                };
+                _nxbService.Add(nxbDTO);
                 _nxbView.ThemThanhCong();
             }
             else

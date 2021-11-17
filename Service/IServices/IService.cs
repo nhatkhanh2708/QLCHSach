@@ -9,5 +9,6 @@ namespace Service.IServices
         void Add(T dto);
         void Update(T dto);
         void Delete(int id);
+        bool isExistById(int id);
     }
 }

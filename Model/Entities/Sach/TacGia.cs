@@ -14,7 +14,7 @@ namespace Model.Entities
         [Required]
         public string ButDanh { get; set; }
         public ICollection<SachTacGia> SachTacGias { get; set; }
-        public TacGia(int id, String hoTen, DateTime ngaySinh, bool gioiTinh) : base(id, hoTen, ngaySinh, gioiTinh)
+        public TacGia()
         {
             SachTacGias = new Collection<SachTacGia>();
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class EFRepository<T> : IRepository<T> where T : BaseEntity
+    public class EFRepository<T> : IRepository<T> where T : class
     {
         protected readonly DatabaseContext _context;
 
@@ -36,13 +36,18 @@ namespace Repository.Repositories
         public void Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges();            
+            _context.SaveChanges();
         }
 
         public void Update(T entity)
         {
             _context.Set<T>().Update(entity);
             _context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            Delete(GetById(id));
         }
     }
 }
