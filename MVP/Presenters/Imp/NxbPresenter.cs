@@ -1,7 +1,7 @@
 ﻿using Model.Entities;
 using MVP.IViews;
 using Service.DTOs;
-using Service.IServices.ISachServices;
+using Service.IServices;
 
 namespace MVP.Presenters
 {
@@ -22,11 +22,10 @@ namespace MVP.Presenters
             {
                 var nxbDTO = new NhaXuatBanDTO
                 {
-                    Id = 3,
                     TenNxb = tenNxb,
                     VietTat = vietTat
                 };
-                //_nxbService.Add(nxbDTO);
+                _nxbService.Add(nxbDTO);
                 //_nxbService.Update(nxbDTO);
                 _nxbView.ThemThanhCong();
             }
