@@ -21,7 +21,7 @@ namespace Service.DTOs
         public string ChucVu { get; set; }
 
         [Required]
-        public DiaChiDTO DiaChi { get; set; }
+        public string DiaChi { get; set; }
 
         [Required]
         public bool Status { get; set; }

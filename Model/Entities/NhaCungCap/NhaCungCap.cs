@@ -1,5 +1,4 @@
 ﻿using Model.Entities.Common;
-using Model.ValueObjects;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +14,7 @@ namespace Model.Entities
         public string VietTat { get; set; }
 
         [Required]
-        public DiaChi DiaChi { get; set; }
+        public string DiaChi { get; set; }
 
         [Required]
         [StringLength(10, MinimumLength = 10)]

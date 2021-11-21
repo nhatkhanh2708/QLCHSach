@@ -1,5 +1,4 @@
 ﻿using Model.Entities.Common;
-using Model.ValueObjects;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -23,7 +22,7 @@ namespace Model.Entities
         public string ChucVu { get; set; }
 
         [Required]
-        public DiaChi DiaChi { get; set; }
+        public string DiaChi { get; set; }
 
         [Required]
         public bool Status { get; set; }
