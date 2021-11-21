@@ -1,4 +1,4 @@
-using MVP;
+using MVP.Views;
 using System;
 using System.Windows.Forms;
 
@@ -16,7 +16,7 @@ namespace Model.Entities
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Startup.ConfigureServices();
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }

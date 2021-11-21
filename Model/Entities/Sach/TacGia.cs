@@ -7,6 +7,10 @@ namespace Model.Entities
 {
     public class TacGia : Person
     {
+        [StringLength(60)]
+        [Required]
+        public string HoTen { get; set; }
+
         [Required]
         public string ButDanh { get; set; }
 

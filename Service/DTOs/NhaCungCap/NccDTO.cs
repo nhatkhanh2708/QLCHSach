@@ -12,7 +12,7 @@ namespace Service.DTOs
         public string VietTat { get; set; }
 
         [Required]
-        public DiaChiDTO DiaChi { get; set; }
+        public string DiaChi { get; set; }
 
         [Required]
         [StringLength(10, MinimumLength = 10)]

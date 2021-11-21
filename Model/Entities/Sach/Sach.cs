@@ -17,8 +17,6 @@ namespace Model.Entities
         [Required]
         public int NxbId { get; set; }
 
-        public byte[] Thumbnail { get; set; }
-
         [DefaultValue(0)]
         [Required]
         public decimal GiaNhap { get; set; }
