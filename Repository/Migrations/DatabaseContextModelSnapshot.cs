@@ -266,6 +266,9 @@ namespace Repository.Migrations
                     b.Property<int>("NxbId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 

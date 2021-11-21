@@ -26,6 +26,10 @@ namespace Model.Entities
         public decimal GiaBan { get; set; }
 
         [Required]
+        [DefaultValue(0)]
+        public int SoLuong { get; set; }
+
+        [Required]
         public bool Status { get; set; }
 
         public NhaXuatBan Nxb { get; set; }

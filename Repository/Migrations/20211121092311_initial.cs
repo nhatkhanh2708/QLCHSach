@@ -115,6 +115,7 @@ namespace Repository.Migrations
                     NxbId = table.Column<int>(type: "int", nullable: false),
                     GiaNhap = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     GiaBan = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SoLuong = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

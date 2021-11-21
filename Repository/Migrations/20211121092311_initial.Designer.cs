@@ -10,7 +10,7 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211121053658_initial")]
+    [Migration("20211121092311_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -266,6 +266,9 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NxbId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
                     b.Property<bool>("Status")

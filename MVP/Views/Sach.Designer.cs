@@ -357,7 +357,7 @@ namespace MVP.Views
             this.buttonHoTroTG.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonHoTroTG.ForeColor = System.Drawing.Color.White;
             this.buttonHoTroTG.Image = global::MVP.Properties.Resources.gear_2_16;
-            this.buttonHoTroTG.Location = new System.Drawing.Point(881, 139);
+            this.buttonHoTroTG.Location = new System.Drawing.Point(881, 138);
             this.buttonHoTroTG.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHoTroTG.Name = "buttonHoTroTG";
             this.buttonHoTroTG.Size = new System.Drawing.Size(54, 46);
