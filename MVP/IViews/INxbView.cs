@@ -1,8 +1,5 @@
-﻿using System;
+﻿using Service.DTOs;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVP.IViews
 {
@@ -11,5 +8,7 @@ namespace MVP.IViews
         public void ThemThanhCong();
         public void ThemThatBai();
         public void XoaThanhCong();
+
+        public void GetListNXB(IEnumerable<NhaXuatBanDTO> listNXB);
     }
 }

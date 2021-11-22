@@ -34,5 +34,10 @@ namespace MVP.Presenters
                 _nxbView.ThemThatBai();
             }
         }
+
+        public void GetList()
+        {
+            _nxbView.GetListNXB(_nxbService.GetsAll());
+        }
     }
 }

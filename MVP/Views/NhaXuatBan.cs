@@ -1,20 +1,27 @@
-﻿using System;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class NhaXuatBan : Form
+    public partial class NhaXuatBan : Form, INxbView
     {
+        private IEnumerable<NhaXuatBanDTO> _nhaXuatBans;
+        private NxbPresenter _nxbPresenter;
+
+        public void GetListNXB(IEnumerable<NhaXuatBanDTO> listNXB)
+        {
+            _nhaXuatBans = listNXB;
+        }
         public NhaXuatBan()
         {
             InitializeComponent();
+            _nxbPresenter = new NxbPresenter(this);
+            _nxbPresenter.GetList();
         }
         private void loadTheme()
         {
@@ -57,5 +64,21 @@ namespace MVP.Views
         {
 
         }
+
+        public void ThemThanhCong()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ThemThatBai()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void XoaThanhCong()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
