@@ -64,7 +64,8 @@ namespace MVP.Views
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                //activeForm.Close();
+                activeForm.Dispose();
             }
             ActivateButton(btnSender);
             activeForm = childForm;
