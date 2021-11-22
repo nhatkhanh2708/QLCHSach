@@ -1,7 +1,7 @@
 ﻿using Model.Entities;
 using Model.IRepositories;
 
-namespace Repository.Repositories.NccRepositories
+namespace Repository.Repositories
 {
     public class NccRepository : EFRepository<NhaCungCap>, INccRepository
     {

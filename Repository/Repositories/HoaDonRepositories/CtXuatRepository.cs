@@ -1,7 +1,7 @@
 ﻿using Model.Entities;
 using Model.IRepositories;
 
-namespace Repository.Repositories.HoaDonRepositories
+namespace Repository.Repositories
 {
     public class CTXuatRepository : EFRepository<ChiTietXuat>, ICtXuatRepository
     {

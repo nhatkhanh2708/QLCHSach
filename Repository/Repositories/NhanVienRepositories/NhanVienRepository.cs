@@ -1,7 +1,7 @@
 ﻿using Model.Entities;
 using Model.IRepositories;
 
-namespace Repository.Repositories.NhanVienRepositories
+namespace Repository.Repositories
 {
     public class NhanVienRepository : EFRepository<NhanVien>, INhanVienRepository
     {

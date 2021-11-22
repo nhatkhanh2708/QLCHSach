@@ -3,7 +3,7 @@ using Model.IRepositories;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Repository.Repositories.SachRepositories
+namespace Repository.Repositories
 {
     public class NxbRepository : EFRepository<NhaXuatBan>, INxbRepository
     {

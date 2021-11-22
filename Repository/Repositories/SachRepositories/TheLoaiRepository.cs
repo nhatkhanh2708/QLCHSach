@@ -1,7 +1,7 @@
 ﻿using Model.Entities;
 using Model.IRepositories;
 
-namespace Repository.Repositories.SachRepositories
+namespace Repository.Repositories
 {
     public class TheLoaiRepository : EFRepository<TheLoai>, ITheLoaiRepository
     {

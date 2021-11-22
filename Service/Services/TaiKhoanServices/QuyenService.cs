@@ -5,7 +5,7 @@ using Service.DTOs;
 using Service.IServices;
 using System.Collections.Generic;
 
-namespace Service.Services.TaiKhoanServices
+namespace Service.Services
 {
     public class QuyenService : IQuyenService
     {
