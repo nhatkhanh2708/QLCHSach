@@ -91,6 +91,7 @@ namespace MVP.Views
             this.dataGV.AllowUserToAddRows = false;
             this.dataGV.AllowUserToDeleteRows = false;
             this.dataGV.AllowUserToOrderColumns = true;
+            this.dataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -109,7 +110,7 @@ namespace MVP.Views
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGV.Location = new System.Drawing.Point(17, 327);
+            this.dataGV.Location = new System.Drawing.Point(12, 322);
             this.dataGV.Name = "dataGV";
             this.dataGV.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -122,7 +123,7 @@ namespace MVP.Views
             this.dataGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGV.RowHeadersWidth = 62;
             this.dataGV.RowTemplate.Height = 33;
-            this.dataGV.Size = new System.Drawing.Size(957, 563);
+            this.dataGV.Size = new System.Drawing.Size(1119, 450);
             this.dataGV.TabIndex = 11;
             // 
             // labelTimKiem
@@ -253,7 +254,7 @@ namespace MVP.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 902);
+            this.ClientSize = new System.Drawing.Size(1143, 784);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);

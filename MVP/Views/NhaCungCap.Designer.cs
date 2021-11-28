@@ -185,9 +185,9 @@ namespace MVP.Views
             this.buttonXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonXoa.ForeColor = System.Drawing.Color.White;
             this.buttonXoa.Image = global::MVP.Properties.Resources.x_mark_4_48;
-            this.buttonXoa.Location = new System.Drawing.Point(588, 258);
+            this.buttonXoa.Location = new System.Drawing.Point(586, 258);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(137, 66);
+            this.buttonXoa.Size = new System.Drawing.Size(156, 66);
             this.buttonXoa.TabIndex = 24;
             this.buttonXoa.Text = "   Xóa";
             this.buttonXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,9 +200,9 @@ namespace MVP.Views
             this.buttonSua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSua.ForeColor = System.Drawing.Color.White;
             this.buttonSua.Image = global::MVP.Properties.Resources.support_48;
-            this.buttonSua.Location = new System.Drawing.Point(380, 258);
+            this.buttonSua.Location = new System.Drawing.Point(377, 258);
             this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(132, 66);
+            this.buttonSua.Size = new System.Drawing.Size(149, 66);
             this.buttonSua.TabIndex = 23;
             this.buttonSua.Text = "   Sửa";
             this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,9 +215,9 @@ namespace MVP.Views
             this.buttonThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonThem.ForeColor = System.Drawing.Color.White;
             this.buttonThem.Image = global::MVP.Properties.Resources.plus_5_481;
-            this.buttonThem.Location = new System.Drawing.Point(170, 258);
+            this.buttonThem.Location = new System.Drawing.Point(144, 258);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(159, 66);
+            this.buttonThem.Size = new System.Drawing.Size(175, 66);
             this.buttonThem.TabIndex = 22;
             this.buttonThem.Text = "   Thêm";
             this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,7 +259,7 @@ namespace MVP.Views
             this.buttonLamMoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonLamMoi.ForeColor = System.Drawing.Color.White;
             this.buttonLamMoi.Image = global::MVP.Properties.Resources.refresh;
-            this.buttonLamMoi.Location = new System.Drawing.Point(786, 258);
+            this.buttonLamMoi.Location = new System.Drawing.Point(819, 258);
             this.buttonLamMoi.Name = "buttonLamMoi";
             this.buttonLamMoi.Size = new System.Drawing.Size(162, 66);
             this.buttonLamMoi.TabIndex = 28;

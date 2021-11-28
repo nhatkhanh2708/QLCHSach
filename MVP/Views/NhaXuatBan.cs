@@ -60,7 +60,7 @@ namespace MVP.Views
         private void NhaXuatBan_Load(object sender, EventArgs e)
         {
             loadTheme();
-            loadData();
+            loadData();            
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)

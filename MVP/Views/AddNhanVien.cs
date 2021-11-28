@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MVP.Views
@@ -15,8 +9,8 @@ namespace MVP.Views
         public AddNhanVien()
         {
             InitializeComponent();
-            this.Text = string.Empty;
         }
+
         private void loadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -30,9 +24,14 @@ namespace MVP.Views
                 }
             }
         }
+
         private void AddNhanVien_Load(object sender, EventArgs e)
         {
             loadTheme();
+            dateTimePickerNBD.Format = DateTimePickerFormat.Custom;
+            dateTimePickerNBD.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerNgaySinh.Format = DateTimePickerFormat.Custom;
+            dateTimePickerNgaySinh.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

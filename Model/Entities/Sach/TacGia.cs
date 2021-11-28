@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Model.Entities
 {
-    public class TacGia : Person
+    public class TacGia : BaseEntity
     {
         [StringLength(60)]
         [Required]

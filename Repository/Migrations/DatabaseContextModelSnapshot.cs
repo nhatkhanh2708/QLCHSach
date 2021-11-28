@@ -338,16 +338,10 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("GioiTinh")
-                        .HasColumnType("bit");
-
                     b.Property<string>("HoTen")
                         .IsRequired()
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
-
-                    b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

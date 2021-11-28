@@ -82,9 +82,7 @@ namespace Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HoTen = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
-                    ButDanh = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    GioiTinh = table.Column<bool>(type: "bit", nullable: false)
+                    ButDanh = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -41,6 +41,8 @@
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonDatLai = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(741, 94);
+            this.textBox5.Location = new System.Drawing.Point(845, 97);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(260, 39);
@@ -65,7 +67,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(171, 94);
+            this.textBox4.Location = new System.Drawing.Point(358, 94);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(272, 39);
@@ -74,38 +76,39 @@
             // labelButDanh
             // 
             this.labelButDanh.AutoSize = true;
-            this.labelButDanh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelButDanh.Location = new System.Drawing.Point(617, 97);
+            this.labelButDanh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelButDanh.Location = new System.Drawing.Point(740, 97);
             this.labelButDanh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelButDanh.Name = "labelButDanh";
-            this.labelButDanh.Size = new System.Drawing.Size(120, 32);
+            this.labelButDanh.Size = new System.Drawing.Size(117, 32);
             this.labelButDanh.TabIndex = 70;
             this.labelButDanh.Text = "Bút Danh";
             // 
             // labelTenTG
             // 
             this.labelTenTG.AutoSize = true;
-            this.labelTenTG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTenTG.Location = new System.Drawing.Point(25, 97);
+            this.labelTenTG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTenTG.Location = new System.Drawing.Point(228, 97);
             this.labelTenTG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTenTG.Name = "labelTenTG";
-            this.labelTenTG.Size = new System.Drawing.Size(142, 32);
+            this.labelTenTG.Size = new System.Drawing.Size(137, 32);
             this.labelTenTG.TabIndex = 69;
             this.labelTenTG.Text = "Tên Tác Giả";
             // 
             // labelDSTG
             // 
             this.labelDSTG.AutoSize = true;
-            this.labelDSTG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDSTG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelDSTG.Location = new System.Drawing.Point(16, 280);
             this.labelDSTG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDSTG.Name = "labelDSTG";
-            this.labelDSTG.Size = new System.Drawing.Size(221, 32);
+            this.labelDSTG.Size = new System.Drawing.Size(215, 32);
             this.labelDSTG.TabIndex = 82;
             this.labelDSTG.Text = "Danh Sách Tác Giả";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 335);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -139,7 +142,7 @@
             this.buttonThem.Location = new System.Drawing.Point(129, 185);
             this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(122, 64);
+            this.buttonThem.Size = new System.Drawing.Size(182, 64);
             this.buttonThem.TabIndex = 92;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -155,7 +158,7 @@
             this.buttonXoa.Location = new System.Drawing.Point(603, 185);
             this.buttonXoa.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(105, 64);
+            this.buttonXoa.Size = new System.Drawing.Size(159, 64);
             this.buttonXoa.TabIndex = 91;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,7 +173,7 @@
             this.buttonSua.Location = new System.Drawing.Point(374, 185);
             this.buttonSua.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(99, 64);
+            this.buttonSua.Size = new System.Drawing.Size(166, 64);
             this.buttonSua.TabIndex = 90;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +188,7 @@
             this.buttonDatLai.Location = new System.Drawing.Point(820, 185);
             this.buttonDatLai.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDatLai.Name = "buttonDatLai";
-            this.buttonDatLai.Size = new System.Drawing.Size(133, 64);
+            this.buttonDatLai.Size = new System.Drawing.Size(176, 64);
             this.buttonDatLai.TabIndex = 89;
             this.buttonDatLai.Text = "Đặt Lại";
             this.buttonDatLai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -194,19 +197,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(217, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 32);
+            this.label1.Size = new System.Drawing.Size(114, 32);
             this.label1.TabIndex = 93;
             this.label1.Text = "Tìm kiếm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(16, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 32);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "Id";
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtId.Location = new System.Drawing.Point(45, 94);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(56, 39);
+            this.txtId.TabIndex = 95;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 902);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.buttonXoa);
@@ -244,5 +271,7 @@
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonDatLai;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
