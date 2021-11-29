@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -11,7 +10,5 @@ namespace Service.DTOs
 
         [Required]
         public string ButDanh { get; set; }
-
-        public ICollection<SachTacGiaDTO> SachTacGias { get; set; }
     }
 }

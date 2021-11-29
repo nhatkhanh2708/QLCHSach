@@ -9,5 +9,10 @@ namespace MVP.Views
         {
             InitializeComponent();
         }
+
+        private void UCTheLoai_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
