@@ -29,9 +29,16 @@ namespace MVP.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dtgvTL = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,19 +56,14 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dtgvTL = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +97,71 @@ namespace MVP.Views
             this.panel4.Padding = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.panel4.Size = new System.Drawing.Size(1275, 548);
             this.panel4.TabIndex = 2;
+            // 
+            // dtgvTL
+            // 
+            this.dtgvTL.AllowUserToAddRows = false;
+            this.dtgvTL.AllowUserToDeleteRows = false;
+            this.dtgvTL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvTL.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvTL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dtgvTL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvTL.Location = new System.Drawing.Point(25, 15);
+            this.dtgvTL.Name = "dtgvTL";
+            this.dtgvTL.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTL.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvTL.RowHeadersWidth = 40;
+            this.dtgvTL.RowTemplate.Height = 33;
+            this.dtgvTL.Size = new System.Drawing.Size(1225, 518);
+            this.dtgvTL.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // panel3
             // 
@@ -302,58 +369,6 @@ namespace MVP.Views
             this.lblTitle.Text = "Thể loại";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtgvTL
-            // 
-            this.dtgvTL.AllowUserToAddRows = false;
-            this.dtgvTL.AllowUserToDeleteRows = false;
-            this.dtgvTL.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvTL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dtgvTL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvTL.Location = new System.Drawing.Point(25, 15);
-            this.dtgvTL.Name = "dtgvTL";
-            this.dtgvTL.ReadOnly = true;
-            this.dtgvTL.RowHeadersWidth = 62;
-            this.dtgvTL.RowTemplate.Height = 33;
-            this.dtgvTL.Size = new System.Drawing.Size(1225, 518);
-            this.dtgvTL.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
             // UCTheLoai
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -365,13 +380,13 @@ namespace MVP.Views
             this.panel1.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).EndInit();
             this.ResumeLayout(false);
 
         }
