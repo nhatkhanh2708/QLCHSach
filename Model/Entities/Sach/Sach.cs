@@ -12,9 +12,6 @@ namespace Model.Entities
         public string TenSach { get; set; }
 
         [Required]
-        public string MaSach { get; set; }
-
-        [Required]
         public int NxbId { get; set; }
 
         [DefaultValue(0)]

@@ -676,7 +676,7 @@ namespace MVP.Views
             // lblChucVu
             // 
             this.lblChucVu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblChucVu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblChucVu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblChucVu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblChucVu.Location = new System.Drawing.Point(47, 0);
             this.lblChucVu.Name = "lblChucVu";
@@ -749,7 +749,6 @@ namespace MVP.Views
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.pnlMain.ResumeLayout(false);

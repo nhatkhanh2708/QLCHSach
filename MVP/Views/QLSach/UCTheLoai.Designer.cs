@@ -34,17 +34,17 @@ namespace MVP.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dtgvTL = new System.Windows.Forms.DataGridView();
+            this.dtgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace MVP.Views
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,7 +90,7 @@ namespace MVP.Views
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dtgvTL);
+            this.panel4.Controls.Add(this.dtgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 254);
             this.panel4.Name = "panel4";
@@ -98,12 +98,12 @@ namespace MVP.Views
             this.panel4.Size = new System.Drawing.Size(1275, 548);
             this.panel4.TabIndex = 2;
             // 
-            // dtgvTL
+            // dtgv
             // 
-            this.dtgvTL.AllowUserToAddRows = false;
-            this.dtgvTL.AllowUserToDeleteRows = false;
-            this.dtgvTL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvTL.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgv.AllowUserToAddRows = false;
+            this.dtgv.AllowUserToDeleteRows = false;
+            this.dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -111,17 +111,17 @@ namespace MVP.Views
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvTL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvTL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dtgvTL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvTL.Location = new System.Drawing.Point(25, 15);
-            this.dtgvTL.Name = "dtgvTL";
-            this.dtgvTL.ReadOnly = true;
+            this.dtgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgv.Location = new System.Drawing.Point(25, 15);
+            this.dtgv.Name = "dtgv";
+            this.dtgv.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -129,11 +129,11 @@ namespace MVP.Views
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvTL.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvTL.RowHeadersWidth = 40;
-            this.dtgvTL.RowTemplate.Height = 33;
-            this.dtgvTL.Size = new System.Drawing.Size(1225, 518);
-            this.dtgvTL.TabIndex = 0;
+            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgv.RowHeadersWidth = 40;
+            this.dtgv.RowTemplate.Height = 33;
+            this.dtgv.Size = new System.Drawing.Size(1225, 518);
+            this.dtgv.TabIndex = 0;
             // 
             // Column1
             // 
@@ -178,87 +178,87 @@ namespace MVP.Views
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.btnRefresh);
+            this.panel5.Controls.Add(this.btnDelete);
+            this.panel5.Controls.Add(this.btnEdit);
+            this.panel5.Controls.Add(this.btnAdd);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(925, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(350, 171);
             this.panel5.TabIndex = 4;
             // 
-            // button4
+            // btnRefresh
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::MVP.Properties.Resources.icons8_refresh_32;
-            this.button4.Location = new System.Drawing.Point(218, 110);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 55);
-            this.button4.TabIndex = 7;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnRefresh.FlatAppearance.BorderSize = 2;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefresh.Image = global::MVP.Properties.Resources.icons8_refresh_32;
+            this.btnRefresh.Location = new System.Drawing.Point(218, 110);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(108, 55);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = global::MVP.Properties.Resources.icons8_delete_32;
-            this.button3.Location = new System.Drawing.Point(218, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 55);
-            this.button3.TabIndex = 6;
-            this.button3.Text = " Xóa";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Image = global::MVP.Properties.Resources.icons8_delete_32;
+            this.btnDelete.Location = new System.Drawing.Point(218, 21);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(108, 55);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = " Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::MVP.Properties.Resources.icons8_edit_32;
-            this.button2.Location = new System.Drawing.Point(57, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 55);
-            this.button2.TabIndex = 5;
-            this.button2.Text = " Sửa";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnEdit.FlatAppearance.BorderSize = 2;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEdit.Image = global::MVP.Properties.Resources.icons8_edit_32;
+            this.btnEdit.Location = new System.Drawing.Point(57, 110);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(108, 55);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = " Sửa";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::MVP.Properties.Resources.icons8_add_32;
-            this.button1.Location = new System.Drawing.Point(57, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 55);
-            this.button1.TabIndex = 4;
-            this.button1.Text = " Thêm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnAdd.FlatAppearance.BorderSize = 2;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Image = global::MVP.Properties.Resources.icons8_add_32;
+            this.btnAdd.Location = new System.Drawing.Point(57, 21);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(108, 55);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = " Thêm";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // txtTheLoai
             // 
             this.txtTheLoai.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTheLoai.Location = new System.Drawing.Point(359, 75);
+            this.txtTheLoai.Location = new System.Drawing.Point(359, 72);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.Size = new System.Drawing.Size(559, 37);
             this.txtTheLoai.TabIndex = 3;
@@ -267,7 +267,7 @@ namespace MVP.Views
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(227, 78);
+            this.label4.Location = new System.Drawing.Point(227, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 30);
             this.label4.TabIndex = 2;
@@ -380,7 +380,7 @@ namespace MVP.Views
             this.panel1.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -409,11 +409,11 @@ namespace MVP.Views
         private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dtgvTL;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dtgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

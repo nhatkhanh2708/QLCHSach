@@ -95,7 +95,7 @@ namespace MVP.Views
             btnHoaDon.FlatAppearance.BorderSize = 0;
         }
 
-        private void AddUCMain(UserControl ucMain)
+        private void AddUCMain(Control ucMain)
         {
             bool flag = false;
             foreach(Control ctl in pnlMain.Controls)
@@ -108,9 +108,16 @@ namespace MVP.Views
             }
             if (!flag)
             {
-                pnlMain.Controls.Clear();
                 ucMain.Dock = DockStyle.Fill;
+                ucMain.BringToFront();
                 pnlMain.Controls.Add(ucMain);
+                foreach (Control ctl in pnlMain.Controls)
+                {
+                    if (!ctl.Name.Equals(ucMain.Name))
+                    {
+                        pnlMain.Controls.Remove(ctl);
+                    }
+                }
             }
         }
 
@@ -211,8 +218,7 @@ namespace MVP.Views
         private void pnlImgLogo_Click(object sender, EventArgs e)
         {
             hideBorder();
-            pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(pnlImgHome);
+            AddUCMain(pnlImgHome);
             hideSubMenu();
         }
     }
