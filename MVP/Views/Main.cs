@@ -1,192 +1,219 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
     public partial class Main : Form
     {
-        private Button currentButton;
-        private Form activeForm;
         public Main()
         {
             InitializeComponent();
-            buttonCloseChildForm.Visible = false;
-            this.Text = string.Empty;
-            this.ControlBox = false;
+            hideSubMenu();
+            hideScrollBar();
         }
 
-      //  [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-      //  private extern static void ReleaseCapture();
-
-      //  [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-     //   private extern static void SendMessage(System.IntPtr hWnd,int wMsg,int wParam,int lParam);
-
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void hideSubMenu()
         {
-
+            pnlSubQLSach.Visible = false;
+            pnlSubQLNhap.Visible = false;
+            pnlSubQLXuat.Visible = false;
+            pnlSubQLNS.Visible = false;
+            pnlSubQLTK.Visible = false;
+            pnlSubTK.Visible = false;   
         }
 
-        private void ActivateButton(object btnSender)
+        private void hideScrollBar()
         {
-            if (btnSender != null)
+            pnlFunct.AutoScroll = false;
+            pnlFunct.HorizontalScroll.Maximum = 0;
+            pnlFunct.HorizontalScroll.Visible = false;
+            pnlFunct.VerticalScroll.Maximum = 0;
+            pnlFunct.VerticalScroll.Visible = false;
+            pnlFunct.AutoScroll = true;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
             {
-                if (currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    Color color = Color.FromArgb(12,108,218);
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font= new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                    panelTitle.BackColor = color;
-                    buttonCloseChildForm.Visible = true;
-                    ThemeColor.PrimaryColor = color;
-                    ThemeColor.SencondaryColor = ThemeColor.ChangeColorBrightness(color, 0);
-                }
+                subMenu.Visible = true;
             }
-        }
-        private void DisableButton()
-        {
-            foreach(Control previousBtn in panelMenu.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font= new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-
-                }
-            }
-        }
-        private void openChildForm(Form childForm , object btnSender)
-        {
-            if (activeForm != null)
-            {
-                //activeForm.Close();
-                activeForm.Dispose();
-            }
-            ActivateButton(btnSender);
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.panelDeskTop.Controls.Add(childForm);
-            this.panelDeskTop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        //    labelTitle.Text = childForm.Text;
-
-        }
-        private void buttonBanSach_Click(object sender, EventArgs e)
-        {
-            //ActivateButton(sender);
-            openChildForm(new BanSach(), sender);
-            labelTitle.Text = "Bán sách";
+            else
+                subMenu.Visible = false;
         }
 
-        private void buttonNhapSach_Click(object sender, EventArgs e)
-        {
-            //ActivateButton(sender);
-            openChildForm(new NhapSach(), sender);
-            labelTitle.Text = "Nhập sách";
+        private void btnQLSach_Click(object sender, EventArgs e)
+        {            
+            showSubMenu(pnlSubQLSach);
         }
 
-        private void buttonSach_Click(object sender, EventArgs e)
+        private void btnQLXuat_Click(object sender, EventArgs e)
         {
-            //ActivateButton(sender);
-            openChildForm(new Sach(), sender);
-            labelTitle.Text = "Sách";
+            showSubMenu(pnlSubQLXuat);
+        }
+        
+        private void btnQLNhap_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlSubQLNhap);
         }
 
-        private void buttonTheLoai_Click(object sender, EventArgs e)
+        private void btnQLNS_Click(object sender, EventArgs e)
         {
-            //ActivateButton(sender);
-            openChildForm(new TheLoai(), sender);
-            labelTitle.Text = "Thể loại";
+            showSubMenu(pnlSubQLNS);
         }
 
-        private void buttonTacGia_Click(object sender, EventArgs e)
+        private void btnQLTK_Click(object sender, EventArgs e)
         {
-            //ActivateButton(sender);
-            openChildForm(new TacGia(), sender);
-            labelTitle.Text = "Tác giả";
+            showSubMenu(pnlSubQLTK);
         }
 
-        private void buttonNXB_Click(object sender, EventArgs e)
+        private void btnTK_Click(object sender, EventArgs e)
         {
-            //ActivateButton(sender);
-            openChildForm(new NhaXuatBan(), sender);
-            labelTitle.Text = "Nhà xuất bản";
+            showSubMenu(pnlSubTK);
         }
 
-        private void buttonNCC_Click(object sender, EventArgs e)
-        {
-            //ActivateButton(sender);
-            openChildForm(new NhaCungCap(), sender);
-            labelTitle.Text = "Nhà cung cấp";
-        }
-
-        private void buttonTaiKhoan_Click(object sender, EventArgs e)
-        {
-            //ActivateButton(sender);
-            openChildForm(new TaiKhoan(), sender);
-            labelTitle.Text = "Tài khoản";
-        }
-
-        private void buttonNhanVien_Click(object sender, EventArgs e)
-        {
-            //ActivateButton(sender);
-            openChildForm(new NhanVien(), sender);
-            labelTitle.Text = "Nhân viên";
-        }
-
-        private void buttonDoanhThu_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            labelTitle.Text = "Doanh thu";
-        }
-
-        private void buttonThongKe_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            labelTitle.Text = "Thống kê";
-        }
-        private void buttonQuyen_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            labelTitle.Text = "Quyền";
-        }
-
-        private void buttonCloseChildForm_Click(object sender, EventArgs e)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-
-            }
-            Reset();
-        }
-        private void Reset()
-        {
-            DisableButton();
-            labelTitle.Text = "HOME";
-            panelTitle.BackColor = Color.FromArgb(41, 128, 185);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
-            currentButton = null;
-            buttonCloseChildForm.Visible = false;
-
-        }
-        private void buttonExist_Click(object sender, EventArgs e)
+        private void btnShutdown_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void buttonDoiMatKhau_Click(object sender, EventArgs e)
+        private void hideBorder()
         {
-            DoiMatKhau dmk = new DoiMatKhau();
-            dmk.ShowDialog();
+            btnInfo.FlatAppearance.BorderSize = 0;
+            btnSach.FlatAppearance.BorderSize = 0;
+            btnTG.FlatAppearance.BorderSize = 0;
+            btnTL.FlatAppearance.BorderSize = 0;
+            btnNXB.FlatAppearance.BorderSize = 0;
+            btnBanSach.FlatAppearance.BorderSize = 0;
+            btnNhapSach.FlatAppearance.BorderSize = 0;
+            btnNCC.FlatAppearance.BorderSize = 0;
+            btnNV.FlatAppearance.BorderSize = 0;
+            btnChucVu.FlatAppearance.BorderSize = 0;
+            btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            btnQuyen.FlatAppearance.BorderSize = 0;
+            btnDoanhThu.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+        }
+
+        private void AddUCMain(UserControl ucMain)
+        {
+            bool flag = false;
+            foreach(Control ctl in pnlMain.Controls)
+            {
+                if (ctl.Name.Equals(ucMain.Name))
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag)
+            {
+                pnlMain.Controls.Clear();
+                ucMain.Dock = DockStyle.Fill;
+                pnlMain.Controls.Add(ucMain);
+            }
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnInfo.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnSach_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            AddUCMain(new UCSach());
+            btnSach.FlatAppearance.BorderSize = 1;
+
+        }
+
+        private void btnTG_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            AddUCMain(new UCTacGia());
+            btnTG.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnTL_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            AddUCMain(new UCTheLoai());
+            btnTL.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnNXB_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            AddUCMain(new UCNhaXuatBan());
+            btnNXB.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnBanSach_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnBanSach.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnNhapSach_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnNhapSach.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnNCC_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnNCC.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnNV.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnChucVu_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnChucVu.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnTaiKhoan.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnQuyen_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnQuyen.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnDoanhThu.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            btnHoaDon.FlatAppearance.BorderSize = 1;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pnlImgLogo_Click(object sender, EventArgs e)
+        {
+            hideBorder();
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(pnlImgHome);
+            hideSubMenu();
         }
     }
 }
