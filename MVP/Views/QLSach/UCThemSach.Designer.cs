@@ -33,23 +33,22 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnMoreNXB = new System.Windows.Forms.Button();
-            this.btnMoreTL = new System.Windows.Forms.Button();
-            this.btnMoreTG = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnChonAnh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,23 +99,22 @@ namespace MVP.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.btnMoreNXB);
-            this.panel1.Controls.Add(this.btnMoreTL);
-            this.panel1.Controls.Add(this.btnMoreTG);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnChonAnh);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
@@ -125,6 +123,50 @@ namespace MVP.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1275, 719);
             this.panel1.TabIndex = 2;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(674, 263);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(488, 35);
+            this.flowLayoutPanel2.TabIndex = 24;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(674, 304);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(449, 36);
+            this.comboBox3.TabIndex = 23;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(674, 221);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(449, 36);
+            this.comboBox2.TabIndex = 22;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(674, 179);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(488, 35);
+            this.flowLayoutPanel1.TabIndex = 21;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(674, 137);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(449, 36);
+            this.comboBox1.TabIndex = 20;
             // 
             // btnThem
             // 
@@ -147,10 +189,9 @@ namespace MVP.Views
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(674, 467);
+            this.textBox7.Location = new System.Drawing.Point(674, 521);
             this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(488, 37);
+            this.textBox7.Size = new System.Drawing.Size(251, 37);
             this.textBox7.TabIndex = 18;
             this.textBox7.Text = "0";
             // 
@@ -158,76 +199,25 @@ namespace MVP.Views
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(555, 470);
+            this.label8.Location = new System.Drawing.Point(555, 524);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 30);
             this.label8.TabIndex = 17;
             this.label8.Text = "Số lượng";
             // 
-            // btnMoreNXB
-            // 
-            this.btnMoreNXB.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnMoreNXB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMoreNXB.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnMoreNXB.FlatAppearance.BorderSize = 2;
-            this.btnMoreNXB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoreNXB.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMoreNXB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMoreNXB.Image = global::MVP.Properties.Resources.icons8_more_32;
-            this.btnMoreNXB.Location = new System.Drawing.Point(1177, 273);
-            this.btnMoreNXB.Name = "btnMoreNXB";
-            this.btnMoreNXB.Size = new System.Drawing.Size(40, 40);
-            this.btnMoreNXB.TabIndex = 16;
-            this.btnMoreNXB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMoreNXB.UseVisualStyleBackColor = false;
-            // 
-            // btnMoreTL
-            // 
-            this.btnMoreTL.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnMoreTL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMoreTL.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnMoreTL.FlatAppearance.BorderSize = 2;
-            this.btnMoreTL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoreTL.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMoreTL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMoreTL.Image = global::MVP.Properties.Resources.icons8_more_32;
-            this.btnMoreTL.Location = new System.Drawing.Point(1177, 204);
-            this.btnMoreTL.Name = "btnMoreTL";
-            this.btnMoreTL.Size = new System.Drawing.Size(40, 40);
-            this.btnMoreTL.TabIndex = 15;
-            this.btnMoreTL.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMoreTL.UseVisualStyleBackColor = false;
-            // 
-            // btnMoreTG
-            // 
-            this.btnMoreTG.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnMoreTG.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMoreTG.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnMoreTG.FlatAppearance.BorderSize = 2;
-            this.btnMoreTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoreTG.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMoreTG.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMoreTG.Image = global::MVP.Properties.Resources.icons8_more_32;
-            this.btnMoreTG.Location = new System.Drawing.Point(1177, 133);
-            this.btnMoreTG.Name = "btnMoreTG";
-            this.btnMoreTG.Size = new System.Drawing.Size(40, 40);
-            this.btnMoreTG.TabIndex = 14;
-            this.btnMoreTG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMoreTG.UseVisualStyleBackColor = false;
-            // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(674, 407);
+            this.textBox6.Location = new System.Drawing.Point(674, 450);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(488, 37);
+            this.textBox6.Size = new System.Drawing.Size(251, 37);
             this.textBox6.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(557, 410);
+            this.label7.Location = new System.Drawing.Point(557, 453);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 30);
             this.label7.TabIndex = 12;
@@ -236,35 +226,26 @@ namespace MVP.Views
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(674, 343);
+            this.textBox5.Location = new System.Drawing.Point(674, 377);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(488, 37);
+            this.textBox5.Size = new System.Drawing.Size(251, 37);
             this.textBox5.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(570, 346);
+            this.label6.Location = new System.Drawing.Point(570, 380);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 30);
             this.label6.TabIndex = 10;
             this.label6.Text = "Giá bán";
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(674, 276);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(488, 37);
-            this.textBox4.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(512, 279);
+            this.label5.Location = new System.Drawing.Point(512, 306);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 30);
             this.label5.TabIndex = 8;
@@ -296,33 +277,15 @@ namespace MVP.Views
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(674, 207);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(488, 37);
-            this.textBox3.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(566, 210);
+            this.label4.Location = new System.Drawing.Point(566, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 30);
             this.label4.TabIndex = 4;
             this.label4.Text = "Thể loại";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(674, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(488, 37);
-            this.textBox2.TabIndex = 3;
             // 
             // label3
             // 
@@ -339,7 +302,7 @@ namespace MVP.Views
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(674, 64);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 37);
+            this.textBox1.Size = new System.Drawing.Size(449, 37);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -375,24 +338,23 @@ namespace MVP.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnChonAnh;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnMoreNXB;
-        private System.Windows.Forms.Button btnMoreTL;
-        private System.Windows.Forms.Button btnMoreTG;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

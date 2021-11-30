@@ -7,12 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="IViews\**" />
-    <Compile Remove="Presenters\**" />
-    <EmbeddedResource Remove="IViews\**" />
-    <EmbeddedResource Remove="Presenters\**" />
-    <None Remove="IViews\**" />
-    <None Remove="Presenters\**" />
+    <Compile Remove="Views\QLNV\**" />
+    <EmbeddedResource Remove="Views\QLNV\**" />
+    <None Remove="Views\QLNV\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,10 +64,6 @@
     <EmbeddedResource Update="Views\QLSach\UCTacGia - Copy.resx">
       <DependentUpon>UCTacGia.resx</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\QLNV\" />
   </ItemGroup>
 
 </Project>

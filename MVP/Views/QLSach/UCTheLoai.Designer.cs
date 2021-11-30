@@ -29,10 +29,11 @@ namespace MVP.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,7 @@ namespace MVP.Views
             this.label4 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,11 +59,12 @@ namespace MVP.Views
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,13 +82,22 @@ namespace MVP.Views
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlBody.Controls.Add(this.panel4);
-            this.pnlBody.Controls.Add(this.panel3);
             this.pnlBody.Controls.Add(this.panel2);
             this.pnlBody.Location = new System.Drawing.Point(0, 73);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1275, 802);
             this.pnlBody.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1275, 802);
+            this.panel2.TabIndex = 0;
             // 
             // panel4
             // 
@@ -96,7 +107,7 @@ namespace MVP.Views
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(25, 15, 25, 15);
             this.panel4.Size = new System.Drawing.Size(1275, 548);
-            this.panel4.TabIndex = 2;
+            this.panel4.TabIndex = 5;
             // 
             // dtgv
             // 
@@ -104,14 +115,14 @@ namespace MVP.Views
             this.dtgv.AllowUserToDeleteRows = false;
             this.dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -122,14 +133,14 @@ namespace MVP.Views
             this.dtgv.Location = new System.Drawing.Point(25, 15);
             this.dtgv.Name = "dtgv";
             this.dtgv.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgv.RowHeadersWidth = 40;
             this.dtgv.RowTemplate.Height = 33;
             this.dtgv.Size = new System.Drawing.Size(1225, 518);
@@ -174,7 +185,7 @@ namespace MVP.Views
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1275, 171);
-            this.panel3.TabIndex = 1;
+            this.panel3.TabIndex = 4;
             // 
             // panel5
             // 
@@ -203,6 +214,7 @@ namespace MVP.Views
             this.btnRefresh.TabIndex = 7;
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDelete
             // 
@@ -220,6 +232,7 @@ namespace MVP.Views
             this.btnDelete.Text = " Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -237,6 +250,7 @@ namespace MVP.Views
             this.btnEdit.Text = " Sửa";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -254,6 +268,7 @@ namespace MVP.Views
             this.btnAdd.Text = " Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtTheLoai
             // 
@@ -295,16 +310,16 @@ namespace MVP.Views
             this.label5.Text = "Id";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // panel6
             // 
-            this.panel2.Controls.Add(this.btnTimKiem);
-            this.panel2.Controls.Add(this.txtTimKiem);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1275, 83);
-            this.panel2.TabIndex = 0;
+            this.panel6.Controls.Add(this.btnTimKiem);
+            this.panel6.Controls.Add(this.txtTimKiem);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1275, 83);
+            this.panel6.TabIndex = 3;
             // 
             // btnTimKiem
             // 
@@ -331,6 +346,7 @@ namespace MVP.Views
             this.txtTimKiem.PlaceholderText = "Tìm kiếm";
             this.txtTimKiem.Size = new System.Drawing.Size(554, 30);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TabStop = false;
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -379,13 +395,14 @@ namespace MVP.Views
             this.Load += new System.EventHandler(this.UCTheLoai_Load);
             this.panel1.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -398,25 +415,26 @@ namespace MVP.Views
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTheLoai;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dtgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label3;
     }
 }
