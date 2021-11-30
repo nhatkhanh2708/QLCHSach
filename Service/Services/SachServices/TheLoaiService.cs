@@ -4,6 +4,7 @@ using Model.IRepositories;
 using Service.DTOs;
 using Service.IServices;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Service.Services
 {
@@ -52,6 +53,11 @@ namespace Service.Services
         public bool isExistById(int id)
         {
             return _theLoaiRepository.GetById(id) != null;
+        }
+
+        public bool isExistByTenTheLoai(string tenTheLoai)
+        {
+            return _theLoaiRepository.GetByTenTheLoai(tenTheLoai).LongCount() != 0;
         }
     }
 }
