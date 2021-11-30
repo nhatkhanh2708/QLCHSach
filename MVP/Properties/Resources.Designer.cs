@@ -93,6 +93,16 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_arrow_34 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_back_arrow_34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8_bill_40", resourceCulture);
@@ -153,9 +163,49 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_info_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_low_price_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_low_price_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_magnifying_glass_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_magnifying_glass_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_more_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_more_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_price_tag_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_price_tag_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +226,16 @@ namespace MVP.Properties {
         internal static System.Drawing.Bitmap icons8_statistics_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8_statistics_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sum_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_sum_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
