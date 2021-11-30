@@ -123,6 +123,7 @@ namespace MVP.Views
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,6 +137,7 @@ namespace MVP.Views
             // btnRefesh
             // 
             this.btnRefesh.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefesh.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.btnRefesh.FlatAppearance.BorderSize = 2;
             this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -152,6 +154,7 @@ namespace MVP.Views
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimKiem.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.btnTimKiem.FlatAppearance.BorderSize = 2;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -165,6 +168,7 @@ namespace MVP.Views
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.btnAdd.FlatAppearance.BorderSize = 2;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -173,7 +177,7 @@ namespace MVP.Views
             this.btnAdd.Image = global::MVP.Properties.Resources.icons8_add_32;
             this.btnAdd.Location = new System.Drawing.Point(27, 16);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(108, 55);
+            this.btnAdd.Size = new System.Drawing.Size(125, 55);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = " Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -192,6 +196,7 @@ namespace MVP.Views
             this.txtTimKiem.PlaceholderText = "Tìm kiếm";
             this.txtTimKiem.Size = new System.Drawing.Size(554, 30);
             this.txtTimKiem.TabIndex = 10;
+            this.txtTimKiem.TabStop = false;
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3

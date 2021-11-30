@@ -26,6 +26,8 @@ namespace Model.Entities
         [DefaultValue(0)]
         public int SoLuong { get; set; }
 
+        public byte[] Img { get; set; }
+
         [Required]
         public bool Status { get; set; }
 

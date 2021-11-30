@@ -48,6 +48,9 @@
     <Compile Update="Views\QLSach\UCTheLoai.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\QLSach\UCThongTinSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

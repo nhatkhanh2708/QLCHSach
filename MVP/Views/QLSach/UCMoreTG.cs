@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MVP.Views
+namespace MVP.Views.QLSach
 {
-    public partial class UCItemBook : UserControl
+    public partial class UCMoreTG : UserControl
     {
-        public UCItemBook(int i)
+        public UCMoreTG()
         {
             InitializeComponent();
-        }
-
-        private void UCItemBook_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

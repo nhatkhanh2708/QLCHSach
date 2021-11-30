@@ -16,6 +16,12 @@ namespace MVP.Views
             hideScrollBar();
         }
 
+        public Panel getPanelMain
+        {
+            get { return pnlMain; }
+            set { pnlMain = value; }
+        }
+
         private void hideScrollBar()
         {
             flp.AutoScroll = false;
@@ -30,7 +36,7 @@ namespace MVP.Views
         {
             for (int i = 0; i < 20; i++)
             {
-                flp.Controls.Add(new UCItemBook(i));
+                flp.Controls.Add(new UCItemSach(getPanelMain));
             }
         }
 
@@ -38,7 +44,6 @@ namespace MVP.Views
         {
             UCThemSach ucThemSach = new UCThemSach();
             ucThemSach.Dock = DockStyle.Fill;
-            ucThemSach.BringToFront();
             pnlMain.Controls.Add(ucThemSach);
             pnlMain.Controls.SetChildIndex(ucThemSach, 0);
         }

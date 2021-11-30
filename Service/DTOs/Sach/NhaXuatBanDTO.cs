@@ -14,7 +14,6 @@ namespace Service.DTOs
         [DisplayName("Viết tắt")]
         public string VietTat { get; set; }
 
-        //Không hiện field này, set browsable = false
         [Browsable(false)]
         public ICollection<SachDTO> Sachs { get; set; }
     }

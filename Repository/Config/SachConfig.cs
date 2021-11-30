@@ -8,7 +8,7 @@ namespace Repository.Config
     {
         public void Configure(EntityTypeBuilder<Sach> builder)
         {
-            
+            builder.Property(m => m.Img).HasColumnType("image");
         }
     }
 }
