@@ -76,17 +76,17 @@ namespace MVP.Presenters
                     tg.Id = int.Parse(id);
                     tg.HoTen = tentg.Trim();
                     tg.ButDanh = butdanh.Trim();
-                    _tacGiaService.Add(tg);
-                    _tacGiaView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);                    
+                    _tacGiaService.Update(tg);
+                    _tacGiaView.Notification(Notification.EDIT_SUCCESSED, null, Resources.success, true);                    
                 }
                 else
                 {
-                    _tacGiaView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.success, false);
+                    _tacGiaView.Notification(Notification.EDIT_FAILED, Notification.EXIST_NAME, Resources.success, false);
                 }
             }
             else
             {
-                _tacGiaView.Notification(Notification.ADD_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, false);
+                _tacGiaView.Notification(Notification.EDIT_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, false);
             }
         }
     }

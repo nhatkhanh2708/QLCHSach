@@ -14,6 +14,7 @@ namespace MVP.Views
         private IEnumerable<TheLoaiDTO> _listTheLoai;
         private TheLoaiPresenter _theLoaiPresenter;
         private BindingSource _tblTheLoais = new BindingSource();
+        
         public UCTheLoai()
         {
             InitializeComponent();
@@ -62,10 +63,10 @@ namespace MVP.Views
 
         private void refresh()
         {
+            loadData();
             txtTimKiem.Text = "";
             lblId.Text = "";
             txtTheLoai.Text = "";
-            loadData();
         }
 
         public void Notification(string title, string description, Image img, bool flag)

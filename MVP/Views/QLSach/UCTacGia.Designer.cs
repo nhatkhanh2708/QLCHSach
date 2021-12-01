@@ -332,6 +332,7 @@ namespace MVP.Views
             this.txtTimKiem.PlaceholderText = "Tìm kiếm";
             this.txtTimKiem.Size = new System.Drawing.Size(554, 30);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TabStop = false;
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3

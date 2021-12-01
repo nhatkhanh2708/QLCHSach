@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -6,9 +7,11 @@ namespace Service.DTOs
     {
         [StringLength(60)]
         [Required]
+        [DisplayName("Tên tác giả")]
         public string HoTen { get; set; }
 
         [Required]
+        [DisplayName("Bút danh")]
         public string ButDanh { get; set; }
     }
 }
