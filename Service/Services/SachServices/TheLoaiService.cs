@@ -57,7 +57,7 @@ namespace Service.Services
 
         public bool isExistByTenTheLoai(string tenTheLoai)
         {
-            return _theLoaiRepository.GetByTenTheLoai(tenTheLoai).LongCount() != 0;
+            return _theLoaiRepository.GetByTenTheLoai(tenTheLoai).LongCount() > 0;
         }
     }
 }

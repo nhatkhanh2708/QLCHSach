@@ -5,11 +5,6 @@ using MVP.Utils;
 using Service.DTOs;
 using Service.IServices;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVP.Presenters
 {
@@ -23,36 +18,39 @@ namespace MVP.Presenters
             _theLoaiService = (ITheLoaiService)Startup.ServiceProvider.GetService(typeof(ITheLoaiService));
         }
 
-        public void AddCategory(string tenTheLoai)
+        public void Add(string tenTheLoai)
         {
             if (!String.IsNullOrEmpty(tenTheLoai))
             {
+                tenTheLoai = tenTheLoai.Trim();
                 if (!_theLoaiService.isExistByTenTheLoai(tenTheLoai))
                 {
                     var theLoai = new TheLoaiDTO();
-                    theLoai.TenTheLoai = tenTheLoai.Trim();
+                    theLoai.TenTheLoai = tenTheLoai;
                     _theLoaiService.Add(theLoai);
-                    _theLoaiView.Notification(Notification.ADD_SUCCESSED, null, Resources.success);
+                    _theLoaiView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);
                 }
                 else
-                    _theLoaiView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.success);
+                {
+                    _theLoaiView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.success, false);
+                }
             }
             else
             {
-                _theLoaiView.Notification(Notification.ADD_FAILED, "Chưa nhập nội dung", Resources.fail);
+                _theLoaiView.Notification(Notification.ADD_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, false);
             }
         }
 
-        public void DeleteCategory(string id)
+        public void Delete(string id)
         {
             if(!String.IsNullOrEmpty(id))
             {
                 _theLoaiService.Delete(int.Parse(id));
-                _theLoaiView.Notification(Notification.DELETE_SUCCESSED, null, Resources.success);
+                _theLoaiView.Notification(Notification.DELETE_SUCCESSED, null, Resources.success, true);
             }
             else
             {
-                _theLoaiView.Notification(Notification.DELETE_FAILED, "Chưa chọn item", Resources.fail);
+                _theLoaiView.Notification(Notification.DELETE_FAILED, Notification.NOT_SELECTED_ITEM, Resources.fail, false);
             }
         }
 
@@ -61,19 +59,27 @@ namespace MVP.Presenters
             _theLoaiView.GetsAll(_theLoaiService.GetsAll());
         }
 
-        public void UpdateCategory(string id, string tenTheLoai)
+        public void Update(string id, string tenTheLoai)
         {
             if (!String.IsNullOrEmpty(id))
             {
-                var theLoai = new TheLoaiDTO();
-                theLoai.Id = int.Parse(id);
-                theLoai.TenTheLoai = tenTheLoai.Trim();
-                _theLoaiService.Update(theLoai);
-                _theLoaiView.Notification(Notification.EDIT_SUCCESSED, null, Resources.success);
-            }
+                tenTheLoai = tenTheLoai.Trim();
+                if (!_theLoaiService.isExistByTenTheLoai(tenTheLoai))
+                {
+                    var theLoai = new TheLoaiDTO();
+                    theLoai.Id = int.Parse(id);
+                    theLoai.TenTheLoai = tenTheLoai;
+                    _theLoaiService.Update(theLoai);
+                    _theLoaiView.Notification(Notification.EDIT_SUCCESSED, null, Resources.success, true);
+                }
+                else
+                {
+                    _theLoaiView.Notification(Notification.EDIT_FAILED, Notification.EXIST_NAME, Resources.fail, false);
+                }
+            }                
             else
             {
-                _theLoaiView.Notification(Notification.EDIT_FAILED, "Chưa chọn item", Resources.fail);
+                _theLoaiView.Notification(Notification.EDIT_FAILED, Notification.NOT_SELECTED_ITEM, Resources.fail, false);
             }
         }
     }

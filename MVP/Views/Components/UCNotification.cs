@@ -9,9 +9,9 @@ namespace MVP.Views
         public UCNotification(string title, string descript, Image img)
         {
             InitializeComponent();
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            BackColor = Color.Transparent;            
-            panel1.BackColor = Color.FromArgb(2, 0, 0, 0);
+            BackColor = Color.FromArgb(1, Color.Transparent);
+            panel3.Location = new Point((Width - panel3.Width) / 2,
+                (Height - panel3.Height) / 2);
             lblTitle.Text = title;
             if(descript != null)
                 lblDescript.Text = descript;

@@ -2,9 +2,9 @@
 {
     public interface ITheLoaiPresenter
     {
-        public void AddCategory(string tenTheLoai);
-        public void UpdateCategory(string id, string tenTheLoai);
-        public void DeleteCategory(string id);        
+        public void Add(string tenTheLoai);
+        public void Update(string id, string tenTheLoai);
+        public void Delete(string id);        
         public void GetsAll();
     }
 }

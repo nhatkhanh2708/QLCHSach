@@ -10,5 +10,7 @@
         public static readonly string DELETE_FAILED = "Xóa không thành công !";
 
         public static readonly string EXIST_NAME = "Tên này đã tồn tại !";
+        public static readonly string NOT_SELECTED_ITEM = "Chưa chọn item";
+        public static readonly string NOT_FILL_CONTENT = "Chưa nhập nội dung";
     }
 }
