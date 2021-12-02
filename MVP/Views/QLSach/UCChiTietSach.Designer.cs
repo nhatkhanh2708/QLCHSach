@@ -1,7 +1,7 @@
 ﻿
 namespace MVP.Views
 {
-    partial class UCThemSach
+    partial class UCChiTietSach
     {
         /// <summary> 
         /// Required designer variable.
@@ -56,9 +56,11 @@ namespace MVP.Views
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,6 +81,7 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
@@ -187,7 +190,6 @@ namespace MVP.Views
             this.cbxTheLoai.Name = "cbxTheLoai";
             this.cbxTheLoai.Size = new System.Drawing.Size(449, 36);
             this.cbxTheLoai.TabIndex = 22;
-            this.cbxTheLoai.SelectedIndexChanged += new System.EventHandler(this.cbxTheLoai_SelectedIndexChanged);
             // 
             // flpTacGia
             // 
@@ -215,15 +217,13 @@ namespace MVP.Views
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThem.Image = global::MVP.Properties.Resources.icons8_add_32;
             this.btnThem.Location = new System.Drawing.Point(805, 615);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(186, 55);
             this.btnThem.TabIndex = 19;
-            this.btnThem.Text = " Thêm";
+            this.btnThem.Text = "Xác nhận";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSoLuong
             // 
@@ -309,7 +309,6 @@ namespace MVP.Views
             this.btnChonAnh.Text = "Chọn ảnh";
             this.btnChonAnh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChonAnh.UseVisualStyleBackColor = false;
-            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
             // label4
             // 
@@ -352,6 +351,7 @@ namespace MVP.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnRefresh);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnBack);
@@ -361,23 +361,39 @@ namespace MVP.Views
             this.panel3.Size = new System.Drawing.Size(1275, 83);
             this.panel3.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::MVP.Properties.Resources.icons8_edit_32;
+            this.button1.Location = new System.Drawing.Point(951, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 55);
+            this.button1.TabIndex = 20;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRefresh.BackColor = System.Drawing.Color.OrangeRed;
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.btnRefresh.FlatAppearance.BorderSize = 2;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.Image = global::MVP.Properties.Resources.icons8_refresh_32;
-            this.btnRefresh.Location = new System.Drawing.Point(1163, 16);
+            this.btnRefresh.Image = global::MVP.Properties.Resources.icons8_delete_32;
+            this.btnRefresh.Location = new System.Drawing.Point(1146, 16);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(88, 55);
+            this.btnRefresh.Size = new System.Drawing.Size(105, 55);
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label1
             // 
@@ -385,9 +401,9 @@ namespace MVP.Views
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label1.Location = new System.Drawing.Point(173, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 55);
+            this.label1.Size = new System.Drawing.Size(234, 55);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Thêm sách";
+            this.label1.Text = "Thông tin sách";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBack
@@ -408,14 +424,30 @@ namespace MVP.Views
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // UCThemSach
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.OrangeRed;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(1146, 615);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 55);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Hủy";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // UCChiTietSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel1);
-            this.Name = "UCThemSach";
+            this.Name = "UCChiTietSach";
             this.Size = new System.Drawing.Size(1275, 802);
-            this.Load += new System.EventHandler(this.UCThemSach_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -458,5 +490,7 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -2,11 +2,19 @@
 
 namespace MVP.Views
 {
-    public partial class UCitemcbx : UserControl
+    public partial class UCItemCbx : UserControl
     {
-        public UCitemcbx()
+        private FlowLayoutPanel _flp;
+        public UCItemCbx(FlowLayoutPanel flowLayoutPanel, string title)
         {
             InitializeComponent();
+            _flp = flowLayoutPanel;
+            lblitem.Text = title;
+        }
+
+        private void btnRemove_Click(object sender, System.EventArgs e)
+        {
+            _flp.Controls.Remove(this);
         }
     }
 }

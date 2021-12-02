@@ -1,7 +1,7 @@
 ﻿
 namespace MVP.Views
 {
-    partial class UCitemcbx
+    partial class UCItemCbx
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,38 +30,41 @@ namespace MVP.Views
         private void InitializeComponent()
         {
             this.lblitem = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblitem
             // 
-            this.lblitem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblitem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblitem.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblitem.Location = new System.Drawing.Point(0, 0);
             this.lblitem.Name = "lblitem";
-            this.lblitem.Size = new System.Drawing.Size(220, 32);
+            this.lblitem.Size = new System.Drawing.Size(149, 30);
             this.lblitem.TabIndex = 0;
             this.lblitem.Text = "Nguyen Nhat Anh";
-            this.lblitem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblitem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDelete
+            // btnRemove
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.Image = global::MVP.Properties.Resources.icons8_close_22;
-            this.btnDelete.Location = new System.Drawing.Point(180, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 32);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Image = global::MVP.Properties.Resources.icons8_close_22;
+            this.btnRemove.Location = new System.Drawing.Point(155, 0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(25, 30);
+            this.btnRemove.TabIndex = 1;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // UCitemcbx
+            // UCItemCbx
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblitem);
-            this.Name = "UCitemcbx";
-            this.Size = new System.Drawing.Size(220, 32);
+            this.Name = "UCItemCbx";
+            this.Size = new System.Drawing.Size(180, 30);
             this.ResumeLayout(false);
 
         }
@@ -69,6 +72,6 @@ namespace MVP.Views
         #endregion
 
         private System.Windows.Forms.Label lblitem;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

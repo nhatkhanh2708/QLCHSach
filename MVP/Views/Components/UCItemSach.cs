@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace MVP.Views
@@ -14,10 +13,10 @@ namespace MVP.Views
         }
         private void pic_Click(object sender, EventArgs e)
         {
-            UCThongTinSach ucThongTinSach = new UCThongTinSach();
-            ucThongTinSach.Dock = DockStyle.Fill;
-            pnlMain.Controls.Add(ucThongTinSach);
-            pnlMain.Controls.SetChildIndex(ucThongTinSach, 0);
+            UCChiTietSach ucChiTietSach = new UCChiTietSach();
+            ucChiTietSach.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(ucChiTietSach);
+            pnlMain.Controls.SetChildIndex(ucChiTietSach, 0);
         }
     }
 }
