@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -8,8 +7,6 @@ namespace Service.DTOs
         [StringLength(60)]
         [Required]
         public string TenNCC { get; set; }
-
-        public string VietTat { get; set; }
 
         [Required]
         public string DiaChi { get; set; }
@@ -22,11 +19,10 @@ namespace Service.DTOs
 
         [Required]
         [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public string NgayHopTac { get; set; }
 
         [Required]
         public bool Status { get; set; }
-
-        public ICollection<HdNhapDTO> HoaDonNhaps { get; set; }
     }
 }

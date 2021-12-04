@@ -11,8 +11,6 @@ namespace Model.Entities
         [Required]
         public string TenNCC { get; set; }
 
-        public string VietTat { get; set; }
-
         [Required]
         public string DiaChi { get; set; }
 
@@ -24,6 +22,7 @@ namespace Model.Entities
 
         [Required]
         [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public string NgayHopTac { get; set; }
 
         [Required]

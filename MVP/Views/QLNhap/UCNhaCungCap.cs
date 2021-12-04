@@ -3,17 +3,25 @@ using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCSach : UserControl
+    public partial class UCNhaCungCap : UserControl
     {
-        public UCSach()
+        public UCNhaCungCap()
         {
             InitializeComponent();
         }
 
-        private void UCSach_Load(object sender, EventArgs e)
+        private void UCNhaCungCap_Load(object sender, EventArgs e)
         {
             loadflp();
             hideScrollBar();
+        }
+
+        private void loadflp()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                flp.Controls.Add(new UCItemNcc(true));
+            }
         }
 
         public Panel getPanelContainer
@@ -30,22 +38,6 @@ namespace MVP.Views
             flp.VerticalScroll.Maximum = 0;
             flp.VerticalScroll.Visible = false;
             flp.AutoScroll = true;
-        }
-
-        private void loadflp()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                flp.Controls.Add(new UCItemSach(getPanelContainer));
-            }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            UCThemSach ucThemSach = new UCThemSach();
-            ucThemSach.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(ucThemSach);
-            pnlContainer.Controls.SetChildIndex(ucThemSach, 0);
         }
     }
 }

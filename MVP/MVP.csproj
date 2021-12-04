@@ -33,6 +33,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\Components\UCItemNhap - Copy.Designer.cs">
+      <DependentUpon>UCItem.Designer.cs</DependentUpon>
+    </Compile>
     <Compile Update="Views\QLSach\UCNhaXuatBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -54,6 +57,9 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Components\UCItemNhap - Copy.resx">
+      <DependentUpon>UCItem.resx</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\QLSach\UCTacGia - Copy %282%29.resx">
       <DependentUpon>UCTacGia.resx</DependentUpon>

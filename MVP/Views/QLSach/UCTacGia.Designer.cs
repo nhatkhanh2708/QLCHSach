@@ -138,6 +138,7 @@ namespace MVP.Views
             this.dtgv.RowTemplate.Height = 33;
             this.dtgv.Size = new System.Drawing.Size(1225, 518);
             this.dtgv.TabIndex = 0;
+            this.dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellClick);
             // 
             // panel3
             // 
@@ -282,7 +283,6 @@ namespace MVP.Views
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(71, 38);
             this.lblId.TabIndex = 1;
-            this.lblId.Text = "1";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5

@@ -13,8 +13,7 @@ namespace MVP.Views
     {
         private IEnumerable<TacGiaDTO> _listTG;
         private TacGiaPresenter _TGPresenter;
-        private BindingSource _tblTGs = new BindingSource();
-
+        
         public UCTacGia()
         {
             InitializeComponent();
@@ -24,22 +23,13 @@ namespace MVP.Views
         private void UCTacGia_Load(object sender, EventArgs e)
         {
             loadData();
-            dtgv.DataSource = _tblTGs;
             dtgv.Columns["Id"].DisplayIndex = 0;
-            AddBinding();
-        }
-
-        private void AddBinding()
-        {
-            lblId.DataBindings.Add(new Binding("Text", _tblTGs.DataSource, "Id", true, DataSourceUpdateMode.Never));
-            txtTG.DataBindings.Add(new Binding("Text", _tblTGs.DataSource, "HoTen", true, DataSourceUpdateMode.Never));
-            txtButDanh.DataBindings.Add(new Binding("Text", _tblTGs.DataSource, "ButDanh", true, DataSourceUpdateMode.Never));
         }
 
         private void loadData()
         {
             _TGPresenter.GetsAll();
-            _tblTGs.DataSource = _listTG.ToList();
+            dtgv.DataSource = _listTG.ToList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -88,5 +78,15 @@ namespace MVP.Views
             _listTG = listTG;
         }
 
+        private void dtgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgv.Rows[e.RowIndex];
+                lblId.Text = row.Cells["Id"].Value.ToString();
+                txtTG.Text = row.Cells["HoTen"].Value.ToString();
+                txtButDanh.Text = row.Cells["ButDanh"].Value.ToString();
+            }
+        }
     }
 }

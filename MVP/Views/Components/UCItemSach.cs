@@ -5,18 +5,18 @@ namespace MVP.Views
 {
     public partial class UCItemSach : UserControl
     {
-        private Panel pnlMain;
-        public UCItemSach(Panel pnlMain)
+        private Panel _pnlCont;
+        public UCItemSach(Panel pnlCont)
         {
             InitializeComponent();
-            this.pnlMain = pnlMain;
+            _pnlCont = pnlCont;
         }
         private void pic_Click(object sender, EventArgs e)
         {
             UCChiTietSach ucChiTietSach = new UCChiTietSach();
             ucChiTietSach.Dock = DockStyle.Fill;
-            pnlMain.Controls.Add(ucChiTietSach);
-            pnlMain.Controls.SetChildIndex(ucChiTietSach, 0);
+            _pnlCont.Controls.Add(ucChiTietSach);
+            _pnlCont.Controls.SetChildIndex(ucChiTietSach, 0);
         }
     }
 }

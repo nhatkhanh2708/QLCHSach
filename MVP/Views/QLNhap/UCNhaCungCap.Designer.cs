@@ -1,7 +1,7 @@
 ﻿
 namespace MVP.Views
 {
-    partial class UCSach
+    partial class UCNhaCungCap
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,50 +29,19 @@ namespace MVP.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.flp = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMore = new System.Windows.Forms.Button();
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.pnlTitle.SuspendLayout();
             this.pnlContainer.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pnlTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1275, 75);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1275, 3);
-            this.label1.TabIndex = 1;
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1275, 70);
-            this.pnlTitle.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -83,33 +52,33 @@ namespace MVP.Views
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1275, 70);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Sách";
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Nhà cung cấp";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlContainer
             // 
             this.pnlContainer.Controls.Add(this.pnlBody);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 75);
+            this.pnlContainer.Location = new System.Drawing.Point(0, 70);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1275, 800);
-            this.pnlContainer.TabIndex = 1;
+            this.pnlContainer.Size = new System.Drawing.Size(1275, 805);
+            this.pnlContainer.TabIndex = 2;
             // 
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlBody.Controls.Add(this.flp);
-            this.pnlBody.Controls.Add(this.button1);
+            this.pnlBody.Controls.Add(this.btnMore);
             this.pnlBody.Controls.Add(this.btnRefesh);
             this.pnlBody.Controls.Add(this.btnTimKiem);
             this.pnlBody.Controls.Add(this.btnAdd);
             this.pnlBody.Controls.Add(this.txtTimKiem);
             this.pnlBody.Controls.Add(this.label3);
-            this.pnlBody.Location = new System.Drawing.Point(0, -1);
+            this.pnlBody.Location = new System.Drawing.Point(0, 1);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1275, 802);
-            this.pnlBody.TabIndex = 3;
+            this.pnlBody.TabIndex = 6;
             // 
             // flp
             // 
@@ -120,19 +89,19 @@ namespace MVP.Views
             this.flp.Size = new System.Drawing.Size(1225, 661);
             this.flp.TabIndex = 15;
             // 
-            // button1
+            // btnMore
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::MVP.Properties.Resources.icons8_more_32;
-            this.button1.Location = new System.Drawing.Point(1012, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 55);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMore.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnMore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMore.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnMore.FlatAppearance.BorderSize = 2;
+            this.btnMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMore.Image = global::MVP.Properties.Resources.icons8_more_32;
+            this.btnMore.Location = new System.Drawing.Point(1012, 18);
+            this.btnMore.Name = "btnMore";
+            this.btnMore.Size = new System.Drawing.Size(55, 55);
+            this.btnMore.TabIndex = 14;
+            this.btnMore.UseVisualStyleBackColor = false;
             // 
             // btnRefesh
             // 
@@ -177,18 +146,14 @@ namespace MVP.Views
             this.btnAdd.Image = global::MVP.Properties.Resources.icons8_add_32;
             this.btnAdd.Location = new System.Drawing.Point(27, 16);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 55);
+            this.btnAdd.Size = new System.Drawing.Size(169, 55);
             this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = " Thêm";
+            this.btnAdd.Text = " Thêm NCC";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTimKiem.Location = new System.Drawing.Point(361, 27);
@@ -207,17 +172,14 @@ namespace MVP.Views
             this.label3.Size = new System.Drawing.Size(554, 4);
             this.label3.TabIndex = 9;
             // 
-            // UCSach
+            // UCNhaCungCap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlContainer);
-            this.Controls.Add(this.panel1);
-            this.Name = "UCSach";
+            this.Controls.Add(this.lblTitle);
+            this.Name = "UCNhaCungCap";
             this.Size = new System.Drawing.Size(1275, 875);
-            this.Load += new System.EventHandler(this.UCSach_Load);
-            this.panel1.ResumeLayout(false);
-            this.pnlTitle.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.UCNhaCungCap_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
@@ -227,14 +189,11 @@ namespace MVP.Views
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.FlowLayoutPanel flp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMore;
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnAdd;

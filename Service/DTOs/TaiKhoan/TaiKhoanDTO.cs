@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -23,8 +22,5 @@ namespace Service.DTOs
 
         [Required]
         public bool Status { get; set; }
-
-        public ICollection<HdNhapDTO> HoaDonNhaps { get; set; }
-        public ICollection<HdXuatDTO> HoaDonXuats { get; set; }
     }
 }

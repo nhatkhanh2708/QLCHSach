@@ -25,6 +25,5 @@ namespace Service.DTOs
 
         [Required]
         public bool Status { get; set; }
-
     }
 }

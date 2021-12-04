@@ -88,7 +88,6 @@ namespace MVP.Views
             btnNhapSach.FlatAppearance.BorderSize = 0;
             btnNCC.FlatAppearance.BorderSize = 0;
             btnNV.FlatAppearance.BorderSize = 0;
-            btnChucVu.FlatAppearance.BorderSize = 0;
             btnTaiKhoan.FlatAppearance.BorderSize = 0;
             btnQuyen.FlatAppearance.BorderSize = 0;
             btnDoanhThu.FlatAppearance.BorderSize = 0;
@@ -165,12 +164,14 @@ namespace MVP.Views
         private void btnNhapSach_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCNhap());
             btnNhapSach.FlatAppearance.BorderSize = 1;
         }
 
         private void btnNCC_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCNhaCungCap());
             btnNCC.FlatAppearance.BorderSize = 1;
         }
 
@@ -178,12 +179,6 @@ namespace MVP.Views
         {
             hideBorder();
             btnNV.FlatAppearance.BorderSize = 1;
-        }
-
-        private void btnChucVu_Click(object sender, EventArgs e)
-        {
-            hideBorder();
-            btnChucVu.FlatAppearance.BorderSize = 1;
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)

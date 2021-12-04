@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
@@ -28,8 +27,5 @@ namespace Service.DTOs
 
         [Required]
         public bool Status { get; set; }
-
-        public ICollection<SachTheLoaiDTO> SachTheLoais { get; set; }
-        public ICollection<SachTacGiaDTO> SachTacGias { get; set; }
     }
 }

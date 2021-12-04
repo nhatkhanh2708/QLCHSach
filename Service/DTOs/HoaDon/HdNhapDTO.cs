@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -20,7 +19,5 @@ namespace Service.DTOs
         [DataType(DataType.DateTime)]
         [Required]
         public DateTime NgayTao { get; set; }
-
-        public ICollection<CtNhapDTO> ChiTietNhaps { get; set; }
     }
 }

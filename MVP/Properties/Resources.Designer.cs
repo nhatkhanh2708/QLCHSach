@@ -153,6 +153,16 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_calendar_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_22 {
             get {
                 object obj = ResourceManager.GetObject("icons8_close_22", resourceCulture);
@@ -203,6 +213,26 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_filled_circle_green {
+            get {
+                object obj = ResourceManager.GetObject("icons8_filled_circle_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_filled_circle_red {
+            get {
+                object obj = ResourceManager.GetObject("icons8_filled_circle_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_import_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8_import_40", resourceCulture);
@@ -216,6 +246,16 @@ namespace MVP.Properties {
         internal static System.Drawing.Bitmap icons8_info_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_info_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_location_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_location_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +333,16 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_supplier_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_supplier_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info34 {
             get {
                 object obj = ResourceManager.GetObject("info34", resourceCulture);
@@ -326,6 +376,16 @@ namespace MVP.Properties {
         internal static System.Drawing.Bitmap logout40 {
             get {
                 object obj = ResourceManager.GetObject("logout40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olia_gozha_J4kK8b9Fgj8_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("olia_gozha_J4kK8b9Fgj8_unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

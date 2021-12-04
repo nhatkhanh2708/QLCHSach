@@ -48,7 +48,6 @@ namespace MVP.Views
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.pnlSubQLNS = new System.Windows.Forms.Panel();
-            this.btnChucVu = new System.Windows.Forms.Button();
             this.btnNV = new System.Windows.Forms.Button();
             this.btnQLNS = new System.Windows.Forms.Button();
             this.pnlSubQLNhap = new System.Windows.Forms.Panel();
@@ -214,7 +213,7 @@ namespace MVP.Views
             this.pnlSubTK.Controls.Add(this.btnHoaDon);
             this.pnlSubTK.Controls.Add(this.btnDoanhThu);
             this.pnlSubTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubTK.Location = new System.Drawing.Point(0, 882);
+            this.pnlSubTK.Location = new System.Drawing.Point(0, 846);
             this.pnlSubTK.Name = "pnlSubTK";
             this.pnlSubTK.Size = new System.Drawing.Size(274, 90);
             this.pnlSubTK.TabIndex = 24;
@@ -262,7 +261,7 @@ namespace MVP.Views
             this.btnTK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTK.Image = global::MVP.Properties.Resources.icons8_statistics_40;
             this.btnTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTK.Location = new System.Drawing.Point(0, 817);
+            this.btnTK.Location = new System.Drawing.Point(0, 781);
             this.btnTK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 6);
             this.btnTK.Name = "btnTK";
             this.btnTK.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -280,7 +279,7 @@ namespace MVP.Views
             this.pnlSubQLTK.Controls.Add(this.btnQuyen);
             this.pnlSubQLTK.Controls.Add(this.btnTaiKhoan);
             this.pnlSubQLTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubQLTK.Location = new System.Drawing.Point(0, 727);
+            this.pnlSubQLTK.Location = new System.Drawing.Point(0, 691);
             this.pnlSubQLTK.Name = "pnlSubQLTK";
             this.pnlSubQLTK.Size = new System.Drawing.Size(274, 90);
             this.pnlSubQLTK.TabIndex = 22;
@@ -328,7 +327,7 @@ namespace MVP.Views
             this.btnQLTK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLTK.Image = global::MVP.Properties.Resources.icons8_account_40;
             this.btnQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTK.Location = new System.Drawing.Point(0, 662);
+            this.btnQLTK.Location = new System.Drawing.Point(0, 626);
             this.btnQLTK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 6);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -343,30 +342,12 @@ namespace MVP.Views
             // pnlSubQLNS
             // 
             this.pnlSubQLNS.BackColor = System.Drawing.Color.SlateBlue;
-            this.pnlSubQLNS.Controls.Add(this.btnChucVu);
             this.pnlSubQLNS.Controls.Add(this.btnNV);
             this.pnlSubQLNS.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubQLNS.Location = new System.Drawing.Point(0, 572);
             this.pnlSubQLNS.Name = "pnlSubQLNS";
-            this.pnlSubQLNS.Size = new System.Drawing.Size(274, 90);
+            this.pnlSubQLNS.Size = new System.Drawing.Size(274, 54);
             this.pnlSubQLNS.TabIndex = 20;
-            // 
-            // btnChucVu
-            // 
-            this.btnChucVu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChucVu.FlatAppearance.BorderSize = 0;
-            this.btnChucVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChucVu.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnChucVu.Location = new System.Drawing.Point(0, 40);
-            this.btnChucVu.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnChucVu.Name = "btnChucVu";
-            this.btnChucVu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnChucVu.Size = new System.Drawing.Size(274, 40);
-            this.btnChucVu.TabIndex = 1;
-            this.btnChucVu.Text = "Chức vụ";
-            this.btnChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChucVu.UseVisualStyleBackColor = true;
-            this.btnChucVu.Click += new System.EventHandler(this.btnChucVu_Click);
             // 
             // btnNV
             // 
@@ -787,7 +768,6 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.Panel pnlSubQLNS;
-        private System.Windows.Forms.Button btnChucVu;
         private System.Windows.Forms.Button btnNV;
         private System.Windows.Forms.Button btnQLNS;
         private System.Windows.Forms.Panel pnlSubQLNhap;

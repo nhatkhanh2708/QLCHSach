@@ -13,7 +13,6 @@ namespace MVP.Views
     {
         private IEnumerable<TheLoaiDTO> _listTheLoai;
         private TheLoaiPresenter _theLoaiPresenter;
-        private BindingSource _tblTheLoais = new BindingSource();
         
         public UCTheLoai()
         {
@@ -24,21 +23,13 @@ namespace MVP.Views
         private void UCTheLoai_Load(object sender, EventArgs e)
         {            
             loadData();
-            dtgv.DataSource = _tblTheLoais;
             dtgv.Columns["Id"].DisplayIndex = 0;
-            AddBinding();
         }
 
         private void loadData()
         {
             _theLoaiPresenter.GetsAll();
-            _tblTheLoais.DataSource = _listTheLoai.ToList();
-        }
-
-        private void AddBinding()
-        {
-            lblId.DataBindings.Add(new Binding("Text", _tblTheLoais.DataSource, "Id", true, DataSourceUpdateMode.Never));
-            txtTheLoai.DataBindings.Add(new Binding("Text", _tblTheLoais.DataSource, "TenTheLoai", true, DataSourceUpdateMode.Never));
+            dtgv.DataSource = _listTheLoai;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -84,6 +75,16 @@ namespace MVP.Views
         public void GetsAll(IEnumerable<TheLoaiDTO> listTheLoai)
         {
             _listTheLoai = listTheLoai;
+        }
+
+        private void dtgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgv.Rows[e.RowIndex];
+                lblId.Text = row.Cells["Id"].Value.ToString();
+                txtTheLoai.Text = row.Cells["TenTheLoai"].Value.ToString();
+            }
         }
     }
 }

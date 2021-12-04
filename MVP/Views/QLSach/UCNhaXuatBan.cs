@@ -13,7 +13,6 @@ namespace MVP.Views
     {
         private IEnumerable<NhaXuatBanDTO> _listNXB;
         private NXBPresenter _nxbPresenter;
-        private BindingSource _tblNXBs = new BindingSource();
         public UCNhaXuatBan()
         {
             InitializeComponent();
@@ -23,22 +22,13 @@ namespace MVP.Views
         private void UCNhaXuatBan_Load(object sender, EventArgs e)
         {
             loadData();
-            dtgv.DataSource = _tblNXBs;
             dtgv.Columns["Id"].DisplayIndex = 0;
-            AddBinding();
-        }
-
-        private void AddBinding()
-        {
-            lblId.DataBindings.Add(new Binding("Text", _tblNXBs.DataSource, "Id", true, DataSourceUpdateMode.Never));
-            txtNXB.DataBindings.Add(new Binding("Text", _tblNXBs.DataSource, "TenNxb", true, DataSourceUpdateMode.Never));
-            txtVietTat.DataBindings.Add(new Binding("Text", _tblNXBs.DataSource, "VietTat", true, DataSourceUpdateMode.Never));
         }
 
         private void loadData()
         {
             _nxbPresenter.GetsAll();
-            _tblNXBs.DataSource = _listNXB.ToList();
+            dtgv.DataSource = _listNXB.ToList();
         }
 
         public void GetsAll(IEnumerable<NhaXuatBanDTO> listNXB)
@@ -85,6 +75,17 @@ namespace MVP.Views
             txtNXB.Text = "";
             txtVietTat.Text = "";
             txtTimKiem.Text = "";
+        }
+
+        private void dtgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgv.Rows[e.RowIndex];
+                lblId.Text = row.Cells["Id"].Value.ToString();
+                txtNXB.Text = row.Cells["TenNxb"].Value.ToString();
+                txtVietTat.Text = row.Cells["VietTat"].Value.ToString();
+            }
         }
     }
 }
