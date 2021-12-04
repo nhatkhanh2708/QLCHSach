@@ -27,8 +27,26 @@ namespace MVP.Views
 
         private void UCThemSach_Load(object sender, EventArgs e)
         {
+            hideScrollBar();
             _themSachPresenter.GetsAllCbx();
             loadCbx();
+        }
+
+        private void hideScrollBar()
+        {
+            flpTacGia.AutoScroll = false;
+            flpTacGia.HorizontalScroll.Maximum = 0;
+            flpTacGia.HorizontalScroll.Visible = false;
+            flpTacGia.VerticalScroll.Maximum = 0;
+            flpTacGia.VerticalScroll.Visible = false;
+            flpTacGia.AutoScroll = true;
+
+            flpTheLoai.AutoScroll = false;
+            flpTheLoai.HorizontalScroll.Maximum = 0;
+            flpTheLoai.HorizontalScroll.Visible = false;
+            flpTheLoai.VerticalScroll.Maximum = 0;
+            flpTheLoai.VerticalScroll.Visible = false;
+            flpTheLoai.AutoScroll = true;
         }
 
         private void loadCbx()
@@ -37,7 +55,6 @@ namespace MVP.Views
             cbxTheLoai.DataSource = bsTheLoai.DataSource;
             cbxTheLoai.DisplayMember = "TenTheLoai";
             cbxTheLoai.ValueMember = "Id";
-            
             //cbx tg
             // cbx nxb
         }

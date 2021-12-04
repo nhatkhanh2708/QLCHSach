@@ -108,7 +108,7 @@ namespace MVP.Views
             this.pnlBody.Controls.Add(this.label3);
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1275, 802);
+            this.pnlBody.Size = new System.Drawing.Size(1275, 800);
             this.pnlBody.TabIndex = 5;
             // 
             // flp

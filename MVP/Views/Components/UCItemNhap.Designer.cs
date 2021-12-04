@@ -193,7 +193,7 @@ namespace MVP.Views
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.Name = "UCItemNhap";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(360, 141);

@@ -15,7 +15,7 @@ namespace MVP.Views
 
         private void UCItemNcc_Load(object sender, EventArgs e)
         {
-            status.Image = _active ? Resources.icons8_filled_circle_green : Resources.icons8_filled_circle_red;
+            lblStatus.Image = _active ? Resources.icons8_filled_circle_green : Resources.icons8_filled_circle_red;
         }
 
         private void lblTenNcc_Click(object sender, EventArgs e)

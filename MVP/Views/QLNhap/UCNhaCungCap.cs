@@ -39,5 +39,13 @@ namespace MVP.Views
             flp.VerticalScroll.Visible = false;
             flp.AutoScroll = true;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            UCThemNCC ucThemNCC = new UCThemNCC();
+            ucThemNCC.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(ucThemNCC);
+            pnlContainer.Controls.SetChildIndex(ucThemNCC, 0);
+        }
     }
 }

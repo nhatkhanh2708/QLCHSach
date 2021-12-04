@@ -6,9 +6,6 @@ namespace Service.DTOs
     public class NhanVienDTO : PersonDTO
     {
         [Required]
-        public string Email { get; set; }
-
-        [Required]
         [StringLength(10, MinimumLength = 10)]
         public string SDT { get; set; }
 

@@ -29,7 +29,6 @@ namespace MVP.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.flp = new System.Windows.Forms.FlowLayoutPanel();
@@ -39,30 +38,22 @@ namespace MVP.Views
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer.SuspendLayout();
             this.pnlBody.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1275, 70);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Nhà cung cấp";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlContainer
             // 
             this.pnlContainer.Controls.Add(this.pnlBody);
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 70);
+            this.pnlContainer.Location = new System.Drawing.Point(0, 75);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1275, 805);
+            this.pnlContainer.Size = new System.Drawing.Size(1275, 800);
             this.pnlContainer.TabIndex = 2;
             // 
             // pnlBody
@@ -75,9 +66,9 @@ namespace MVP.Views
             this.pnlBody.Controls.Add(this.btnAdd);
             this.pnlBody.Controls.Add(this.txtTimKiem);
             this.pnlBody.Controls.Add(this.label3);
-            this.pnlBody.Location = new System.Drawing.Point(0, 1);
+            this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1275, 802);
+            this.pnlBody.Size = new System.Drawing.Size(1275, 800);
             this.pnlBody.TabIndex = 6;
             // 
             // flp
@@ -146,11 +137,12 @@ namespace MVP.Views
             this.btnAdd.Image = global::MVP.Properties.Resources.icons8_add_32;
             this.btnAdd.Location = new System.Drawing.Point(27, 16);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 55);
+            this.btnAdd.Size = new System.Drawing.Size(123, 55);
             this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = " Thêm NCC";
+            this.btnAdd.Text = " Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtTimKiem
             // 
@@ -172,24 +164,63 @@ namespace MVP.Views
             this.label3.Size = new System.Drawing.Size(554, 4);
             this.label3.TabIndex = 9;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pnlTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1275, 75);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(0, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1275, 3);
+            this.label1.TabIndex = 1;
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(1275, 70);
+            this.pnlTitle.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1275, 70);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Nhà cung cấp";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCNhaCungCap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlContainer);
-            this.Controls.Add(this.lblTitle);
             this.Name = "UCNhaCungCap";
             this.Size = new System.Drawing.Size(1275, 875);
             this.Load += new System.EventHandler(this.UCNhaCungCap_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.FlowLayoutPanel flp;
@@ -199,5 +230,9 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlTitle;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

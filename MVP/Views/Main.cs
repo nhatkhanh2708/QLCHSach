@@ -178,6 +178,7 @@ namespace MVP.Views
         private void btnNV_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCNhanVien());
             btnNV.FlatAppearance.BorderSize = 1;
         }
 

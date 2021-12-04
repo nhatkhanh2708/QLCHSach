@@ -25,7 +25,7 @@ namespace Repository.Repositories
 
         public void Add(T entity)
         {
-            _context.Set<T>().Add(entity);
+            var temp = _context.Set<T>().Add(entity);
             _context.SaveChanges();
         }
 

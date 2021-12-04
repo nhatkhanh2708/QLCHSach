@@ -73,7 +73,7 @@ namespace MVP.Views
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1275, 802);
+            this.panel1.Size = new System.Drawing.Size(1275, 800);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -105,7 +105,7 @@ namespace MVP.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1275, 719);
+            this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 4;
             // 
             // panel4
@@ -167,6 +167,7 @@ namespace MVP.Views
             this.flpTheLoai.Name = "flpTheLoai";
             this.flpTheLoai.Size = new System.Drawing.Size(577, 35);
             this.flpTheLoai.TabIndex = 24;
+            this.flpTheLoai.WrapContents = false;
             // 
             // cbxNXB
             // 
@@ -195,6 +196,7 @@ namespace MVP.Views
             this.flpTacGia.Name = "flpTacGia";
             this.flpTacGia.Size = new System.Drawing.Size(577, 35);
             this.flpTacGia.TabIndex = 21;
+            this.flpTacGia.WrapContents = false;
             // 
             // cbxTacGia
             // 
@@ -414,7 +416,7 @@ namespace MVP.Views
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel1);
             this.Name = "UCThemSach";
-            this.Size = new System.Drawing.Size(1275, 802);
+            this.Size = new System.Drawing.Size(1275, 800);
             this.Load += new System.EventHandler(this.UCThemSach_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
