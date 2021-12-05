@@ -16,7 +16,7 @@ namespace Repository.Migrations
                     TenNCC = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SDT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    NgayHopTac = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NgayHopTac = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
