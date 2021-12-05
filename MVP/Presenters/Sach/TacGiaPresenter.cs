@@ -8,7 +8,7 @@ using System;
 
 namespace MVP.Presenters
 {
-    public class TacGiaPresenter : ITacGiaPresenter
+    public class TacGiaPresenter
     {
         private readonly ITacGiaService _tacGiaService;
         private readonly ITacGiaView _tacGiaView;

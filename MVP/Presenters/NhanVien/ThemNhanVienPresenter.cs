@@ -8,7 +8,7 @@ using System;
 
 namespace MVP.Presenters
 {
-    public class ThemNhanVienPresenter : IThemNhanVienPresenter
+    public class ThemNhanVienPresenter
     {
         private readonly IThemNhanVienView _themNVView;
         private readonly INhanVienService _nvService;

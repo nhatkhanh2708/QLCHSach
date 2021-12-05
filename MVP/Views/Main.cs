@@ -185,6 +185,7 @@ namespace MVP.Views
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCTaiKhoan());
             btnTaiKhoan.FlatAppearance.BorderSize = 1;
         }
 

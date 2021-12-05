@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MVP.Presenters
 {
-    public class ThemSachPresenter : IThemSachPresenter
+    public class ThemSachPresenter
     {
         private readonly IThemSachView _themSachView;
         private readonly ITheLoaiService _theLoaiService;

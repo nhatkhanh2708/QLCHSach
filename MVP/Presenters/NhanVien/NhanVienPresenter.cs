@@ -4,7 +4,7 @@ using Service.IServices;
 
 namespace MVP.Presenters
 {
-    public class NhanVienPresenter : INhanVienPresenter
+    public class NhanVienPresenter
     {
         private readonly INhanVienService _nvService;
         private readonly INhanVienView _nvView;

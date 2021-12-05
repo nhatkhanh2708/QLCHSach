@@ -4,7 +4,7 @@ using Service.IServices;
 
 namespace MVP.Presenters
 {
-    public class NhaCungCapPresenter : INhaCungCapPresenter
+    public class NhaCungCapPresenter
     {
         private readonly INccService _nccService;
         private readonly INhaCungCapView _nccView;

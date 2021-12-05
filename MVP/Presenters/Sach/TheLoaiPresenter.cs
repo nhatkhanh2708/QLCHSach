@@ -8,7 +8,7 @@ using System;
 
 namespace MVP.Presenters
 {
-    public class TheLoaiPresenter : ITheLoaiPresenter
+    public class TheLoaiPresenter
     {
         private readonly ITheLoaiService _theLoaiService;
         private readonly ITheLoaiView _theLoaiView;

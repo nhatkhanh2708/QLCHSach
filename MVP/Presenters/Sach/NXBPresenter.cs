@@ -8,7 +8,7 @@ using System;
 
 namespace MVP.Presenters
 {
-    public class NXBPresenter : INXBPresenter
+    public class NXBPresenter
     {
         private readonly INxbService _nxbService;
         private readonly INXBView _nxbView;

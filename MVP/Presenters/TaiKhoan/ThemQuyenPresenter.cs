@@ -8,7 +8,7 @@ using System;
 
 namespace MVP.Presenters
 {
-    public class ThemQuyenPresenter : IThemQuyenPresenter
+    public class ThemQuyenPresenter
     {
         private readonly IQuyenService _quyenService;
         private readonly IThemQuyenView _themQuyenView;
@@ -21,6 +21,7 @@ namespace MVP.Presenters
         {
             if(!String.IsNullOrEmpty(tenquyen) && !String.IsNullOrEmpty(mota))
             {
+                mota = mota.Substring(0, mota.Length - 2);
                 if(_quyenService.isExistMota(mota) || _quyenService.isExistTenQuyen(tenquyen))
                 {
                     _themQuyenView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.fail, false);

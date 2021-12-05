@@ -1,7 +1,7 @@
 ﻿
 namespace MVP.Views
 {
-    partial class UCQuyen
+    partial class UCTaiKhoan
     {
         /// <summary> 
         /// Required designer variable.
@@ -55,7 +55,7 @@ namespace MVP.Views
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1275, 75);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -83,7 +83,7 @@ namespace MVP.Views
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1275, 70);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quyền";
+            this.lblTitle.Text = "Tài khoản";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlContainer
@@ -93,7 +93,7 @@ namespace MVP.Views
             this.pnlContainer.Location = new System.Drawing.Point(0, 75);
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1275, 800);
-            this.pnlContainer.TabIndex = 4;
+            this.pnlContainer.TabIndex = 5;
             // 
             // pnlBody
             // 
@@ -134,7 +134,6 @@ namespace MVP.Views
             this.btnRefesh.TabIndex = 13;
             this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefesh.UseVisualStyleBackColor = false;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimKiem
             // 
@@ -189,14 +188,14 @@ namespace MVP.Views
             this.label3.Size = new System.Drawing.Size(554, 4);
             this.label3.TabIndex = 9;
             // 
-            // UCQuyen
+            // UCTaiKhoan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel1);
-            this.Name = "UCQuyen";
+            this.Name = "UCTaiKhoan";
             this.Size = new System.Drawing.Size(1275, 875);
-            this.Load += new System.EventHandler(this.UCQuyen_Load);
+            this.Load += new System.EventHandler(this.UCTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
             this.pnlContainer.ResumeLayout(false);

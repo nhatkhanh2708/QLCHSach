@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Service.DTOs;
+using System;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
     public partial class UCChiTietQuyen : UserControl
     {
-        public UCChiTietQuyen()
+        private QuyenDTO _quyenDTO;
+        public UCChiTietQuyen(QuyenDTO quyenDTO)
         {
             InitializeComponent();
+            _quyenDTO = quyenDTO;            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
