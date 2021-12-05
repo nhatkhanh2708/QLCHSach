@@ -1,27 +1,31 @@
-﻿using System;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCNhaCungCap : UserControl
+    public partial class UCNhaCungCap : UserControl, INhaCungCapView
     {
+        private NhaCungCapPresenter _nccPresenter;
         public UCNhaCungCap()
         {
             InitializeComponent();
+            _nccPresenter = new NhaCungCapPresenter(this);
         }
 
         private void UCNhaCungCap_Load(object sender, EventArgs e)
         {
-            loadflp();
             hideScrollBar();
+            loadAllNcc();
         }
 
-        private void loadflp()
+        private void loadAllNcc()
         {
-            for (int i = 0; i < 20; i++)
-            {
-                flp.Controls.Add(new UCItemNcc(true, getPanelContainer));
-            }
+            _nccPresenter.GetsAll();
         }
 
         public Panel getPanelContainer
@@ -46,6 +50,15 @@ namespace MVP.Views
             ucThemNCC.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucThemNCC);
             pnlContainer.Controls.SetChildIndex(ucThemNCC, 0);
+        }
+
+        public void GetsAll(IEnumerable<NccDTO> listNcc)
+        {
+            for (int i = 0; i < listNcc.Count(); i++)
+            {
+                flp.Controls.Add(new UCItemNcc(listNcc.ElementAt(i), getPanelContainer));
+
+            }
         }
     }
 }

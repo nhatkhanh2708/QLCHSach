@@ -39,6 +39,7 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTenNcc = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -129,6 +130,7 @@ namespace MVP.Views
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblId);
             this.panel2.Controls.Add(this.lblTenNcc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -149,6 +151,17 @@ namespace MVP.Views
             this.lblTenNcc.Text = "label1";
             this.lblTenNcc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTenNcc.Click += new System.EventHandler(this.lblTenNcc_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblId.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblId.Location = new System.Drawing.Point(0, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(43, 63);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "#1";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // UCItemNcc
             // 
@@ -180,5 +193,6 @@ namespace MVP.Views
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblId;
     }
 }
