@@ -1,4 +1,5 @@
 ﻿using Model.Entities.Common;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +22,7 @@ namespace Model.Entities
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public string NgayHopTac { get; set; }
+        public DateTime NgayHopTac { get; set; }
 
         [Required]
         public bool Status { get; set; }

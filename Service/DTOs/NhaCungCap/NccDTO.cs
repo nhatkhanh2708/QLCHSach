@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
@@ -18,7 +19,7 @@ namespace Service.DTOs
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public string NgayHopTac { get; set; }
+        public DateTime NgayHopTac { get; set; }
 
         [Required]
         public bool Status { get; set; }

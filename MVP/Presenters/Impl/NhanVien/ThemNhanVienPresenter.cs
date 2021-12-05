@@ -79,12 +79,7 @@ namespace MVP.Presenters
                 return "Nữ";
             }
         }
-        
-        public string ChangeLeght(string ngay)
-        {
-            ngay = ngay.Remove(ngay.Length - 8);
-            return ngay;
-        }
+
         public int CheckAge(DateTime ngaysinh)
         {
             var today = DateTime.Today;
@@ -93,6 +88,7 @@ namespace MVP.Presenters
                 age--;
             return age;
         }
+
         public void Add(string hoten, string gioitinh, string ngaysinh, string diachi, string sdt, string chucvu, string ngaybatdau,string trangthai)
         {
             if(hoten.Length==0 || gioitinh.Length==0 || ngaysinh.Length==0 || diachi.Length==0 || trangthai.Length==0 || sdt.Length==0 || chucvu.Length==0 || ngaybatdau.Length == 0)
