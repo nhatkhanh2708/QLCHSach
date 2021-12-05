@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Service.DTOs;
+using System;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
     public partial class UCChiTietNV : UserControl
     {
-        public UCChiTietNV()
+        private NhanVienDTO _nvDTO;
+        public UCChiTietNV(NhanVienDTO nhanVienDTO)
         {
             InitializeComponent();
+            _nvDTO = nhanVienDTO;
         }
 
         private void UCChiTietNV_Load(object sender, EventArgs e)

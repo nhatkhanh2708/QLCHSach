@@ -44,15 +44,15 @@ namespace MVP.Views
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtNcc = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxChucVu = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxGender = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -76,6 +76,7 @@ namespace MVP.Views
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnBack
             // 
@@ -112,10 +113,14 @@ namespace MVP.Views
             this.btnThem.Text = " Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cbxStatus
             // 
             this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Đang làm việc",
+            "Đã nghỉ việc"});
             this.cbxStatus.Location = new System.Drawing.Point(824, 320);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(300, 33);
@@ -224,14 +229,14 @@ namespace MVP.Views
             this.label13.Size = new System.Drawing.Size(300, 3);
             this.label13.TabIndex = 32;
             // 
-            // txtNcc
+            // txtTenNV
             // 
-            this.txtNcc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNcc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNcc.Location = new System.Drawing.Point(214, 86);
-            this.txtNcc.Name = "txtNcc";
-            this.txtNcc.Size = new System.Drawing.Size(300, 30);
-            this.txtNcc.TabIndex = 31;
+            this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTenNV.Location = new System.Drawing.Point(214, 86);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(300, 30);
+            this.txtTenNV.TabIndex = 31;
             // 
             // label6
             // 
@@ -256,11 +261,11 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.cbxChucVu);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.dtpNgayBatDau);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbxGender);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.cbxStatus);
@@ -274,7 +279,7 @@ namespace MVP.Views
             this.panel2.Controls.Add(this.txtDiaChi);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.txtNcc);
+            this.panel2.Controls.Add(this.txtTenNV);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 83);
@@ -282,13 +287,13 @@ namespace MVP.Views
             this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 5;
             // 
-            // comboBox2
+            // cbxChucVu
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(824, 241);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(300, 33);
-            this.comboBox2.TabIndex = 56;
+            this.cbxChucVu.FormattingEnabled = true;
+            this.cbxChucVu.Location = new System.Drawing.Point(824, 241);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Size = new System.Drawing.Size(300, 33);
+            this.cbxChucVu.TabIndex = 56;
             // 
             // label14
             // 
@@ -317,16 +322,16 @@ namespace MVP.Views
             this.label11.TabIndex = 53;
             this.label11.Text = "Ngày bắt đầu làm";
             // 
-            // comboBox1
+            // cbxGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxGender.FormattingEnabled = true;
+            this.cbxGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(214, 244);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 33);
-            this.comboBox1.TabIndex = 52;
+            this.cbxGender.Location = new System.Drawing.Point(214, 244);
+            this.cbxGender.Name = "cbxGender";
+            this.cbxGender.Size = new System.Drawing.Size(300, 33);
+            this.cbxGender.TabIndex = 52;
             // 
             // label9
             // 
@@ -380,16 +385,16 @@ namespace MVP.Views
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtNcc;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxGender;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxChucVu;
         private System.Windows.Forms.Label label14;
     }
 }

@@ -12,5 +12,10 @@
         public static readonly string EXIST_NAME = "Tên này đã tồn tại !";
         public static readonly string NOT_SELECTED_ITEM = "Chưa chọn item";
         public static readonly string NOT_FILL_CONTENT = "Chưa nhập nội dung";
+
+        public static readonly string NAME_NOT_CONTENT_NUMBER = "Tên không chứa số";
+        public static readonly string NUMBER_NOT_CONTENT_CHAR = "Số điện thoại không chứa ký tự";
+        public static readonly string LENGTH_LIMIT = "Vượt quá độ dài cho phép";
+        public static readonly string AGE_LIMIT = "Tuổi phải từ 18 trở lên";
     }
 }

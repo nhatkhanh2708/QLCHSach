@@ -1,28 +1,31 @@
-﻿using System;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCNhanVien : UserControl
+    public partial class UCNhanVien : UserControl, INhanVienView
     {
+        private NhanVienPresenter _nvPresenter;
         public UCNhanVien()
         {
             InitializeComponent();
+            _nvPresenter = new NhanVienPresenter(this);
         }
 
         private void UCNhanVien_Load(object sender, EventArgs e)
         {
-            loadflp();
             hideScrollBar();
+            loadAllNV();
         }
 
-        private void loadflp()
+        private void loadAllNV()
         {
-            for (int i = 0; i < 20; i++)
-            {
-                flp.Controls.Add(new UCItemNV(true, getPanelContainer));
-            }
+            _nvPresenter.GetsAll();
         }
 
         public Panel getPanelContainer
@@ -49,5 +52,12 @@ namespace MVP.Views
             pnlContainer.Controls.SetChildIndex(ucThemNV, 0);
         }
 
+        public void GetsAll(IEnumerable<NhanVienDTO> listNV)
+        {
+            for (int i = 0; i < listNV.Count(); i++)
+            {
+                flp.Controls.Add(new UCItemNV(listNV.ElementAt(i), getPanelContainer));
+            }
+        }
     }
 }
