@@ -1,5 +1,5 @@
 ﻿
-namespace MVP.Views.QLNhap
+namespace MVP.Views
 {
     partial class UCChiTietNCC
     {
@@ -72,6 +72,7 @@ namespace MVP.Views.QLNhap
             this.btnBack.TabIndex = 4;
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbxStatus
             // 
@@ -118,6 +119,7 @@ namespace MVP.Views.QLNhap
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label1);
@@ -249,6 +251,7 @@ namespace MVP.Views.QLNhap
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.cbxStatus);
@@ -300,7 +303,7 @@ namespace MVP.Views.QLNhap
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(186, 55);
             this.btnThem.TabIndex = 50;
-            this.btnThem.Text = "Xác nhận";
+            this.btnThem.Text = "Cập nhật";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             // 
@@ -320,6 +323,7 @@ namespace MVP.Views.QLNhap
             this.Controls.Add(this.panel1);
             this.Name = "UCChiTietNCC";
             this.Size = new System.Drawing.Size(1275, 800);
+            this.Load += new System.EventHandler(this.UCChiTietNCC_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

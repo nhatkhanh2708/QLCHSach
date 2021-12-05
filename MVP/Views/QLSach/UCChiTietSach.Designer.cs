@@ -31,6 +31,7 @@ namespace MVP.Views
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace MVP.Views
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -110,6 +110,23 @@ namespace MVP.Views
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1275, 719);
             this.panel2.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.OrangeRed;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(1146, 615);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 55);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Hủy";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -221,7 +238,7 @@ namespace MVP.Views
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(186, 55);
             this.btnThem.TabIndex = 19;
-            this.btnThem.Text = "Xác nhận";
+            this.btnThem.Text = "Cập nhật";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             // 
@@ -423,23 +440,6 @@ namespace MVP.Views
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(1146, 615);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 55);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Hủy";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // UCChiTietSach
             // 

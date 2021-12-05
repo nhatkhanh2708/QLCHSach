@@ -20,7 +20,7 @@ namespace MVP.Views
         {
             for (int i = 0; i < 20; i++)
             {
-                flp.Controls.Add(new UCItemNcc(true));
+                flp.Controls.Add(new UCItemNcc(true, getPanelContainer));
             }
         }
 

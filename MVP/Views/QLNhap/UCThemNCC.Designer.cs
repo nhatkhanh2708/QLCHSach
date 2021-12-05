@@ -66,6 +66,7 @@ namespace MVP.Views
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.cbxStatus);
             this.panel2.Controls.Add(this.dtpNgayHopTac);
@@ -223,6 +224,7 @@ namespace MVP.Views
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.btnRefresh);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnBack);
@@ -284,6 +286,7 @@ namespace MVP.Views
             this.Controls.Add(this.panel1);
             this.Name = "UCThemNCC";
             this.Size = new System.Drawing.Size(1275, 800);
+            this.Load += new System.EventHandler(this.UCThemNCC_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

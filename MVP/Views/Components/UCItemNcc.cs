@@ -7,10 +7,12 @@ namespace MVP.Views
     public partial class UCItemNcc : UserControl
     {
         private bool _active;
-        public UCItemNcc(bool isActive)
+        private Panel _pnlContainer;
+        public UCItemNcc(bool isActive, Panel pnlContainer)
         {
             InitializeComponent();
             _active = isActive;
+            _pnlContainer = pnlContainer;
         }
 
         private void UCItemNcc_Load(object sender, EventArgs e)
@@ -20,7 +22,10 @@ namespace MVP.Views
 
         private void lblTenNcc_Click(object sender, EventArgs e)
         {
-
+            UCChiTietNCC ucChiTietNCC = new UCChiTietNCC();
+            ucChiTietNCC.Dock = DockStyle.Fill;
+            _pnlContainer.Controls.Add(ucChiTietNCC);
+            _pnlContainer.Controls.SetChildIndex(ucChiTietNCC, 0);
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MVP.Views
@@ -15,6 +8,19 @@ namespace MVP.Views
         public UCThemNV()
         {
             InitializeComponent();
+        }
+
+        private void UCThemNV_Load(object sender, EventArgs e)
+        {
+            dtpNgaySinh.Format = DateTimePickerFormat.Custom;
+            dtpNgaySinh.CustomFormat = "MM/dd/yyyy";
+            dtpNgayBatDau.Format = DateTimePickerFormat.Custom;
+            dtpNgayBatDau.CustomFormat = "MM/dd/yyyy";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

@@ -39,6 +39,7 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblGender = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblTenNv = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -131,6 +132,7 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.Controls.Add(this.lblGender);
+            this.panel2.Controls.Add(this.lblId);
             this.panel2.Controls.Add(this.lblTenNv);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -140,13 +142,25 @@ namespace MVP.Views
             // 
             // lblGender
             // 
-            this.lblGender.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblGender.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblGender.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblGender.Image = global::MVP.Properties.Resources.icons8_female_24;
-            this.lblGender.Location = new System.Drawing.Point(0, 0);
+            this.lblGender.Location = new System.Drawing.Point(313, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(43, 63);
-            this.lblGender.TabIndex = 1;
+            this.lblGender.TabIndex = 2;
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblId
+            // 
+            this.lblId.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblId.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblId.Location = new System.Drawing.Point(0, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(43, 63);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "#1";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTenNv
             // 
@@ -160,6 +174,7 @@ namespace MVP.Views
             this.lblTenNv.TabIndex = 0;
             this.lblTenNv.Text = "label1";
             this.lblTenNv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenNv.Click += new System.EventHandler(this.lblTenNv_Click);
             // 
             // UCItemNV
             // 
@@ -191,6 +206,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTenNv;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblGender;
     }
 }

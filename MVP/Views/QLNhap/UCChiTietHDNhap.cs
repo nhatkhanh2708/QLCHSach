@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCChiTietNCC : UserControl
+    public partial class UCChiTietHDNhap : UserControl
     {
-        public UCChiTietNCC()
+        public UCChiTietHDNhap()
         {
             InitializeComponent();
         }
 
-        private void UCChiTietNCC_Load(object sender, EventArgs e)
+        private void UCChiTietHDNhap_Load(object sender, EventArgs e)
         {
-            dtpNgayHopTac.Format = DateTimePickerFormat.Custom;
-            dtpNgayHopTac.CustomFormat = "MM/dd/yyyy";
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
