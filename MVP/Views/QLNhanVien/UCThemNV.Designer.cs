@@ -32,9 +32,7 @@ namespace MVP.Views
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,8 +46,6 @@ namespace MVP.Views
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbxChucVu = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxGender = new System.Windows.Forms.ComboBox();
@@ -115,33 +111,12 @@ namespace MVP.Views
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // cbxStatus
-            // 
-            this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Items.AddRange(new object[] {
-            "Đang làm việc",
-            "Đã nghỉ việc"});
-            this.cbxStatus.Location = new System.Drawing.Point(824, 320);
-            this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(300, 33);
-            this.cbxStatus.TabIndex = 49;
-            // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Location = new System.Drawing.Point(214, 169);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(300, 31);
             this.dtpNgaySinh.TabIndex = 48;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(689, 323);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 30);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "Trạng thái";
             // 
             // label10
             // 
@@ -156,7 +131,7 @@ namespace MVP.Views
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Location = new System.Drawing.Point(214, 352);
+            this.label4.Location = new System.Drawing.Point(824, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(300, 3);
             this.label4.TabIndex = 38;
@@ -188,7 +163,7 @@ namespace MVP.Views
             // 
             this.txtSdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSdt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSdt.Location = new System.Drawing.Point(214, 319);
+            this.txtSdt.Location = new System.Drawing.Point(824, 247);
             this.txtSdt.MaxLength = 10;
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(300, 30);
@@ -261,16 +236,12 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.cbxChucVu);
-            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.dtpNgayBatDau);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.cbxGender);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.cbxStatus);
             this.panel2.Controls.Add(this.dtpNgaySinh);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtSdt);
@@ -286,24 +257,6 @@ namespace MVP.Views
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 5;
-            // 
-            // cbxChucVu
-            // 
-            this.cbxChucVu.FormattingEnabled = true;
-            this.cbxChucVu.Location = new System.Drawing.Point(824, 241);
-            this.cbxChucVu.Name = "cbxChucVu";
-            this.cbxChucVu.Size = new System.Drawing.Size(300, 33);
-            this.cbxChucVu.TabIndex = 56;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(707, 244);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 30);
-            this.label14.TabIndex = 55;
-            this.label14.Text = "Chức vụ";
             // 
             // dtpNgayBatDau
             // 
@@ -347,7 +300,7 @@ namespace MVP.Views
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(46, 325);
+            this.label5.Location = new System.Drawing.Point(656, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 30);
             this.label5.TabIndex = 36;
@@ -373,9 +326,7 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
@@ -394,7 +345,5 @@ namespace MVP.Views
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbxChucVu;
-        private System.Windows.Forms.Label label14;
     }
 }

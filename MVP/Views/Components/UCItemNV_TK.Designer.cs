@@ -126,6 +126,7 @@ namespace MVP.Views
             this.Name = "UCItemNV_TK";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(253, 103);
+            this.Load += new System.EventHandler(this.UCItemNV_TK_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

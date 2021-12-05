@@ -7,22 +7,13 @@ namespace Service.Helpers
 {
     public class HashPass
     {
-        public static void CreateHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        public static void CreateHash(string password, out byte[] hash)
         {
-            using (var hmac = new HMACSHA512())
+            using (var md5Hash = MD5.Create())
             {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-            }
-        }
+                var sourceBytes = Encoding.UTF8.GetBytes(password);
 
-        public static bool VerifyHash(string password, byte[] passwordHash, byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA512(passwordSalt))
-            {
-                var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-                return passwordHash.SequenceEqual(hash);
+                hash = md5Hash.ComputeHash(sourceBytes);
             }
         }
     }

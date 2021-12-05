@@ -21,7 +21,7 @@ namespace MVP.Presenters
         {
             if(!String.IsNullOrEmpty(tenquyen) && !String.IsNullOrEmpty(mota))
             {
-                mota = mota.Substring(0, mota.Length - 2);
+                mota = mota.Substring(0, mota.Length - 1);
                 if(_quyenService.isExistMota(mota) || _quyenService.isExistTenQuyen(tenquyen))
                 {
                     _themQuyenView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.fail, false);

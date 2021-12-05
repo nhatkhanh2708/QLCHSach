@@ -32,11 +32,12 @@ namespace MVP.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnShutdown = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblFailed = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,9 +45,10 @@ namespace MVP.Views
             // 
             this.panel1.BackgroundImage = global::MVP.Properties.Resources.olia_gozha_J4kK8b9Fgj8_unsplash;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lblFailed);
             this.panel1.Controls.Add(this.btnShutdown);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtUsername);
@@ -80,22 +82,23 @@ namespace MVP.Views
             this.label2.TabIndex = 16;
             this.label2.Text = "CỬA HÀNG SÁCH";
             // 
-            // btnAdd
+            // btnLogin
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnAdd.FlatAppearance.BorderSize = 2;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(426, 376);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(142, 55);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Đăng nhập";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnLogin.FlatAppearance.BorderSize = 2;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.Location = new System.Drawing.Point(426, 376);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(142, 55);
+            this.btnLogin.TabIndex = 15;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPass
             // 
@@ -106,6 +109,7 @@ namespace MVP.Views
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPass.Location = new System.Drawing.Point(310, 270);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "password";
             this.txtPass.Size = new System.Drawing.Size(380, 30);
             this.txtPass.TabIndex = 14;
@@ -143,6 +147,19 @@ namespace MVP.Views
             this.label3.Size = new System.Drawing.Size(554, 4);
             this.label3.TabIndex = 11;
             // 
+            // lblFailed
+            // 
+            this.lblFailed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFailed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFailed.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblFailed.Location = new System.Drawing.Point(310, 326);
+            this.lblFailed.Name = "lblFailed";
+            this.lblFailed.Size = new System.Drawing.Size(371, 38);
+            this.lblFailed.TabIndex = 18;
+            this.lblFailed.Text = "Đăng nhập thất bại !";
+            this.lblFailed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFailed.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -169,7 +186,8 @@ namespace MVP.Views
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnShutdown;
+        private System.Windows.Forms.Label lblFailed;
     }
 }

@@ -64,7 +64,6 @@ namespace MVP.Views
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             flp.Controls.Clear();
-            txtTimKiem.Text = "";
             loadQuyen();
         }
     }

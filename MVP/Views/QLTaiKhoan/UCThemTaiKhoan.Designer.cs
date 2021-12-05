@@ -42,10 +42,10 @@ namespace MVP.Views
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flp = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxQuyen = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTenQuyen = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,10 +79,10 @@ namespace MVP.Views
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.flp);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbxQuyen);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.txtTenQuyen);
+            this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 83);
@@ -186,14 +186,14 @@ namespace MVP.Views
             this.flp.Size = new System.Drawing.Size(592, 618);
             this.flp.TabIndex = 55;
             // 
-            // comboBox1
+            // cbxQuyen
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(862, 333);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 33);
-            this.comboBox1.TabIndex = 51;
-            this.comboBox1.TabStop = false;
+            this.cbxQuyen.FormattingEnabled = true;
+            this.cbxQuyen.Location = new System.Drawing.Point(862, 333);
+            this.cbxQuyen.Name = "cbxQuyen";
+            this.cbxQuyen.Size = new System.Drawing.Size(300, 33);
+            this.cbxQuyen.TabIndex = 51;
+            this.cbxQuyen.TabStop = false;
             // 
             // btnThem
             // 
@@ -212,6 +212,7 @@ namespace MVP.Views
             this.btnThem.Text = " Tạo";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label13
             // 
@@ -221,16 +222,16 @@ namespace MVP.Views
             this.label13.Size = new System.Drawing.Size(300, 3);
             this.label13.TabIndex = 32;
             // 
-            // txtTenQuyen
+            // txtUsername
             // 
-            this.txtTenQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTenQuyen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenQuyen.Location = new System.Drawing.Point(862, 247);
-            this.txtTenQuyen.Name = "txtTenQuyen";
-            this.txtTenQuyen.Size = new System.Drawing.Size(300, 30);
-            this.txtTenQuyen.TabIndex = 31;
-            this.txtTenQuyen.TabStop = false;
-            this.txtTenQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsername.Location = new System.Drawing.Point(862, 247);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(300, 30);
+            this.txtUsername.TabIndex = 31;
+            this.txtUsername.TabStop = false;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -303,14 +304,14 @@ namespace MVP.Views
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTenQuyen;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flp;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxQuyen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;

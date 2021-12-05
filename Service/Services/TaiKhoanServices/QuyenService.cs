@@ -57,12 +57,12 @@ namespace Service.Services
 
         public bool isExistTenQuyen(string tenquyen)
         {
-            return _quyenRepository.GetsByTen(tenquyen).Count() > 0;
+            return _quyenRepository.GetsByTen(tenquyen) != null;
         }
 
         public bool isExistMota(string mota)
         {
-            return _quyenRepository.GetsByMoTa(mota).Count() > 0;
+            return _quyenRepository.GetsByMoTa(mota) != null;
         }
     }
 }

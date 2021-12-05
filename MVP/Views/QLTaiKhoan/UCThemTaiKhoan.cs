@@ -1,20 +1,28 @@
-﻿using System;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCThemTaiKhoan : UserControl
+    public partial class UCThemTaiKhoan : UserControl, IThemTaiKhoanView
     {
+        private ThemTaiKhoanPresenter _themTaiKhoanPresenter;
         public UCThemTaiKhoan()
         {
             InitializeComponent();
+            _themTaiKhoanPresenter = new ThemTaiKhoanPresenter(this);
         }
 
         private void UCThemTaiKhoan_Load(object sender, EventArgs e)
         {
             hideScrollBar();
-            for (int i = 0; i < 10; i++)
-                flp.Controls.Add(new UCItemNV_TK());
+            _themTaiKhoanPresenter.GetsAllQuyen();
+            _themTaiKhoanPresenter.GetsNV_NotAccount();
         }
 
         private void hideScrollBar()
@@ -30,6 +38,42 @@ namespace MVP.Views
         private void btnBack_Click(object sender, EventArgs e)
         {
             Dispose();
-        }        
+        }
+
+        public void Notification(string title, string description, Image img, bool flag)
+        {
+            UCNotification ucNotifi = new UCNotification(title, description, img);
+            ucNotifi.Anchor = AnchorStyles.None;
+            ucNotifi.Location = new Point((panel1.Width - ucNotifi.Width) / 2,
+                (panel1.Height - ucNotifi.Height) / 2);
+            panel1.Controls.Add(ucNotifi);
+            panel1.Controls.SetChildIndex(ucNotifi, 0);
+            if (flag)
+                refresh();
+        }
+
+        private void refresh()
+        {
+            flp.Controls.Clear();
+            _themTaiKhoanPresenter.GetsNV_NotAccount();
+        }
+
+        public void GetsNV_NotAccount(IEnumerable<NhanVienDTO> listNV)
+        {
+            for (int i = 0; i < listNV.Count(); i++)
+                flp.Controls.Add(new UCItemNV_TK(listNV.ElementAt(i), lblId, lblTenNV, lblNgaySinh));
+        }
+
+        public void GetsAllQuyen(IEnumerable<QuyenDTO> listQuyen)
+        {
+            cbxQuyen.DataSource = listQuyen;
+            cbxQuyen.DisplayMember = "TenQuyen";
+            cbxQuyen.ValueMember = "Id";
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            _themTaiKhoanPresenter.Add(txtUsername.Text, lblNgaySinh.Text, lblId.Text, (int)cbxQuyen.SelectedValue);
+        }
     }
 }

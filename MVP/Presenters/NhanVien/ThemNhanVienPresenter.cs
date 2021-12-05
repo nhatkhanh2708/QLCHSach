@@ -12,13 +12,10 @@ namespace MVP.Presenters
     {
         private readonly IThemNhanVienView _themNVView;
         private readonly INhanVienService _nvService;
-        //private readonly IQuyenService _quyenService;
-
         public ThemNhanVienPresenter(IThemNhanVienView nvView)
         {
             _themNVView = nvView;
             _nvService = (INhanVienService)Startup.ServiceProvider.GetService(typeof(INhanVienService));
-            //_quyenService = (IQuyenService)Startup.ServiceProvider.GetService(typeof(IQuyenService));
         }
         
         public int IsNumber(string pValue)
@@ -89,9 +86,9 @@ namespace MVP.Presenters
             return age;
         }
 
-        public void Add(string hoten, string gioitinh, string ngaysinh, string diachi, string sdt, string chucvu, string ngaybatdau,string trangthai)
+        public void Add(string hoten, string gioitinh, string ngaysinh, string diachi, string sdt, string ngaybatdau)
         {
-            if(hoten.Length==0 || gioitinh.Length==0 || ngaysinh.Length==0 || diachi.Length==0 || trangthai.Length==0 || sdt.Length==0 || chucvu.Length==0 || ngaybatdau.Length == 0)
+            if(hoten.Length==0 || gioitinh.Length==0 || ngaysinh.Length==0 || diachi.Length==0 ||sdt.Length==0 || ngaybatdau.Length == 0)
             {
                 _themNVView.Notification(Notification.ADD_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, true);
             }
@@ -127,7 +124,7 @@ namespace MVP.Presenters
                                     SDT = sdt,
                                     NgaySinh = ns,
                                     NgayBatDau = nbd,
-                                    Status = IsWorking(trangthai)
+                                    Status = true
                                 };
                                 nvDTO.Status = true;
                                 _nvService.Add(nvDTO);
@@ -142,10 +139,5 @@ namespace MVP.Presenters
                 }
             }
         }
-
-        /*public void GetsAllCbx()
-        {
-            _themNVView.GetsAllCbx(_quyenService.GetsAll());
-        }*/
     }
 }

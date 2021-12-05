@@ -17,5 +17,7 @@
         public static readonly string NUMBER_NOT_CONTENT_CHAR = "Số điện thoại không chứa ký tự";
         public static readonly string LENGTH_LIMIT = "Vượt quá độ dài cho phép";
         public static readonly string AGE_LIMIT = "Tuổi phải từ 18 trở lên";
+
+        public static readonly string LOGIN_FAILED = "Đăng nhập thất bại !";
     }
 }

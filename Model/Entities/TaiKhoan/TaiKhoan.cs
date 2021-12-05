@@ -21,9 +21,6 @@ namespace Model.Entities
         public byte[] PasswordHash { get; set; }
 
         [Required]
-        public byte[] PasswordSalt { get; set; }
-
-        [Required]
         public bool Status { get; set; }
 
         public Quyen Quyen { get; set; }

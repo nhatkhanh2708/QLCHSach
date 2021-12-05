@@ -15,7 +15,6 @@ namespace Model.Entities
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime NgayBatDau { get; set; }
 
-        [Required]
         public string ChucVu { get; set; }
 
         [Required]

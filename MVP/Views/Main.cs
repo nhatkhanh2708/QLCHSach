@@ -1,15 +1,22 @@
-﻿using System;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
+using System;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class Main : Form
+    public partial class Main : Form, IMainView
     {
-        public Main()
+        private TaiKhoanDTO _taiKhoanDTO;
+        private Form _fLogin;
+        private MainPresenter _mainPresenter;
+        public Main(TaiKhoanDTO taiKhoanDTO, Form flogin)
         {
             InitializeComponent();
-            hideSubMenu();
-            hideScrollBar();
+            _taiKhoanDTO = taiKhoanDTO;
+            _fLogin = flogin;
+            _mainPresenter = new MainPresenter(this);
         }
 
         private void hideSubMenu()
@@ -211,6 +218,7 @@ namespace MVP.Views
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
+            _fLogin.Show();
         }
 
         private void pnlImgLogo_Click(object sender, EventArgs e)
@@ -218,6 +226,46 @@ namespace MVP.Views
             hideBorder();
             AddUCMain(pnlImgHome);
             hideSubMenu();
+        }
+
+        public void GetTenNV(string tenNV)
+        {
+            btnInfo.Text = tenNV;
+        }
+
+        public void GetTenQuyen(string quyen, string[] funct)
+        {
+            lblChucVu.Text = quyen;
+            foreach(string c in funct)
+            {
+                if (c.Equals(QLSACH))
+                    btnQLSach.Visible = true;
+                if (c.Equals(QLBAN))
+                    btnQLXuat.Visible = true;
+                if (c.Equals(QLNHAP))
+                    btnQLNhap.Visible = true;
+                if (c.Equals(QLNV))
+                    btnQLNS.Visible = true;
+                if (c.Equals(QLTK))
+                    btnQLTK.Visible = true;
+                if (c.Equals(THONGKE))
+                    btnTK.Visible = true;
+            }
+        }
+
+        private readonly string QLSACH = "QL sách";
+        private readonly string QLBAN = "QL bán";
+        private readonly string QLNHAP = "QL nhập";
+        private readonly string QLNV = "QL nhân viên";
+        private readonly string QLTK = "QL tài khoản";
+        private readonly string THONGKE = "Thống kê";
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            _mainPresenter.ShowName(_taiKhoanDTO.NhanVienId);
+            _mainPresenter.ShowRole(_taiKhoanDTO.QuyenId);
+            hideSubMenu();
+            hideScrollBar();
         }
     }
 }

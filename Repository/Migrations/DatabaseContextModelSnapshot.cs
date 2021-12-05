@@ -180,7 +180,6 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("ChucVu")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DiaChi")
@@ -222,8 +221,8 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("MoTa")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("TenQuyen")
                         .IsRequired()
@@ -347,10 +346,6 @@ namespace Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 

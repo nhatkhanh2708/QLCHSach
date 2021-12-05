@@ -1,6 +1,5 @@
 ﻿using Model.Entities;
 using Model.IRepositories;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Repository.Repositories
@@ -9,14 +8,14 @@ namespace Repository.Repositories
     {
         public QuyenRepository(DatabaseContext context) : base(context) { }
 
-        public IEnumerable<Quyen> GetsByMoTa(string mota)
+        public Quyen GetsByMoTa(string mota)
         {
-            return _context.Quyens.Where(q => q.MoTa.Equals(mota)).ToList();
+            return _context.Quyens.FirstOrDefault(q => q.MoTa.Equals(mota));
         }
 
-        public IEnumerable<Quyen> GetsByTen(string tenquyen)
+        public Quyen GetsByTen(string tenquyen)
         {
-            return _context.Quyens.Where(q => q.TenQuyen.Equals(tenquyen)).ToList();
+            return _context.Quyens.FirstOrDefault(q => q.TenQuyen.Equals(tenquyen));
         }
     }
 }

@@ -17,12 +17,12 @@ namespace MVP.Views
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string mota = "";
+            string mota = "";            
             mota += chkQLSach.Checked ? "QL sách," : "";
             mota += chkQLBan.Checked ? "QL bán," : "";
             mota += chkQLNhap.Checked ? "QL nhập," : "";
-            mota += chkQLNV.Checked ? "QL NV," : "";
-            mota += chkQLTaiKhoan.Checked ? "QL TK," : "";
+            mota += chkQLNV.Checked ? "QL nhân viên," : "";
+            mota += chkQLTaiKhoan.Checked ? "QL tài khoản," : "";
             mota += chkThongKe.Checked ? "Thống kê," : "";            
             _themQuyenPresenter.Add(txtTenQuyen.Text, mota);
         }

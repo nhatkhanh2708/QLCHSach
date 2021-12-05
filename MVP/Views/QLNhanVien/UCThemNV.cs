@@ -47,9 +47,7 @@ namespace MVP.Views
                 dtpNgaySinh.Value.ToShortDateString(),
                 txtDiaChi.Text,
                 txtSdt.Text,
-                "Chức vụ A",
-                dtpNgayBatDau.Value.ToShortDateString(),
-                cbxStatus.GetItemText(cbxStatus.SelectedItem)
+                dtpNgayBatDau.Value.ToShortDateString()
             );
         }
 

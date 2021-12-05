@@ -12,5 +12,6 @@ namespace Service.IServices
         void Delete(int id);
         bool isExistById(int id);
         bool isExistByUsername(string username);
+        TaiKhoanDTO isLogin(string username, string password);
     }
 }

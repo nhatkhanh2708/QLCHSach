@@ -5,6 +5,7 @@ using Service.DTOs;
 using Service.Helpers;
 using Service.IServices;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Service.Services
 {
@@ -21,10 +22,9 @@ namespace Service.Services
 
         public void Add(TaiKhoanDTO dto, string password)
         {
-            byte[] passHash, passSalt;
-            HashPass.CreateHash(password, out passHash, out passSalt);
+            byte[] passHash;
+            HashPass.CreateHash(password, out passHash);
             dto.PasswordHash = passHash;
-            dto.PasswordSalt = passSalt;
             var entity = _mapper.Map<TaiKhoanDTO, TaiKhoan>(dto);
             _taiKhoanRepository.Add(entity);
         }
@@ -62,6 +62,18 @@ namespace Service.Services
         public bool isExistByUsername(string username)
         {
             return _taiKhoanRepository.GetByUsername(username) != null;
+        }
+
+        public TaiKhoanDTO isLogin(string username, string password)
+        {
+            var acc = _taiKhoanRepository.GetByUsername(username);
+            if (acc == null)
+                return null;
+            byte[] passh;
+            HashPass.CreateHash(password, out passh);
+            if(passh.SequenceEqual(acc.PasswordHash))
+                return _mapper.Map<TaiKhoan, TaiKhoanDTO>(acc);
+            return null;
         }
     }
 }

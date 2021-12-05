@@ -271,6 +271,7 @@ namespace MVP.Views
             this.btnTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTK.UseVisualStyleBackColor = true;
+            this.btnTK.Visible = false;
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
             // pnlSubQLTK
@@ -337,6 +338,7 @@ namespace MVP.Views
             this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLTK.UseVisualStyleBackColor = true;
+            this.btnQLTK.Visible = false;
             this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // pnlSubQLNS
@@ -385,6 +387,7 @@ namespace MVP.Views
             this.btnQLNS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLNS.UseVisualStyleBackColor = true;
+            this.btnQLNS.Visible = false;
             this.btnQLNS.Click += new System.EventHandler(this.btnQLNS_Click);
             // 
             // pnlSubQLNhap
@@ -451,6 +454,7 @@ namespace MVP.Views
             this.btnQLNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLNhap.UseVisualStyleBackColor = true;
+            this.btnQLNhap.Visible = false;
             this.btnQLNhap.Click += new System.EventHandler(this.btnQLNhap_Click);
             // 
             // pnlSubQLXuat
@@ -499,6 +503,7 @@ namespace MVP.Views
             this.btnQLXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLXuat.UseVisualStyleBackColor = true;
+            this.btnQLXuat.Visible = false;
             this.btnQLXuat.Click += new System.EventHandler(this.btnQLXuat_Click);
             // 
             // pnlSubQLSach
@@ -603,6 +608,7 @@ namespace MVP.Views
             this.btnQLSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLSach.UseVisualStyleBackColor = true;
+            this.btnQLSach.Visible = false;
             this.btnQLSach.Click += new System.EventHandler(this.btnQLSach_Click);
             // 
             // pnlLogo
@@ -732,6 +738,7 @@ namespace MVP.Views
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
