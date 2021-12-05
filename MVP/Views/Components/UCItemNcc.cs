@@ -19,6 +19,7 @@ namespace MVP.Views
         private void UCItemNcc_Load(object sender, EventArgs e)
         {
             lblId.Text = "#" + _nccDTO.Id;
+            lblTenNcc.Text = _nccDTO.TenNCC;
             lblDiaChi.Text = _nccDTO.DiaChi;
             lblNgayHopTac.Text = _nccDTO.NgayHopTac.ToShortDateString();
             lblStatus.Image = _nccDTO.Status ? Resources.icons8_filled_circle_green : Resources.icons8_filled_circle_red;

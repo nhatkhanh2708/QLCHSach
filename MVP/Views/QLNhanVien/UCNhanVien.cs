@@ -59,5 +59,12 @@ namespace MVP.Views
                 flp.Controls.Add(new UCItemNV(listNV.ElementAt(i), getPanelContainer));
             }
         }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            flp.Controls.Clear();
+            txtTimKiem.Text = "";
+            loadAllNV();
+        }
     }
 }

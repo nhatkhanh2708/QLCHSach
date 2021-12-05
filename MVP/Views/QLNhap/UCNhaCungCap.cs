@@ -57,8 +57,14 @@ namespace MVP.Views
             for (int i = 0; i < listNcc.Count(); i++)
             {
                 flp.Controls.Add(new UCItemNcc(listNcc.ElementAt(i), getPanelContainer));
-
             }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Controls.Clear();
+            flp.Controls.Clear();
+            loadAllNcc();
         }
     }
 }
