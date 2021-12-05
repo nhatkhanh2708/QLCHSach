@@ -65,7 +65,7 @@ namespace Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenQuyen = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    MoTa = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: true)
+                    MoTa = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {

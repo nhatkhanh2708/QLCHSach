@@ -8,7 +8,7 @@ namespace Service.DTOs
         [Required]
         public string TenQuyen { get; set; }
 
-        [StringLength(60)]
+        [StringLength(100)]
         public string MoTa { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Model.Entities
         [Required]
         public string TenQuyen { get; set; }
 
-        [StringLength(60)]
+        [StringLength(100)]
         public string MoTa { get; set; }
 
         public ICollection<TaiKhoan> TaiKhoans { get; set; }

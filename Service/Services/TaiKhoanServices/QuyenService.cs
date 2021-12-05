@@ -4,6 +4,7 @@ using Model.IRepositories;
 using Service.DTOs;
 using Service.IServices;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Service.Services
 {
@@ -52,6 +53,16 @@ namespace Service.Services
         public bool isExistById(int id)
         {
             return _quyenRepository.GetById(id) != null;
+        }
+
+        public bool isExistTenQuyen(string tenquyen)
+        {
+            return _quyenRepository.GetsByTen(tenquyen).Count() > 0;
+        }
+
+        public bool isExistMota(string mota)
+        {
+            return _quyenRepository.GetsByMoTa(mota).Count() > 0;
         }
     }
 }

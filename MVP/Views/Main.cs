@@ -191,6 +191,7 @@ namespace MVP.Views
         private void btnQuyen_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCQuyen());
             btnQuyen.FlatAppearance.BorderSize = 1;
         }
 

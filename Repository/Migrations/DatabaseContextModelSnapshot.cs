@@ -222,8 +222,8 @@ namespace Repository.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("MoTa")
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("TenQuyen")
                         .IsRequired()
