@@ -303,6 +303,7 @@ namespace MVP.Views
             this.Controls.Add(this.panel1);
             this.Name = "UCChiTietQuyen";
             this.Size = new System.Drawing.Size(1275, 800);
+            this.Load += new System.EventHandler(this.UCChiTietQuyen_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -37,6 +37,7 @@ namespace MVP.Views
             this.pnlBody = new System.Windows.Forms.Panel();
             this.flp = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.pnlContainer.SuspendLayout();
@@ -94,6 +95,7 @@ namespace MVP.Views
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlBody.Controls.Add(this.btnRefesh);
             this.pnlBody.Controls.Add(this.flp);
             this.pnlBody.Controls.Add(this.btnAdd);
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
@@ -129,6 +131,24 @@ namespace MVP.Views
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefesh.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnRefesh.FlatAppearance.BorderSize = 2;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRefesh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefesh.Image = global::MVP.Properties.Resources.icons8_refresh_32;
+            this.btnRefesh.Location = new System.Drawing.Point(1142, 16);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(108, 55);
+            this.btnRefesh.TabIndex = 16;
+            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
             // UCQuyen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -155,5 +175,6 @@ namespace MVP.Views
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.FlowLayoutPanel flp;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRefesh;
     }
 }

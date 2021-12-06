@@ -5,6 +5,7 @@ using MVP.Utils;
 using Service.DTOs;
 using Service.IServices;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MVP.Presenters
 {
@@ -23,7 +24,7 @@ namespace MVP.Presenters
         }
         public void Add(string username, string password, string nvId, int quyenId)
         {
-            if (!string.IsNullOrEmpty(username) || !_taiKhoanService.isExistByUsername(username))
+            if (!string.IsNullOrEmpty(username) && !_taiKhoanService.isExistByUsername(username))
             {
                 var date = password.Split("/");
                 var thang = date[0].Length == 1 ? "0" + date[0] : date[0];
@@ -35,6 +36,10 @@ namespace MVP.Presenters
                 taiKhoan.Username = username;
                 taiKhoan.Status = true;
                 _taiKhoanService.Add(taiKhoan, pass);
+
+                var nv = _nhanVienService.GetById(int.Parse(nvId));
+                nv.ChucVu = _quyenService.GetById(quyenId).TenQuyen;
+                _nhanVienService.Update(nv);
                 _themTaiKhoanView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);
             }
             else
@@ -67,8 +72,12 @@ namespace MVP.Presenters
                 {
                     listNV_NotAccount.Add(nv);
                 }
-                    
             }
+            /*var results = listNV.Join(listTK,
+                      wo => wo.Id,
+                      p => p.NhanVienId,
+                      (nv, tk) => new {nv}
+                    );*/
             _themTaiKhoanView.GetsNV_NotAccount(listNV_NotAccount);
         }
     }

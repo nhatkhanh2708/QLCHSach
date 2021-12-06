@@ -119,14 +119,12 @@ namespace MVP.Presenters
                                 {
                                     HoTen = hoten,
                                     GioiTinh = IsGender(gioitinh),
-                                    DiaChi = diachi,                                    
-                                    ChucVu = "Chức vụ A",
+                                    DiaChi = diachi,
                                     SDT = sdt,
                                     NgaySinh = ns,
                                     NgayBatDau = nbd,
                                     Status = true
                                 };
-                                nvDTO.Status = true;
                                 _nvService.Add(nvDTO);
                                 _themNVView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);
                             }

@@ -37,7 +37,6 @@ namespace MVP.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblId = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -119,24 +118,12 @@ namespace MVP.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblId);
             this.panel2.Controls.Add(this.lblTenNV);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 63);
             this.panel2.TabIndex = 0;
-            // 
-            // lblId
-            // 
-            this.lblId.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblId.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblId.Location = new System.Drawing.Point(0, 0);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(43, 63);
-            this.lblId.TabIndex = 1;
-            this.lblId.Text = "#1";
-            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTenNV
             // 
@@ -150,6 +137,7 @@ namespace MVP.Views
             this.lblTenNV.TabIndex = 0;
             this.lblTenNV.Text = "label1";
             this.lblTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenNV.Click += new System.EventHandler(this.lblTenNV_Click);
             // 
             // UCItemTK
             // 
@@ -160,6 +148,7 @@ namespace MVP.Views
             this.Name = "UCItemTK";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(360, 141);
+            this.Load += new System.EventHandler(this.UCItemTK_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -178,7 +167,6 @@ namespace MVP.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblTenNV;
     }
 }

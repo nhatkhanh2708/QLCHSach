@@ -134,6 +134,7 @@ namespace MVP.Views
             this.btnRefesh.TabIndex = 13;
             this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimKiem
             // 

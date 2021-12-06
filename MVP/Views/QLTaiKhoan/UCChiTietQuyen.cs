@@ -10,12 +10,17 @@ namespace MVP.Views
         public UCChiTietQuyen(QuyenDTO quyenDTO)
         {
             InitializeComponent();
-            _quyenDTO = quyenDTO;            
+            _quyenDTO = quyenDTO;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void UCChiTietQuyen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
