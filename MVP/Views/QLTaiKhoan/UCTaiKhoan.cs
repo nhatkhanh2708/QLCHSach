@@ -67,6 +67,7 @@ namespace MVP.Views
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             flp.Controls.Clear();
+            loadTaiKhoan();
         }
 
         public void GetsAllTaiKhoan(IEnumerable<TaiKhoanDTO> listTK)
