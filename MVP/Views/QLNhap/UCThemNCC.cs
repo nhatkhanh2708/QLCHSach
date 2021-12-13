@@ -28,7 +28,7 @@ namespace MVP.Views
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            _themnccPresenter.Add(txtNcc.Text, txtDiaChi.Text, txtSdt.Text, dtpNgayHopTac.Value, cbxStatus.GetItemText(cbxStatus.SelectedItem));
+            _themnccPresenter.Add(txtNcc.Text, txtDiaChi.Text, txtSdt.Text, dtpNgayHopTac.Value);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

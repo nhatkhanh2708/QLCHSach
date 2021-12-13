@@ -31,7 +31,11 @@ namespace Model.Entities
         [Required]
         public bool Status { get; set; }
 
+        [Required]
+        public int NccId { get; set; }
+
         public NhaXuatBan Nxb { get; set; }
+
 
         public ICollection<SachTheLoai> SachTheLoais { get; set; }
         public ICollection<SachTacGia> SachTacGias { get; set; }

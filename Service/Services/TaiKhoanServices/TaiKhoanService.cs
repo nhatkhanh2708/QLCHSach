@@ -75,5 +75,11 @@ namespace Service.Services
                 return _mapper.Map<TaiKhoan, TaiKhoanDTO>(acc);
             return null;
         }
+
+        public TaiKhoanDTO GetByNVId(int id)
+        {
+            var entity = _taiKhoanRepository.GetByNVId(id);            
+            return _mapper.Map<TaiKhoan, TaiKhoanDTO>(entity);
+        }
     }
 }

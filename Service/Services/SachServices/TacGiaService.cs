@@ -59,5 +59,11 @@ namespace Service.Services
         {
             return _tacGiaRepository.GetByName(tentg, butdanh).LongCount() > 0;
         }
+
+        public IEnumerable<TacGiaDTO> GetByTen(string tg)
+        {
+            var entities = _tacGiaRepository.GetByTen(tg, tg);
+            return _mapper.Map<IEnumerable<TacGia>, IEnumerable<TacGiaDTO>>(entities);
+        }
     }
 }

@@ -66,5 +66,19 @@ namespace MVP.Views
             txtTimKiem.Text = "";
             loadAllNV();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            _nvPresenter.GetByName(txtTimKiem.Text);
+        }
+
+        public void GetsByName(List<NhanVienDTO> listNV)
+        {
+            flp.Controls.Clear();
+            for (int i = 0; i < listNV.Count(); i++)
+            {
+                flp.Controls.Add(new UCItemNV(listNV.ElementAt(i), getPanelContainer));
+            }
+        }
     }
 }

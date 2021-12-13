@@ -87,5 +87,19 @@ namespace MVP.Views
                 txtVietTat.Text = row.Cells["VietTat"].Value.ToString();
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            _nxbPresenter.GetByTen(txtTimKiem.Text);
+        }
+
+        public void GetByTen(IEnumerable<NhaXuatBanDTO> listNXB)
+        {
+            _listNXB = listNXB;
+            dtgv.DataSource = _listNXB.ToList();
+            lblId.Text = "";
+            txtNXB.Text = "";
+            txtVietTat.Text = "";
+        }
     }
 }

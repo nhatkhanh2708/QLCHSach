@@ -59,5 +59,11 @@ namespace Service.Services
         {
             return _theLoaiRepository.GetByTenTheLoai(tenTheLoai).LongCount() > 0;
         }
+
+        public IEnumerable<TheLoaiDTO> GetByTen(string tenTheLoai)
+        {
+            var entities = _theLoaiRepository.GetByTen(tenTheLoai);
+            return _mapper.Map<IEnumerable<TheLoai>, IEnumerable<TheLoaiDTO>>(entities);
+        }
     }
 }

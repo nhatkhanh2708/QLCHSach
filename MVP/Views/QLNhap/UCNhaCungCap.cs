@@ -66,5 +66,19 @@ namespace MVP.Views
             flp.Controls.Clear();
             loadAllNcc();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            _nccPresenter.GetByName(txtTimKiem.Text);
+        }
+
+        public void GetsByName(List<NccDTO> listNcc)
+        {
+            flp.Controls.Clear();
+            for (int i = 0; i < listNcc.Count(); i++)
+            {
+                flp.Controls.Add(new UCItemNcc(listNcc.ElementAt(i), getPanelContainer));
+            }
+        }
     }
 }

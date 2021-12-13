@@ -6,5 +6,6 @@ namespace MVP.IViews
     public interface INhaCungCapView
     {
         public void GetsAll(IEnumerable<NccDTO> listNcc);
+        public void GetsByName(List<NccDTO> listNcc);
     }
 }

@@ -4,10 +4,10 @@ using System.Drawing;
 
 namespace MVP.IViews
 {
-    public interface INXBView
+    public interface IChiTietNVView
     {
+        public void GetAllChucVu(IEnumerable<QuyenDTO> listQuyen);
         public void Notification(string title, string description, Image img, bool flag);
-        public void GetsAll(IEnumerable<NhaXuatBanDTO> listNXB);
-        public void GetByTen(IEnumerable<NhaXuatBanDTO> listNXB);
+        public void isExistTaiKhoanNV(bool isExist);
     }
 }

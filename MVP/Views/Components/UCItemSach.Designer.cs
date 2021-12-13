@@ -108,9 +108,10 @@ namespace MVP.Views
             // 
             this.lblGiaNhap.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblGiaNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGiaNhap.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblGiaNhap.Location = new System.Drawing.Point(159, 0);
             this.lblGiaNhap.Name = "lblGiaNhap";
-            this.lblGiaNhap.Size = new System.Drawing.Size(86, 31);
+            this.lblGiaNhap.Size = new System.Drawing.Size(81, 31);
             this.lblGiaNhap.TabIndex = 3;
             this.lblGiaNhap.Text = "75000";
             this.lblGiaNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,11 +129,12 @@ namespace MVP.Views
             // 
             this.lblGiaBan.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblGiaBan.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGiaBan.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblGiaBan.Location = new System.Drawing.Point(38, 0);
             this.lblGiaBan.Name = "lblGiaBan";
             this.lblGiaBan.Size = new System.Drawing.Size(88, 31);
             this.lblGiaBan.TabIndex = 1;
-            this.lblGiaBan.Text = "75000";
+            this.lblGiaBan.Text = "80000";
             this.lblGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1

@@ -8,6 +8,11 @@ namespace Repository.Repositories
     {
         public TaiKhoanRepository(DatabaseContext context) : base(context) { }
 
+        public TaiKhoan GetByNVId(int id)
+        {
+            return _context.TaiKhoans.FirstOrDefault(u => u.NhanVienId == id);
+        }
+
         public TaiKhoan GetByUsername(string username)
         {
             return _context.TaiKhoans.FirstOrDefault(u => u.Username == username);

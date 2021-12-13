@@ -53,6 +53,9 @@ namespace MVP.Views
 
         private void refresh()
         {
+            txtDiaChi.Text = "";
+            txtSdt.Text = "";
+            txtTenNV.Text = "";
             txtDiaChi.Controls.Clear();
             txtTenNV.Controls.Clear();
             txtSdt.Controls.Clear();

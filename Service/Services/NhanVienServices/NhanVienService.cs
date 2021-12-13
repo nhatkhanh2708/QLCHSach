@@ -53,5 +53,12 @@ namespace Service.Services
         {
             return _nhanVienRepository.GetById(id) != null;
         }
+
+        public void UpdateStatus(int id)
+        {
+            var entity = _nhanVienRepository.GetById(id);
+            entity.Status = false;
+            _nhanVienRepository.Update(entity);
+        }
     }
 }

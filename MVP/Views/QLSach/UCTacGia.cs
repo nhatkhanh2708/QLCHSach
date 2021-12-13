@@ -88,5 +88,19 @@ namespace MVP.Views
                 txtButDanh.Text = row.Cells["ButDanh"].Value.ToString();
             }
         }
+
+        public void GetByTen(IEnumerable<TacGiaDTO> listTG)
+        {
+            _listTG = listTG;
+            dtgv.DataSource = _listTG.ToList();
+            lblId.Text = "";
+            txtButDanh.Text = "";
+            txtTG.Text = "";
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            _TGPresenter.GetByTen(txtTimKiem.Text);
+        }
     }
 }

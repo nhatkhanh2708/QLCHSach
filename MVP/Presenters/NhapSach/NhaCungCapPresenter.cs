@@ -1,6 +1,8 @@
 ﻿using Model.Entities;
 using MVP.IViews;
+using Service.DTOs;
 using Service.IServices;
+using System.Collections.Generic;
 
 namespace MVP.Presenters
 {
@@ -15,7 +17,30 @@ namespace MVP.Presenters
         }
         public void GetsAll()
         {
-            _nccView.GetsAll(_nccService.GetsAll());
+            var listall = _nccService.GetsAll();
+            List<NccDTO> listemp = new List<NccDTO>();
+            foreach (NccDTO n in listall)
+            {
+                if (n.Status)
+                {
+                    listemp.Add(n);
+                }
+            }
+            _nccView.GetsAll(listemp);
+        }
+
+        public void GetByName(string name)
+        {
+            var listall = _nccService.GetsAll();
+            List<NccDTO> listemp = new List<NccDTO>();
+            foreach(NccDTO n in listall)
+            {
+                if (n.TenNCC.StartsWith(name) && n.Status)
+                {
+                    listemp.Add(n);
+                }
+            }
+            _nccView.GetsByName(listemp);
         }
     }
 }

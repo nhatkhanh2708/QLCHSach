@@ -10,7 +10,7 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211206011449_initial")]
+    [Migration("20211213062013_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -251,6 +251,9 @@ namespace Repository.Migrations
 
                     b.Property<byte[]>("Img")
                         .HasColumnType("image");
+
+                    b.Property<int>("NccId")
+                        .HasColumnType("int");
 
                     b.Property<int>("NxbId")
                         .HasColumnType("int");

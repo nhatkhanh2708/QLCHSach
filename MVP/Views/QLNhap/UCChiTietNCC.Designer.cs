@@ -36,8 +36,8 @@ namespace MVP.Views
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@ namespace MVP.Views
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +77,9 @@ namespace MVP.Views
             // cbxStatus
             // 
             this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Hợp tác",
+            "Không còn hợp tác"});
             this.cbxStatus.Location = new System.Drawing.Point(551, 405);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(300, 33);
@@ -120,8 +123,8 @@ namespace MVP.Views
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnEdit);
+            this.panel3.Controls.Add(this.btnDel);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnBack);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -130,39 +133,41 @@ namespace MVP.Views
             this.panel3.Size = new System.Drawing.Size(1275, 83);
             this.panel3.TabIndex = 4;
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::MVP.Properties.Resources.icons8_edit_32;
-            this.button1.Location = new System.Drawing.Point(949, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 55);
-            this.button1.TabIndex = 22;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnEdit.FlatAppearance.BorderSize = 2;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEdit.Image = global::MVP.Properties.Resources.icons8_edit_32;
+            this.btnEdit.Location = new System.Drawing.Point(949, 17);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(116, 55);
+            this.btnEdit.TabIndex = 22;
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button2
+            // btnDel
             // 
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::MVP.Properties.Resources.icons8_delete_32;
-            this.button2.Location = new System.Drawing.Point(1144, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 55);
-            this.button2.TabIndex = 21;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDel.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnDel.FlatAppearance.BorderSize = 2;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDel.Image = global::MVP.Properties.Resources.icons8_delete_32;
+            this.btnDel.Location = new System.Drawing.Point(1144, 16);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(105, 55);
+            this.btnDel.TabIndex = 21;
+            this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // label1
             // 
@@ -252,8 +257,8 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.cbxStatus);
             this.panel2.Controls.Add(this.dtpNgayHopTac);
             this.panel2.Controls.Add(this.label12);
@@ -273,39 +278,41 @@ namespace MVP.Views
             this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 5;
             // 
-            // button3
+            // btnHuy
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(923, 519);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 55);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Hủy";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuy.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnHuy.FlatAppearance.BorderSize = 2;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHuy.Location = new System.Drawing.Point(923, 519);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(105, 55);
+            this.btnHuy.TabIndex = 51;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnThem
+            // btnUpdate
             // 
-            this.btnThem.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnThem.FlatAppearance.BorderSize = 2;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThem.Location = new System.Drawing.Point(597, 518);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(186, 55);
-            this.btnThem.TabIndex = 50;
-            this.btnThem.Text = "Cập nhật";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(597, 518);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(186, 55);
+            this.btnUpdate.TabIndex = 50;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label5
             // 
@@ -351,9 +358,9 @@ namespace MVP.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

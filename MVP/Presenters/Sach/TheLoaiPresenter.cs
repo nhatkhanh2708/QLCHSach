@@ -82,5 +82,13 @@ namespace MVP.Presenters
                 _theLoaiView.Notification(Notification.EDIT_FAILED, Notification.NOT_SELECTED_ITEM, Resources.fail, false);
             }
         }
+
+        public void GetByTen(string tentl)
+        {
+            if (!String.IsNullOrEmpty(tentl))
+                _theLoaiView.GetByTen(_theLoaiService.GetByTen(tentl));
+            else
+                _theLoaiView.GetByTen(_theLoaiService.GetsAll());
+        }
     }
 }

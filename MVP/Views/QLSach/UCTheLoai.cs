@@ -86,5 +86,18 @@ namespace MVP.Views
                 txtTheLoai.Text = row.Cells["TenTheLoai"].Value.ToString();
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            _theLoaiPresenter.GetByTen(txtTimKiem.Text);
+        }
+
+        public void GetByTen(IEnumerable<TheLoaiDTO> listTheLoai)
+        {
+            _listTheLoai = listTheLoai;
+            dtgv.DataSource = _listTheLoai;
+            lblId.Text = "";
+            txtTheLoai.Text = "";
+        }
     }
 }

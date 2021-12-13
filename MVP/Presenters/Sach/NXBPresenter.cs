@@ -73,5 +73,17 @@ namespace MVP.Presenters
                 _nxbView.Notification(Notification.EDIT_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, false);
             }
         }
+
+        public void GetByTen(string ten)
+        {
+            if (!String.IsNullOrEmpty(ten))
+            {
+                _nxbView.GetByTen(_nxbService.GetsByTenNXB(ten));
+            }
+            else
+            {
+                _nxbView.GetByTen(_nxbService.GetsAll());
+            }
+        }
     }
 }

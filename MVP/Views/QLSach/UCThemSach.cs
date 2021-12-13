@@ -15,14 +15,11 @@ namespace MVP.Views
         private IEnumerable<TacGiaDTO> _listTacGia;
         private IEnumerable<NhaXuatBanDTO> _listNxb;
         private ThemSachPresenter _themSachPresenter;
-        
-        private BindingSource bsTheLoai;
 
         public UCThemSach()
         {
             InitializeComponent();
             _themSachPresenter = new ThemSachPresenter(this);
-            bsTheLoai = new BindingSource();
         }
 
         private void UCThemSach_Load(object sender, EventArgs e)
@@ -51,8 +48,7 @@ namespace MVP.Views
 
         private void loadCbx()
         {
-            bsTheLoai.DataSource = _listTheLoai.ToList();
-            cbxTheLoai.DataSource = bsTheLoai.DataSource;
+            cbxTheLoai.DataSource = _listTheLoai.ToList();
             cbxTheLoai.DisplayMember = "TenTheLoai";
             cbxTheLoai.ValueMember = "Id";
             //cbx tg
@@ -113,7 +109,7 @@ namespace MVP.Views
 
         private void cbxTheLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            flpTheLoai.Controls.Add(new UCItemCbx(flpTheLoai, cbxTheLoai.SelectedValue.ToString()));
+            flpTheLoai.Controls.Add(new UCItemCbx(flpTheLoai, cbxTheLoai.SelectedText.ToString()));
         }
     }
 }

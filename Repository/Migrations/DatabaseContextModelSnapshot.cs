@@ -250,6 +250,9 @@ namespace Repository.Migrations
                     b.Property<byte[]>("Img")
                         .HasColumnType("image");
 
+                    b.Property<int>("NccId")
+                        .HasColumnType("int");
+
                     b.Property<int>("NxbId")
                         .HasColumnType("int");
 

@@ -111,7 +111,8 @@ namespace Repository.Migrations
                     GiaBan = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     Img = table.Column<byte[]>(type: "image", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    NccId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

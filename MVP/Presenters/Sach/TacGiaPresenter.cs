@@ -89,5 +89,17 @@ namespace MVP.Presenters
                 _tacGiaView.Notification(Notification.EDIT_FAILED, Notification.NOT_FILL_CONTENT, Resources.fail, false);
             }
         }
+
+        public void GetByTen(string tg)
+        {
+            if (!String.IsNullOrEmpty(tg))
+            {
+                _tacGiaView.GetByTen(_tacGiaService.GetByTen(tg));
+            }
+            else
+            {
+                _tacGiaView.GetByTen(_tacGiaService.GetsAll());
+            }
+        }
     }
 }

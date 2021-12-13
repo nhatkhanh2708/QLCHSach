@@ -17,7 +17,7 @@ namespace MVP.Presenters
             _themnccView = themNCCView;
             _nccService = (INccService)Startup.ServiceProvider.GetService(typeof(INccService));
         }
-        public void Add(string tenncc, string diachi, string sdt, DateTime ngayhoptac, string status)
+        public void Add(string tenncc, string diachi, string sdt, DateTime ngayhoptac)
         {
             if (!String.IsNullOrEmpty(tenncc) && IsNumber(sdt) == 0 && IsChar(tenncc) == 0 && sdt.Length <= 10)
             {
@@ -26,7 +26,7 @@ namespace MVP.Presenters
                 ncc.DiaChi = diachi.Trim();
                 ncc.SDT = sdt.Trim();
                 ncc.NgayHopTac = ngayhoptac;
-                ncc.Status = ConvertBoolToString(status);
+                ncc.Status = true;
                 _nccService.Add(ncc);
                 _themnccView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);
             }

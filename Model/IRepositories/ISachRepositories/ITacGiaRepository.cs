@@ -6,5 +6,6 @@ namespace Model.IRepositories
     public interface ITacGiaRepository : IRepository<TacGia>
     {
         public IEnumerable<TacGia> GetByName(string tentg, string butdanh);
+        public IEnumerable<TacGia> GetByTen(string tentg, string butdanh);
     }
 }

@@ -27,5 +27,8 @@ namespace Service.DTOs
 
         [Required]
         public bool Status { get; set; }
+
+        [Required]
+        public int NccId { get; set; }
     }
 }

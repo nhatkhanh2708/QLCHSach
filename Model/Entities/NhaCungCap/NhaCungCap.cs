@@ -31,7 +31,7 @@ namespace Model.Entities
 
         public NhaCungCap()
         {
-            HoaDonNhaps = new Collection<HoaDonNhap>();
+            HoaDonNhaps = new Collection<HoaDonNhap>();            
         }
     }
 }

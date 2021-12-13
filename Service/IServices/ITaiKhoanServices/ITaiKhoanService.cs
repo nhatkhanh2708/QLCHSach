@@ -11,7 +11,9 @@ namespace Service.IServices
         void Update(TaiKhoanDTO dto);
         void Delete(int id);
         bool isExistById(int id);
+        TaiKhoanDTO GetByNVId(int id);
         bool isExistByUsername(string username);
         TaiKhoanDTO isLogin(string username, string password);
+
     }
 }

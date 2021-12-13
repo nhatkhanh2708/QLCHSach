@@ -13,5 +13,10 @@ namespace Repository.Repositories
         {
             return _context.TacGias.Where(q => (q.HoTen.Equals(tentg) && q.ButDanh.Equals(butdanh))).ToList();
         }
+
+        public IEnumerable<TacGia> GetByTen(string tentg, string butdanh)
+        {
+            return _context.TacGias.Where(q => (q.HoTen.StartsWith(tentg) || q.ButDanh.StartsWith(butdanh))).ToList();
+        }
     }
 }

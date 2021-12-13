@@ -1,6 +1,8 @@
 ﻿using Model.Entities;
 using MVP.IViews;
+using Service.DTOs;
 using Service.IServices;
+using System.Collections.Generic;
 
 namespace MVP.Presenters
 {
@@ -16,7 +18,30 @@ namespace MVP.Presenters
 
         public void GetsAll()
         {
-            _nvView.GetsAll(_nvService.GetsAll());
+            var listnv = _nvService.GetsAll();
+            List<NhanVienDTO> listemp = new List<NhanVienDTO>();
+            foreach (NhanVienDTO nv in listnv)
+            {
+                if (nv.Status)
+                {
+                    listemp.Add(nv);
+                }
+            }
+            _nvView.GetsAll(listemp);
+        }
+
+        public void GetByName(string name)
+        {
+            var listnv = _nvService.GetsAll();
+            List<NhanVienDTO> listemp = new List<NhanVienDTO>();
+            foreach(NhanVienDTO nv in listnv)
+            {
+                if (nv.HoTen.StartsWith(name) && nv.Status)
+                {
+                    listemp.Add(nv);
+                }
+            }
+            _nvView.GetsByName(listemp);
         }
     }
 }
