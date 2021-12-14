@@ -53,5 +53,11 @@ namespace Service.Services
         {
             return _sachRepository.GetById(id) != null;
         }
+
+        public int AddSach(SachDTO s)
+        {
+            var entity = _mapper.Map<SachDTO, Sach>(s);
+            return _sachRepository.Add_ReturnId(entity);
+        }
     }
 }

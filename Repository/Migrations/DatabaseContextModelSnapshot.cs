@@ -139,7 +139,7 @@ namespace Repository.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("TenNCC")
@@ -355,7 +355,7 @@ namespace Repository.Migrations
                     b.Property<int>("QuyenId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("Username")

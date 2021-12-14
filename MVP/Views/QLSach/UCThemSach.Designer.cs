@@ -31,6 +31,9 @@ namespace MVP.Views
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRmImg = new System.Windows.Forms.Button();
+            this.cbxNcc = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -43,11 +46,8 @@ namespace MVP.Views
             this.flpTacGia = new System.Windows.Forms.FlowLayoutPanel();
             this.cbxTacGia = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnChonAnh = new System.Windows.Forms.Button();
@@ -59,6 +59,9 @@ namespace MVP.Views
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.numerGiaBan = new System.Windows.Forms.TextBox();
+            this.numerGiaNhap = new System.Windows.Forms.TextBox();
+            this.numerSL = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,6 +82,12 @@ namespace MVP.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.numerSL);
+            this.panel2.Controls.Add(this.numerGiaNhap);
+            this.panel2.Controls.Add(this.numerGiaBan);
+            this.panel2.Controls.Add(this.btnRmImg);
+            this.panel2.Controls.Add(this.cbxNcc);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
@@ -90,11 +99,8 @@ namespace MVP.Views
             this.panel2.Controls.Add(this.flpTacGia);
             this.panel2.Controls.Add(this.cbxTacGia);
             this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.txtSoLuong);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtGiaNhap);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtGiaBan);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.btnChonAnh);
@@ -108,9 +114,48 @@ namespace MVP.Views
             this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 4;
             // 
+            // btnRmImg
+            // 
+            this.btnRmImg.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnRmImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRmImg.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnRmImg.FlatAppearance.BorderSize = 2;
+            this.btnRmImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRmImg.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRmImg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRmImg.Location = new System.Drawing.Point(363, 615);
+            this.btnRmImg.Name = "btnRmImg";
+            this.btnRmImg.Size = new System.Drawing.Size(117, 55);
+            this.btnRmImg.TabIndex = 35;
+            this.btnRmImg.Text = "Loại bỏ";
+            this.btnRmImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRmImg.UseVisualStyleBackColor = false;
+            this.btnRmImg.Visible = false;
+            this.btnRmImg.Click += new System.EventHandler(this.btnRmImg_Click);
+            // 
+            // cbxNcc
+            // 
+            this.cbxNcc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbxNcc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxNcc.FormattingEnabled = true;
+            this.cbxNcc.Location = new System.Drawing.Point(674, 547);
+            this.cbxNcc.Name = "cbxNcc";
+            this.cbxNcc.Size = new System.Drawing.Size(449, 36);
+            this.cbxNcc.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(512, 549);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(149, 30);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Nhà cung cấp";
+            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.picBox);
             this.panel4.Location = new System.Drawing.Point(27, 64);
             this.panel4.Name = "panel4";
@@ -121,8 +166,9 @@ namespace MVP.Views
             // picBox
             // 
             this.picBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBox.InitialImage = null;
             this.picBox.Location = new System.Drawing.Point(3, 3);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(450, 494);
@@ -132,7 +178,7 @@ namespace MVP.Views
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label15.Location = new System.Drawing.Point(674, 554);
+            this.label15.Location = new System.Drawing.Point(674, 508);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(449, 3);
             this.label15.TabIndex = 31;
@@ -140,7 +186,7 @@ namespace MVP.Views
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label14.Location = new System.Drawing.Point(674, 483);
+            this.label14.Location = new System.Drawing.Point(674, 437);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(449, 3);
             this.label14.TabIndex = 30;
@@ -148,7 +194,7 @@ namespace MVP.Views
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label13.Location = new System.Drawing.Point(674, 410);
+            this.label13.Location = new System.Drawing.Point(674, 364);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(449, 3);
             this.label13.TabIndex = 29;
@@ -156,14 +202,14 @@ namespace MVP.Views
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(674, 97);
+            this.label9.Location = new System.Drawing.Point(674, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(449, 3);
             this.label9.TabIndex = 25;
             // 
             // flpTheLoai
             // 
-            this.flpTheLoai.Location = new System.Drawing.Point(674, 263);
+            this.flpTheLoai.Location = new System.Drawing.Point(674, 225);
             this.flpTheLoai.Name = "flpTheLoai";
             this.flpTheLoai.Size = new System.Drawing.Size(577, 35);
             this.flpTheLoai.TabIndex = 24;
@@ -174,7 +220,7 @@ namespace MVP.Views
             this.cbxNXB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxNXB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbxNXB.FormattingEnabled = true;
-            this.cbxNXB.Location = new System.Drawing.Point(674, 304);
+            this.cbxNXB.Location = new System.Drawing.Point(674, 266);
             this.cbxNXB.Name = "cbxNXB";
             this.cbxNXB.Size = new System.Drawing.Size(449, 36);
             this.cbxNXB.TabIndex = 23;
@@ -184,7 +230,7 @@ namespace MVP.Views
             this.cbxTheLoai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxTheLoai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbxTheLoai.FormattingEnabled = true;
-            this.cbxTheLoai.Location = new System.Drawing.Point(674, 221);
+            this.cbxTheLoai.Location = new System.Drawing.Point(674, 183);
             this.cbxTheLoai.Name = "cbxTheLoai";
             this.cbxTheLoai.Size = new System.Drawing.Size(449, 36);
             this.cbxTheLoai.TabIndex = 22;
@@ -192,7 +238,7 @@ namespace MVP.Views
             // 
             // flpTacGia
             // 
-            this.flpTacGia.Location = new System.Drawing.Point(674, 179);
+            this.flpTacGia.Location = new System.Drawing.Point(674, 141);
             this.flpTacGia.Name = "flpTacGia";
             this.flpTacGia.Size = new System.Drawing.Size(577, 35);
             this.flpTacGia.TabIndex = 21;
@@ -203,10 +249,11 @@ namespace MVP.Views
             this.cbxTacGia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxTacGia.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbxTacGia.FormattingEnabled = true;
-            this.cbxTacGia.Location = new System.Drawing.Point(674, 137);
+            this.cbxTacGia.Location = new System.Drawing.Point(674, 99);
             this.cbxTacGia.Name = "cbxTacGia";
             this.cbxTacGia.Size = new System.Drawing.Size(449, 36);
             this.cbxTacGia.TabIndex = 20;
+            this.cbxTacGia.SelectedIndexChanged += new System.EventHandler(this.cbxTacGia_SelectedIndexChanged);
             // 
             // btnThem
             // 
@@ -227,59 +274,31 @@ namespace MVP.Views
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSoLuong.Location = new System.Drawing.Point(674, 521);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(449, 30);
-            this.txtSoLuong.TabIndex = 18;
-            this.txtSoLuong.Text = "0";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(555, 524);
+            this.label8.Location = new System.Drawing.Point(555, 478);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 30);
             this.label8.TabIndex = 17;
             this.label8.Text = "Số lượng";
             // 
-            // txtGiaNhap
-            // 
-            this.txtGiaNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGiaNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGiaNhap.Location = new System.Drawing.Point(674, 450);
-            this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(449, 30);
-            this.txtGiaNhap.TabIndex = 13;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(557, 453);
+            this.label7.Location = new System.Drawing.Point(557, 407);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 30);
             this.label7.TabIndex = 12;
             this.label7.Text = "Giá nhập";
             // 
-            // txtGiaBan
-            // 
-            this.txtGiaBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGiaBan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGiaBan.Location = new System.Drawing.Point(674, 377);
-            this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(449, 30);
-            this.txtGiaBan.TabIndex = 11;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(570, 380);
+            this.label6.Location = new System.Drawing.Point(570, 334);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 30);
             this.label6.TabIndex = 10;
@@ -289,7 +308,7 @@ namespace MVP.Views
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(512, 306);
+            this.label5.Location = new System.Drawing.Point(512, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 30);
             this.label5.TabIndex = 8;
@@ -317,7 +336,7 @@ namespace MVP.Views
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(566, 221);
+            this.label4.Location = new System.Drawing.Point(566, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 30);
             this.label4.TabIndex = 4;
@@ -327,7 +346,7 @@ namespace MVP.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(578, 139);
+            this.label3.Location = new System.Drawing.Point(578, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 30);
             this.label3.TabIndex = 2;
@@ -337,7 +356,7 @@ namespace MVP.Views
             // 
             this.txtTenSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenSach.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenSach.Location = new System.Drawing.Point(674, 64);
+            this.txtTenSach.Location = new System.Drawing.Point(674, 26);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(449, 30);
             this.txtTenSach.TabIndex = 1;
@@ -346,7 +365,7 @@ namespace MVP.Views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(599, 67);
+            this.label2.Location = new System.Drawing.Point(599, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 30);
             this.label2.TabIndex = 0;
@@ -410,6 +429,36 @@ namespace MVP.Views
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // numerGiaBan
+            // 
+            this.numerGiaBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerGiaBan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerGiaBan.Location = new System.Drawing.Point(674, 334);
+            this.numerGiaBan.Name = "numerGiaBan";
+            this.numerGiaBan.Size = new System.Drawing.Size(449, 30);
+            this.numerGiaBan.TabIndex = 36;
+            this.numerGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numerGiaNhap
+            // 
+            this.numerGiaNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerGiaNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerGiaNhap.Location = new System.Drawing.Point(674, 407);
+            this.numerGiaNhap.Name = "numerGiaNhap";
+            this.numerGiaNhap.Size = new System.Drawing.Size(449, 30);
+            this.numerGiaNhap.TabIndex = 37;
+            this.numerGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numerSL
+            // 
+            this.numerSL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerSL.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerSL.Location = new System.Drawing.Point(674, 478);
+            this.numerSL.Name = "numerSL";
+            this.numerSL.Size = new System.Drawing.Size(449, 30);
+            this.numerSL.TabIndex = 38;
+            this.numerSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // UCThemSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -442,11 +491,8 @@ namespace MVP.Views
         private System.Windows.Forms.FlowLayoutPanel flpTacGia;
         private System.Windows.Forms.ComboBox cbxTacGia;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGiaNhap;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtGiaBan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnChonAnh;
@@ -460,5 +506,11 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.ComboBox cbxNcc;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnRmImg;
+        private System.Windows.Forms.TextBox numerSL;
+        private System.Windows.Forms.TextBox numerGiaNhap;
+        private System.Windows.Forms.TextBox numerGiaBan;
     }
 }

@@ -21,7 +21,6 @@ namespace Service.DTOs
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime NgayHopTac { get; set; }
 
-        [Required]
-        public bool Status { get; set; }
+        public bool? Status { get; set; }
     }
 }

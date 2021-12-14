@@ -22,7 +22,7 @@ namespace MVP.Views
             lblTenNcc.Text = _nccDTO.TenNCC;
             lblDiaChi.Text = _nccDTO.DiaChi;
             lblNgayHopTac.Text = _nccDTO.NgayHopTac.ToShortDateString();
-            lblStatus.Image = _nccDTO.Status ? Resources.icons8_filled_circle_green : Resources.icons8_filled_circle_red;
+            lblStatus.Image = _nccDTO.Status == true ? Resources.icons8_filled_circle_green : Resources.icons8_filled_circle_red;
         }
 
         private void lblTenNcc_Click(object sender, EventArgs e)

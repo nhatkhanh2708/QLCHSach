@@ -17,7 +17,7 @@ namespace Repository.Migrations
                     DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SDT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     NgayHopTac = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Status = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -135,7 +135,7 @@ namespace Repository.Migrations
                     QuyenId = table.Column<int>(type: "int", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
+                    Status = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {

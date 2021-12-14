@@ -79,5 +79,28 @@ namespace MVP.Views
         {
             _listNV = listNV;
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            flp.Controls.Clear();
+            List<TaiKhoanDTO> listtemptk = new List<TaiKhoanDTO>();
+            foreach (TaiKhoanDTO tk in _listTK)
+            {
+                if (tk.Username.StartsWith(txtTimKiem.Text))
+                {
+                    listtemptk.Add(tk);
+                }
+            }
+            var results = _listNV.Join(listtemptk,
+                      wo => wo.Id,
+                      p => p.NhanVienId,
+                      (nv, tk) => new { nv, tk }
+                    );
+            for (int i = 0; i < results.Count(); i++)
+            {
+                
+                flp.Controls.Add(new UCItemTK(results.ElementAt(i).nv, results.ElementAt(i).tk, getPanelContainer));
+            }
+        }
     }
 }

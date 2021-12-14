@@ -130,8 +130,7 @@ namespace Repository
                 .HasOne<HoaDonXuat>(s => s.HoaDonXuat)
                 .WithMany(s => s.ChiTietXuats)
                 .HasForeignKey(s => s.HdXuatId);
-            #endregion
-
+            #endregion            
             base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }

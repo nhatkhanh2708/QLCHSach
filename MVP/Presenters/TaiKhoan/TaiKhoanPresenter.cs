@@ -1,6 +1,7 @@
 ﻿using Model.Entities;
 using MVP.IViews;
 using Service.IServices;
+using System.Linq;
 
 namespace MVP.Presenters
 {
@@ -18,12 +19,12 @@ namespace MVP.Presenters
 
         public void GetsAllTaiKhoan()
         {
-            _taiKhoanView.GetsAllTaiKhoan(_taiKhoanService.GetsAll());
+            _taiKhoanView.GetsAllTaiKhoan(_taiKhoanService.GetsAll().Where(p => p.Status != null));
         }
 
         public void GetsAllNhanVien()
         {
-            _taiKhoanView.GetsAllNhanVien(_nhanVienService.GetsAll());
+            _taiKhoanView.GetsAllNhanVien(_nhanVienService.GetsAll().Where(n => n.Status == true));
         }
     }
 }

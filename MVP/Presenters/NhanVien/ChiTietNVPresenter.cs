@@ -25,8 +25,11 @@ namespace MVP.Presenters
         {
             _nvService.UpdateStatus(id);
             var tk = _tkService.GetByNVId(id);
-            tk.Status = false;
-            _tkService.Update(tk);
+            if (tk != null)
+            {
+                tk.Status = null;
+                _tkService.Update(tk);
+            }
         }
 
         public void UpdateNV(NhanVienDTO nv, int quyenid)

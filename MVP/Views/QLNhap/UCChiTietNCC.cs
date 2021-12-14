@@ -38,7 +38,7 @@ namespace MVP.Views
             txtDiaChi.Text = _nccDTO.DiaChi;
             txtNcc.Text = _nccDTO.TenNCC;
             txtSdt.Text = _nccDTO.SDT;
-            cbxStatus.SelectedIndex = _nccDTO.Status ? 0 : 1;
+            cbxStatus.SelectedIndex = _nccDTO.Status == true ? 0 : 1;
             dtpNgayHopTac.Value = _nccDTO.NgayHopTac;
         }
 

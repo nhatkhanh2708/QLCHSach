@@ -38,6 +38,7 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTenNV = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -69,6 +70,7 @@ namespace MVP.Views
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.lblStatus);
             this.panel4.Controls.Add(this.lblChucVu);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,11 +81,10 @@ namespace MVP.Views
             // 
             // lblChucVu
             // 
-            this.lblChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblChucVu.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblChucVu.Location = new System.Drawing.Point(43, 0);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(313, 37);
+            this.lblChucVu.Size = new System.Drawing.Size(223, 37);
             this.lblChucVu.TabIndex = 1;
             this.lblChucVu.Text = "label2";
             this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,6 +140,20 @@ namespace MVP.Views
             this.lblTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTenNV.Click += new System.EventHandler(this.lblTenNV_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatus.Location = new System.Drawing.Point(272, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(84, 37);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "Active";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
+            // 
             // UCItemTK
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -168,5 +183,6 @@ namespace MVP.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTenNV;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

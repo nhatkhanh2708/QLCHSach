@@ -1,15 +1,14 @@
 ﻿using System.Drawing;
-using System.IO;
 
 namespace MVP.Utils
 {
     public class Image
     {
-        public static byte[] ConvertImg2Bytes(Image img)
+        public static byte[] ConvertImg2Bytes(System.Drawing.Image img)
         {
-            ImageConverter _imageConverter = new ImageConverter();
-            byte[] xByte = (byte[])_imageConverter.ConvertTo(img, typeof(byte[]));
-            return xByte;
+                ImageConverter _imageConverter = new ImageConverter();
+                byte[] xByte = (byte[])_imageConverter.ConvertTo(img, typeof(byte[]));
+                return xByte;
         }
 
         public static Image ConvertBytes2Img(byte[] data)

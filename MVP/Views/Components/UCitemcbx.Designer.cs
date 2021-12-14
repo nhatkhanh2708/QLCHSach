@@ -39,7 +39,7 @@ namespace MVP.Views
             this.lblitem.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblitem.Location = new System.Drawing.Point(0, 0);
             this.lblitem.Name = "lblitem";
-            this.lblitem.Size = new System.Drawing.Size(149, 30);
+            this.lblitem.Size = new System.Drawing.Size(136, 30);
             this.lblitem.TabIndex = 0;
             this.lblitem.Text = "Nguyen Nhat Anh";
             this.lblitem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +51,7 @@ namespace MVP.Views
             this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Image = global::MVP.Properties.Resources.icons8_close_22;
-            this.btnRemove.Location = new System.Drawing.Point(155, 0);
+            this.btnRemove.Location = new System.Drawing.Point(138, 0);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(25, 30);
             this.btnRemove.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace MVP.Views
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblitem);
             this.Name = "UCItemCbx";
-            this.Size = new System.Drawing.Size(180, 30);
+            this.Size = new System.Drawing.Size(163, 30);
             this.ResumeLayout(false);
 
         }

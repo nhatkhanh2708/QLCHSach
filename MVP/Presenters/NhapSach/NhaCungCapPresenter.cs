@@ -21,7 +21,7 @@ namespace MVP.Presenters
             List<NccDTO> listemp = new List<NccDTO>();
             foreach (NccDTO n in listall)
             {
-                if (n.Status)
+                if (n.Status != null)
                 {
                     listemp.Add(n);
                 }
@@ -35,7 +35,7 @@ namespace MVP.Presenters
             List<NccDTO> listemp = new List<NccDTO>();
             foreach(NccDTO n in listall)
             {
-                if (n.TenNCC.StartsWith(name) && n.Status)
+                if (n.TenNCC.StartsWith(name) && n.Status != null)
                 {
                     listemp.Add(n);
                 }

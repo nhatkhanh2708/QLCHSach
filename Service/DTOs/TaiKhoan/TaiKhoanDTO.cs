@@ -16,7 +16,6 @@ namespace Service.DTOs
 
         public byte[] PasswordHash { get; set; }
 
-        [Required]
-        public bool Status { get; set; }
+        public bool? Status { get; set; }
     }
 }
