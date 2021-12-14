@@ -65,7 +65,6 @@ namespace MVP.Views
             this.lblImg.BackColor = System.Drawing.Color.Silver;
             this.lblImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblImg.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblImg.Image = global::MVP.Properties.Resources.icons8_book_40;
             this.lblImg.Location = new System.Drawing.Point(0, 0);
             this.lblImg.Name = "lblImg";
             this.lblImg.Size = new System.Drawing.Size(115, 137);

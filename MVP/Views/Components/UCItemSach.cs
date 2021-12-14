@@ -27,7 +27,15 @@ namespace MVP.Views
             lblGiaNhap.Text = double.Parse(_sach.GiaNhap.ToString()).ToString("#,###", cul.NumberFormat);
             lblGiaBan.Text = double.Parse(_sach.GiaBan.ToString()).ToString("#,###", cul.NumberFormat);
             if (_sach.Img.Length != 0)
-                lblImg.Image = (Image)(new ImageConverter()).ConvertFrom(_sach.Img);
+            {
+                lblImg.BackgroundImage = (Image)(new ImageConverter()).ConvertFrom(_sach.Img);
+                lblImg.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            else
+            {
+                lblImg.BackgroundImage = Properties.Resources.icons8_book_40;
+                lblImg.BackgroundImageLayout = ImageLayout.Center;
+            }
             lblSl.Text = _sach.SoLuong.ToString();
             string tg = "";
             foreach(string t in _listtg)
