@@ -31,11 +31,14 @@ namespace MVP.Views
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numerSL = new System.Windows.Forms.TextBox();
+            this.numerGiaNhap = new System.Windows.Forms.TextBox();
+            this.numerGiaBan = new System.Windows.Forms.TextBox();
             this.btnRmImg = new System.Windows.Forms.Button();
             this.cbxNcc = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.picBox = new System.Windows.Forms.PictureBox();
+            this.lblImg = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,13 +62,9 @@ namespace MVP.Views
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.numerGiaBan = new System.Windows.Forms.TextBox();
-            this.numerGiaNhap = new System.Windows.Forms.TextBox();
-            this.numerSL = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +113,39 @@ namespace MVP.Views
             this.panel2.Size = new System.Drawing.Size(1275, 717);
             this.panel2.TabIndex = 4;
             // 
+            // numerSL
+            // 
+            this.numerSL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerSL.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerSL.Location = new System.Drawing.Point(674, 478);
+            this.numerSL.Name = "numerSL";
+            this.numerSL.Size = new System.Drawing.Size(449, 30);
+            this.numerSL.TabIndex = 38;
+            this.numerSL.TabStop = false;
+            this.numerSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numerGiaNhap
+            // 
+            this.numerGiaNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerGiaNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerGiaNhap.Location = new System.Drawing.Point(674, 407);
+            this.numerGiaNhap.Name = "numerGiaNhap";
+            this.numerGiaNhap.Size = new System.Drawing.Size(449, 30);
+            this.numerGiaNhap.TabIndex = 37;
+            this.numerGiaNhap.TabStop = false;
+            this.numerGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numerGiaBan
+            // 
+            this.numerGiaBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numerGiaBan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numerGiaBan.Location = new System.Drawing.Point(674, 334);
+            this.numerGiaBan.Name = "numerGiaBan";
+            this.numerGiaBan.Size = new System.Drawing.Size(449, 30);
+            this.numerGiaBan.TabIndex = 36;
+            this.numerGiaBan.TabStop = false;
+            this.numerGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnRmImg
             // 
             this.btnRmImg.BackColor = System.Drawing.Color.OrangeRed;
@@ -142,6 +174,7 @@ namespace MVP.Views
             this.cbxNcc.Name = "cbxNcc";
             this.cbxNcc.Size = new System.Drawing.Size(449, 36);
             this.cbxNcc.TabIndex = 34;
+            this.cbxNcc.SelectedIndexChanged += new System.EventHandler(this.cbxNcc_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -156,24 +189,21 @@ namespace MVP.Views
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.picBox);
+            this.panel4.Controls.Add(this.lblImg);
             this.panel4.Location = new System.Drawing.Point(27, 64);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(3);
             this.panel4.Size = new System.Drawing.Size(456, 500);
             this.panel4.TabIndex = 32;
             // 
-            // picBox
+            // lblImg
             // 
-            this.picBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBox.InitialImage = null;
-            this.picBox.Location = new System.Drawing.Point(3, 3);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(450, 494);
-            this.picBox.TabIndex = 7;
-            this.picBox.TabStop = false;
+            this.lblImg.BackColor = System.Drawing.Color.Silver;
+            this.lblImg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblImg.Location = new System.Drawing.Point(3, 3);
+            this.lblImg.Name = "lblImg";
+            this.lblImg.Size = new System.Drawing.Size(450, 494);
+            this.lblImg.TabIndex = 0;
             // 
             // label15
             // 
@@ -224,6 +254,7 @@ namespace MVP.Views
             this.cbxNXB.Name = "cbxNXB";
             this.cbxNXB.Size = new System.Drawing.Size(449, 36);
             this.cbxNXB.TabIndex = 23;
+            this.cbxNXB.SelectedIndexChanged += new System.EventHandler(this.cbxNXB_SelectedIndexChanged);
             // 
             // cbxTheLoai
             // 
@@ -360,6 +391,7 @@ namespace MVP.Views
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(449, 30);
             this.txtTenSach.TabIndex = 1;
+            this.txtTenSach.TabStop = false;
             // 
             // label2
             // 
@@ -429,36 +461,6 @@ namespace MVP.Views
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // numerGiaBan
-            // 
-            this.numerGiaBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numerGiaBan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numerGiaBan.Location = new System.Drawing.Point(674, 334);
-            this.numerGiaBan.Name = "numerGiaBan";
-            this.numerGiaBan.Size = new System.Drawing.Size(449, 30);
-            this.numerGiaBan.TabIndex = 36;
-            this.numerGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numerGiaNhap
-            // 
-            this.numerGiaNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numerGiaNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numerGiaNhap.Location = new System.Drawing.Point(674, 407);
-            this.numerGiaNhap.Name = "numerGiaNhap";
-            this.numerGiaNhap.Size = new System.Drawing.Size(449, 30);
-            this.numerGiaNhap.TabIndex = 37;
-            this.numerGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numerSL
-            // 
-            this.numerSL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numerSL.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numerSL.Location = new System.Drawing.Point(674, 478);
-            this.numerSL.Name = "numerSL";
-            this.numerSL.Size = new System.Drawing.Size(449, 30);
-            this.numerSL.TabIndex = 38;
-            this.numerSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // UCThemSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -471,7 +473,6 @@ namespace MVP.Views
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -505,12 +506,12 @@ namespace MVP.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.ComboBox cbxNcc;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnRmImg;
         private System.Windows.Forms.TextBox numerSL;
         private System.Windows.Forms.TextBox numerGiaNhap;
         private System.Windows.Forms.TextBox numerGiaBan;
+        private System.Windows.Forms.Label lblImg;
     }
 }

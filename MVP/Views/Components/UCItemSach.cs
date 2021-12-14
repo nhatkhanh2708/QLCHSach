@@ -40,7 +40,7 @@ namespace MVP.Views
 
         private void lblImg_Click(object sender, EventArgs e)
         {
-            UCChiTietSach ucChiTietSach = new UCChiTietSach();
+            UCChiTietSach ucChiTietSach = new UCChiTietSach(_sach);
             ucChiTietSach.Dock = DockStyle.Fill;
             _pnlCont.Controls.Add(ucChiTietSach);
             _pnlCont.Controls.SetChildIndex(ucChiTietSach, 0);

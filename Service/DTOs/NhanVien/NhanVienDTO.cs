@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
-    public class NhanVienDTO : PersonDTO
+    public class NhanVienDTO : PersonDTO, ICloneable
     {
         [Required]
         [StringLength(10, MinimumLength = 10)]
@@ -21,5 +21,10 @@ namespace Service.DTOs
 
         [Required]
         public bool Status { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

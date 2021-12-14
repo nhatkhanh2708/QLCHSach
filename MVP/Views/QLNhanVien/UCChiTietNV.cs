@@ -12,11 +12,13 @@ namespace MVP.Views
     public partial class UCChiTietNV : UserControl, IChiTietNVView
     {
         private NhanVienDTO _nvDTO;
+        private NhanVienDTO temp;
         private ChiTietNVPresenter _chiTietNVPresenter;
         public UCChiTietNV(NhanVienDTO nhanVienDTO)
         {
             InitializeComponent();
             _nvDTO = nhanVienDTO;
+            temp = (NhanVienDTO)_nvDTO.Clone();
             _chiTietNVPresenter = new ChiTietNVPresenter(this);
         }
 
@@ -89,19 +91,19 @@ namespace MVP.Views
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            _nvDTO.HoTen = txtTennv.Text;
-            _nvDTO.GioiTinh = cbxGender.SelectedIndex == 0 ? true : false;
-            _nvDTO.NgayBatDau = dtpNgayBatDau.Value;
-            _nvDTO.NgaySinh = dtpNgaySinh.Value;
-            _nvDTO.DiaChi = txtDiaChi.Text;
-            _nvDTO.SDT = txtSdt.Text;
-            _nvDTO.ChucVu = null;
+            temp.HoTen = txtTennv.Text;
+            temp.GioiTinh = cbxGender.SelectedIndex == 0 ? true : false;
+            temp.NgayBatDau = dtpNgayBatDau.Value;
+            temp.NgaySinh = dtpNgaySinh.Value;
+            temp.DiaChi = txtDiaChi.Text;
+            temp.SDT = txtSdt.Text;
+            temp.ChucVu = null;
             int Quyenid = -1;
             if (cbxChucVu.DataSource != null)
             {
                 Quyenid = int.Parse(cbxChucVu.SelectedValue.ToString());
             }
-            _chiTietNVPresenter.UpdateNV(_nvDTO, Quyenid);
+            _chiTietNVPresenter.UpdateNV(temp, Quyenid);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -137,6 +139,7 @@ namespace MVP.Views
                 cbxGender.Enabled = false;
                 dtpNgayBatDau.Enabled = false;
                 dtpNgaySinh.Enabled = false;
+                _nvDTO = (NhanVienDTO)temp.Clone();
             }            
         }
 

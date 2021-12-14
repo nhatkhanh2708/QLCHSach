@@ -11,6 +11,7 @@ namespace MVP.Views
     {
         private QuyenDTO _quyenDTO;
         private CtQuyenPresenter ctQuyenPresenter;
+        private QuyenDTO q;
         public UCChiTietQuyen(QuyenDTO quyenDTO)
         {
             InitializeComponent();
@@ -78,6 +79,7 @@ namespace MVP.Views
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            q = (QuyenDTO)_quyenDTO.Clone();
             string mota = "";
             mota += chkQLSach.Checked ? "QL sách," : "";
             mota += chkQLBan.Checked ? "QL bán," : "";
@@ -86,9 +88,9 @@ namespace MVP.Views
             mota += chkQLTaiKhoan.Checked ? "QL tài khoản," : "";
             mota += chkThongKe.Checked ? "Thống kê," : "";
             mota = mota.Substring(0, mota.Length - 1);
-            _quyenDTO.TenQuyen = txtTenQuyen.Text;
-            _quyenDTO.MoTa = mota;
-            ctQuyenPresenter.Update(_quyenDTO);
+            q.TenQuyen = txtTenQuyen.Text;
+            q.MoTa = mota;
+            ctQuyenPresenter.Update(q);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -98,18 +100,26 @@ namespace MVP.Views
 
         public void Notification(string title, string description, Image img, bool flag)
         {
-            if (flag)
-            {
-                Dispose();
-            }
-            else
-            {
+            
                 UCNotification ucNotifi = new UCNotification(title, description, img);
                 ucNotifi.Anchor = AnchorStyles.None;
                 ucNotifi.Location = new Point((panel1.Width - ucNotifi.Width) / 2,
                     (panel1.Height - ucNotifi.Height) / 2);
                 panel1.Controls.Add(ucNotifi);
                 panel1.Controls.SetChildIndex(ucNotifi, 0);
+            if (flag)
+            {
+                btnHuy.Visible = false;
+                btnUpdate.Visible = false;
+                txtTenQuyen.ReadOnly = true;
+                chkQLBan.Enabled = false;
+                chkQLNhap.Enabled = false;
+                chkQLNV.Enabled = false;
+                chkQLSach.Enabled = false;
+                chkQLTaiKhoan.Enabled = false;
+                chkThongKe.Enabled = false;
+                txtTenQuyen.Text = _quyenDTO.TenQuyen;
+                _quyenDTO = (QuyenDTO)q.Clone();
             }
         }
     }

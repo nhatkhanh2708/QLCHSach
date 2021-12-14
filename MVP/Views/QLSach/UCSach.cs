@@ -53,6 +53,7 @@ namespace MVP.Views
 
         public void GetsAll(IEnumerable<SachDTO> listSach, IEnumerable<TacGiaDTO> listTG, IEnumerable<SachTacGiaDTO> listSTG)
         {
+            flp.Controls.Clear();
             _listSach = listSach;
             _listTG = listTG;
             _listSachTG = listSTG;
@@ -73,6 +74,11 @@ namespace MVP.Views
                 }
                 flp.Controls.Add(new UCItemSach(_listSach.ElementAt(i), listtg, getPanelContainer));
             }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            _sachPresenter.GetsAll();
         }
     }
 }

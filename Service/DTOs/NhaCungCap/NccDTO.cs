@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
-    public class NccDTO : BaseDTO
+    public class NccDTO : BaseDTO, ICloneable
     {
         [StringLength(60)]
         [Required]
@@ -22,5 +22,10 @@ namespace Service.DTOs
         public DateTime NgayHopTac { get; set; }
 
         public bool? Status { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace MVP.Views
     public partial class UCItemCbx : UserControl
     {
         private FlowLayoutPanel _flp;
-        private int _id;
+        public int _id;
         public UCItemCbx(FlowLayoutPanel flowLayoutPanel, string title, int id)
         {
             InitializeComponent();
@@ -15,6 +15,11 @@ namespace MVP.Views
         }
 
         public int getId() =>  _id;
+
+        public void visiblebtnRm(bool flag)
+        {
+            btnRemove.Visible = flag;
+        }
 
         private void btnRemove_Click(object sender, System.EventArgs e)
         {

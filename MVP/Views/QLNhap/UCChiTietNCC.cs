@@ -10,11 +10,13 @@ namespace MVP.Views
     public partial class UCChiTietNCC : UserControl, ICtNccView
     {
         private NccDTO _nccDTO;
+        private NccDTO temp;
         private CtNccPresenter _ctNccPresenter;
         public UCChiTietNCC(NccDTO nccDTO)
         {
             InitializeComponent();
             _nccDTO = nccDTO;
+            temp = (NccDTO)_nccDTO.Clone();
             _ctNccPresenter = new CtNccPresenter(this);
         }
 
@@ -66,12 +68,13 @@ namespace MVP.Views
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            _nccDTO.TenNCC = txtNcc.Text;
-            _nccDTO.Status = cbxStatus.SelectedIndex == 0 ? true : false;
-            _nccDTO.NgayHopTac = dtpNgayHopTac.Value;
-            _nccDTO.SDT = txtSdt.Text;
-            _nccDTO.DiaChi = txtDiaChi.Text;
-            _ctNccPresenter.UpdateNcc(_nccDTO);
+            temp.Id = _nccDTO.Id;
+            temp.TenNCC = txtNcc.Text;
+            temp.Status = cbxStatus.SelectedIndex == 0 ? true : false;
+            temp.NgayHopTac = dtpNgayHopTac.Value;
+            temp.SDT = txtSdt.Text;
+            temp.DiaChi = txtDiaChi.Text;
+            _ctNccPresenter.UpdateNcc(temp);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -96,6 +99,7 @@ namespace MVP.Views
                 cbxStatus.Enabled = false;
                 btnUpdate.Visible = false;
                 btnHuy.Visible = false;
+                _nccDTO = (NccDTO)temp.Clone();
             }
         }
     }

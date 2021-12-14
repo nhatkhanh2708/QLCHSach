@@ -17,7 +17,7 @@ namespace MVP.Views
         private IEnumerable<NhaXuatBanDTO> _listNxb;
         private IEnumerable<NccDTO> _listNcc;
         private ThemSachPresenter _themSachPresenter;
-        
+        int nxbId, nccId;
         public UCThemSach()
         {
             InitializeComponent();
@@ -30,6 +30,8 @@ namespace MVP.Views
             _themSachPresenter.GetsAllCbx();
             loadCbx();
             isLoad = false;
+            nxbId = (int)cbxNXB.SelectedValue;
+            nccId = (int)cbxNcc.SelectedValue;
         }
 
         private void hideScrollBar()
@@ -66,6 +68,9 @@ namespace MVP.Views
             cbxNcc.DataSource = _listNcc.ToList();
             cbxNcc.DisplayMember = "TenNCC";
             cbxNcc.ValueMember = "Id";
+
+            lblImg.BackgroundImage = Properties.Resources.icons8_book_100__1_;
+            lblImg.BackgroundImageLayout = ImageLayout.Center;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -92,8 +97,8 @@ namespace MVP.Views
                 listTLId.Add(ctl.getId());
             }
 
-            _themSachPresenter.Add(txtTenSach.Text, listTgId, listTLId, (int)cbxNXB.SelectedValue,
-                numerGiaBan.Text, numerGiaNhap.Text, numerSL.Text, (int) cbxNcc.SelectedValue, picBox.BackgroundImage);
+            _themSachPresenter.Add(txtTenSach.Text, listTgId, listTLId, nxbId,
+                numerGiaBan.Text, numerGiaNhap.Text, numerSL.Text, nccId, lblImg.BackgroundImage);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -107,7 +112,7 @@ namespace MVP.Views
             cbxTacGia.SelectedIndex = 0;
             cbxTheLoai.SelectedIndex = 0;
             cbxNcc.SelectedIndex = 0;
-            picBox.Controls.Clear();
+            lblImg.Controls.Clear();
             txtTenSach.Text = "";
             numerGiaBan.Text = "";
             numerGiaNhap.Text = "";
@@ -132,10 +137,11 @@ namespace MVP.Views
         {
             if(img != null)
             {
-                picBox.BackgroundImage = img;
-                picBox.BackgroundImageLayout = ImageLayout.Stretch;
+                lblImg.Controls.Clear();
+                lblImg.BackgroundImage = img;
+                lblImg.BackgroundImageLayout = ImageLayout.Stretch;
                 panel4.BackColor = Color.DarkSlateBlue;
-                picBox.BorderStyle = BorderStyle.FixedSingle;
+                lblImg.BorderStyle = BorderStyle.FixedSingle;
                 btnRmImg.Visible = true;
             }            
         }
@@ -150,24 +156,61 @@ namespace MVP.Views
 
         private void cbxTacGia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(!isLoad)
-                flpTacGia.Controls.Add(new UCItemCbx(flpTacGia, cbxTacGia.Text, int.Parse(cbxTacGia.SelectedValue.ToString())));
+            if (!isLoad)
+            {
+                bool flag = false;
+                int idtemp = int.Parse(cbxTacGia.SelectedValue.ToString());
+                foreach (UCItemCbx ctl in flpTacGia.Controls)
+                {
+                    if (ctl._id == idtemp)
+                    {
+                        flag = true;
+                    }
+                }
+                if (!flag)
+                    flpTacGia.Controls.Add(new UCItemCbx(flpTacGia, cbxTacGia.Text, idtemp));
+            }
+                
         }
 
         private void cbxTheLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(!isLoad)
             {
-                flpTheLoai.Controls.Add(new UCItemCbx(flpTheLoai, cbxTheLoai.Text, int.Parse(cbxTheLoai.SelectedValue.ToString())));
+                bool flag = false;                
+                int idtemp = int.Parse(cbxTheLoai.SelectedValue.ToString());
+                foreach (UCItemCbx ctl in flpTheLoai.Controls)
+                {
+                    if (ctl._id == idtemp)
+                    {
+                        flag = true;
+                    }
+                }
+                if (!flag)
+                    flpTheLoai.Controls.Add(new UCItemCbx(flpTheLoai, cbxTheLoai.Text, idtemp));
             }
         }
 
         private void btnRmImg_Click(object sender, EventArgs e)
         {
-            picBox.BackgroundImage = null;
+            lblImg.Controls.Clear();
+            lblImg.BackgroundImage = Properties.Resources.icons8_book_100__1_;
+            lblImg.BackgroundImageLayout = ImageLayout.Center;
             panel4.BackColor = Color.WhiteSmoke;
-            picBox.BorderStyle = BorderStyle.None;
+            lblImg.BorderStyle = BorderStyle.None;
             btnRmImg.Visible = false;
+        }
+
+        private void cbxNXB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(!isLoad)
+                nxbId = (int)cbxNXB.SelectedValue;
+        }
+
+        private void cbxNcc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(!isLoad)
+                nccId = (int)cbxNcc.SelectedValue;
         }
     }
 }

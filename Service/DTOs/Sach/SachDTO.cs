@@ -1,9 +1,10 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Service.DTOs
 {
-    public class SachDTO : BaseDTO 
+    public class SachDTO : BaseDTO, ICloneable
     {
         [StringLength(100)]
         public string TenSach { get; set; }
@@ -30,5 +31,10 @@ namespace Service.DTOs
 
         [Required]
         public int NccId { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }
