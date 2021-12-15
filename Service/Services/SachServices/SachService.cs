@@ -66,5 +66,11 @@ namespace Service.Services
             entity.Status = false;
             _sachRepository.Update(entity);
         }
+
+        public IEnumerable<SachDTO> GetsByName_NccId(string sach, int nccId)
+        {
+            var entities = _sachRepository.GetsByName_NccId(sach, nccId);
+            return _mapper.Map<IEnumerable<Sach>, IEnumerable<SachDTO>>(entities);
+        }
     }
 }

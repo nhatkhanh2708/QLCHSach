@@ -1,4 +1,5 @@
 ﻿using Service.DTOs;
+using System.Collections.Generic;
 
 namespace Service.IServices
 {
@@ -6,5 +7,6 @@ namespace Service.IServices
     {
         public int AddSach(SachDTO s);
         public void UpdateStatus(int id);
+        public IEnumerable<SachDTO> GetsByName_NccId(string sach, int nccId);
     }
 }

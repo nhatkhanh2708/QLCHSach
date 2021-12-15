@@ -165,6 +165,7 @@ namespace MVP.Views
             this.btnTimKiem.Size = new System.Drawing.Size(55, 55);
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnAdd
             // 

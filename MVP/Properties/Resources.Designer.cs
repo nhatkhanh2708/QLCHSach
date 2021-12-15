@@ -213,6 +213,16 @@ namespace MVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_download_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_download_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_edit_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_edit_32", resourceCulture);

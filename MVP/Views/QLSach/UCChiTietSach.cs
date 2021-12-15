@@ -65,7 +65,6 @@ namespace MVP.Views
                 lblImg.BackgroundImageLayout = ImageLayout.Stretch;
                 panel4.BackColor = Color.DarkSlateBlue;
                 lblImg.BorderStyle = BorderStyle.FixedSingle;
-                btnRmImg.Visible = true;
             }
             else
             {
@@ -73,7 +72,6 @@ namespace MVP.Views
                 lblImg.BackgroundImageLayout = ImageLayout.Center;
                 panel4.BackColor = Color.WhiteSmoke;
                 lblImg.BorderStyle = BorderStyle.None;
-                btnRmImg.Visible = false;
             }
         }
 

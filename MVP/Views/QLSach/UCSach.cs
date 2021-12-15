@@ -73,12 +73,37 @@ namespace MVP.Views
                     }
                 }
                 flp.Controls.Add(new UCItemSach(_listSach.ElementAt(i), listtg, getPanelContainer));
+                listtg = new List<string>();
             }
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             _sachPresenter.GetsAll();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            flp.Controls.Clear();
+            var listS = _listSach.Where(p => p.TenSach.StartsWith(txtTimKiem.Text)).ToList();
+            var results = _listSachTG.Join(_listTG,
+                      wo => wo.TacGiaId,
+                      p => p.Id,
+                      (stg, tg) => new { stg, tg }
+                    );
+            List<string> listtg = new List<string>();
+            for (int i = 0; i < listS.Count(); i++)
+            {
+                for (int j = 0; j < results.Count(); j++)
+                {
+                    if (results.ElementAt(j).stg.SachId == listS.ElementAt(i).Id)
+                    {
+                        listtg.Add(results.ElementAt(j).tg.ButDanh);
+                    }
+                }
+                flp.Controls.Add(new UCItemSach(listS.ElementAt(i), listtg, getPanelContainer));
+                listtg = new List<string>();
+            }
         }
     }
 }
