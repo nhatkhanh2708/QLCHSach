@@ -31,5 +31,7 @@ namespace MVP.Presenters
         {
             _themHDNhapView.GetsSachByName_NccId(_sachService.GetsByName_NccId(sach, nccId));
         }
+
+
     }
 }

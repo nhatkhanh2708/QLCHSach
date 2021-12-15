@@ -2,6 +2,7 @@
 using MVP.Presenters;
 using MVP.Properties;
 using Service.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
@@ -16,10 +17,14 @@ namespace MVP.Views
         private ThemHDNhapPresenter _themHDNhapPresenter;
         private int _NccId = -1;
         private SachDTO temp = null;
+        private Dictionary<int, int> listSelected;
+        CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+        private decimal totalPrice = 0;
         public UCThemHDNhap()
         {
             InitializeComponent();
             _themHDNhapPresenter = new ThemHDNhapPresenter(this);
+            listSelected = new Dictionary<int, int>();
         }
 
         private void btnBack_Click(object sender, System.EventArgs e)
@@ -67,13 +72,13 @@ namespace MVP.Views
                 (panel2.Height - ucNotifi.Height) / 2);
             panel2.Controls.Add(ucNotifi);
             panel2.Controls.SetChildIndex(ucNotifi, 0);
-            if (flag)
+            /*if (flag)
             {
                 lblSLHienCo.Text = "";
                 lblTenSach.Text = "";
                 lblGiaNhap.Text = "";
                 numerSLNhap.Value = 0;
-            }
+            }*/
         }
 
         public void GetsAllNCC(IEnumerable<NccDTO> listNcc)
@@ -120,6 +125,9 @@ namespace MVP.Views
             lblGiaNhap.Text = "";
             lblTongTien.Text = "0 VND";
             numerSLNhap.Value = 0;
+            listSelected.Clear();
+            temp = null;
+            totalPrice = 0;
         }
 
         private void btnTimKiem_Click(object sender, System.EventArgs e)
@@ -136,7 +144,6 @@ namespace MVP.Views
             for (int i = 0; i < listSach.Count(); i++)
             {
                 flp.Controls.Add(new UCItemSachNhap(this, listSach.ElementAt(i)));
-                
             }
         }
 
@@ -162,14 +169,17 @@ namespace MVP.Views
                 {
                     if(temp.Id == ctl.id)
                     {
-                        Notification("Thêm không thành công !", "Sách này đã thêm !", Resources.fail, false);
+                        Notification("Thêm không thành công !", "Sách này đã được thêm trước đó !", Resources.fail, false);
                         isAdd = true;
                         break;
                     }
                 }
                 if (!isAdd)
                 {
-                    flpSachDaChon.Controls.Add(new UCItemSachChon(flpSachDaChon, temp, (int)numerSLNhap.Value));
+                    flpSachDaChon.Controls.Add(new UCItemSachChon(this, flpSachDaChon, temp, (int)numerSLNhap.Value));
+                    listSelected.Add(temp.Id, (int) numerSLNhap.Value);
+                    totalPrice = totalPrice + (numerSLNhap.Value * temp.GiaNhap);
+                    lblTongTien.Text = double.Parse(totalPrice.ToString()).ToString("#,###", cul.NumberFormat)+" VND";
                     temp = null;
                     lblSLHienCo.Text = "";
                     lblTenSach.Text = "";
@@ -177,6 +187,29 @@ namespace MVP.Views
                     numerSLNhap.Value = 0;
                 }
             }
+        }
+
+        public void RmSelected(int id, decimal total)
+        {
+            if(listSelected.Count > 0)
+            {
+                totalPrice -= total;
+                lblTongTien.Text = double.Parse(totalPrice.ToString()).ToString("#,###", cul.NumberFormat) + " VND";
+                listSelected.Remove(id);
+            }
+        }
+
+        private void btnThem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnRmAll_Click(object sender, EventArgs e)
+        {
+            flpSachDaChon.Controls.Clear();
+            temp = null;
+            totalPrice = 0;
+            listSelected.Clear();
         }
     }
 }

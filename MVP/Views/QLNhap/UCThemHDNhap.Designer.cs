@@ -32,7 +32,7 @@ namespace MVP.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThemSach = new System.Windows.Forms.Button();
-            this.btnRmImg = new System.Windows.Forms.Button();
+            this.btnRmAll = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@ namespace MVP.Views
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnThemSach);
-            this.panel2.Controls.Add(this.btnRmImg);
+            this.panel2.Controls.Add(this.btnRmAll);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.lblTongTien);
@@ -125,23 +125,24 @@ namespace MVP.Views
             this.btnThemSach.UseVisualStyleBackColor = false;
             this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
-            // btnRmImg
+            // btnRmAll
             // 
-            this.btnRmImg.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnRmImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRmImg.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnRmImg.FlatAppearance.BorderSize = 2;
-            this.btnRmImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRmImg.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRmImg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRmImg.Location = new System.Drawing.Point(1119, 567);
-            this.btnRmImg.Name = "btnRmImg";
-            this.btnRmImg.Size = new System.Drawing.Size(107, 44);
-            this.btnRmImg.TabIndex = 55;
-            this.btnRmImg.Text = "Xóa tất cả";
-            this.btnRmImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRmImg.UseVisualStyleBackColor = false;
-            this.btnRmImg.Visible = false;
+            this.btnRmAll.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnRmAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRmAll.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnRmAll.FlatAppearance.BorderSize = 2;
+            this.btnRmAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRmAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRmAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRmAll.Location = new System.Drawing.Point(1119, 567);
+            this.btnRmAll.Name = "btnRmAll";
+            this.btnRmAll.Size = new System.Drawing.Size(107, 44);
+            this.btnRmAll.TabIndex = 55;
+            this.btnRmAll.Text = "Xóa tất cả";
+            this.btnRmAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRmAll.UseVisualStyleBackColor = false;
+            this.btnRmAll.Visible = false;
+            this.btnRmAll.Click += new System.EventHandler(this.btnRmAll_Click);
             // 
             // btnThem
             // 
@@ -160,6 +161,7 @@ namespace MVP.Views
             this.btnThem.Text = "Tạo hóa đơn";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label13
             // 
@@ -467,7 +469,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel flpSachDaChon;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnRmImg;
+        private System.Windows.Forms.Button btnRmAll;
         private System.Windows.Forms.Button btnThemSach;
     }
 }

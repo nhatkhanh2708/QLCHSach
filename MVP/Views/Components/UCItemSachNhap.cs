@@ -27,7 +27,7 @@ namespace MVP.Views
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             lblSach.Text = _sachDTO.TenSach;
             lblGiaNhap.Text = double.Parse(_sachDTO.GiaNhap.ToString()).ToString("#,###", cul.NumberFormat);
-            lblSL.Text = "+"+_sachDTO.SoLuong.ToString();
+            lblSL.Text = _sachDTO.SoLuong.ToString();
         }
     }
 }

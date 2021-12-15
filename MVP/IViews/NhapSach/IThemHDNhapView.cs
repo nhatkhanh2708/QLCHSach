@@ -11,5 +11,6 @@ namespace MVP.IViews
         public void GetsSachByNccId(IEnumerable<SachDTO> listSach);
         public void GetsSachByName_NccId(IEnumerable<SachDTO> listSach);
         public void SelectedSach(SachDTO s);
+        public void RmSelected(int id, decimal total);
     }
 }
