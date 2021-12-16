@@ -37,6 +37,7 @@ namespace MVP.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblSlNhap = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTg = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.lblSach = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -49,12 +50,13 @@ namespace MVP.Views
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lblTg);
             this.panel1.Controls.Add(this.btnDel);
             this.panel1.Controls.Add(this.lblSach);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 98);
+            this.panel1.Size = new System.Drawing.Size(228, 126);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -62,17 +64,17 @@ namespace MVP.Views
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 48);
-            this.panel2.TabIndex = 38;
+            this.panel2.Size = new System.Drawing.Size(191, 52);
+            this.panel2.TabIndex = 39;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lblTienSach);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 23);
+            this.panel4.Location = new System.Drawing.Point(0, 27);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(191, 27);
             this.panel4.TabIndex = 1;
@@ -105,7 +107,7 @@ namespace MVP.Views
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(191, 23);
+            this.panel3.Size = new System.Drawing.Size(191, 27);
             this.panel3.TabIndex = 0;
             // 
             // lblSlNhap
@@ -115,10 +117,9 @@ namespace MVP.Views
             this.lblSlNhap.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblSlNhap.Location = new System.Drawing.Point(33, 0);
             this.lblSlNhap.Name = "lblSlNhap";
-            this.lblSlNhap.Size = new System.Drawing.Size(112, 23);
+            this.lblSlNhap.Size = new System.Drawing.Size(112, 27);
             this.lblSlNhap.TabIndex = 16;
             this.lblSlNhap.Text = "+100";
-            this.lblSlNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -126,8 +127,18 @@ namespace MVP.Views
             this.label2.Image = global::MVP.Properties.Resources.icons8_download_24;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 23);
+            this.label2.Size = new System.Drawing.Size(33, 27);
             this.label2.TabIndex = 15;
+            // 
+            // lblTg
+            // 
+            this.lblTg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTg.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblTg.Location = new System.Drawing.Point(0, 50);
+            this.lblTg.Name = "lblTg";
+            this.lblTg.Size = new System.Drawing.Size(228, 24);
+            this.lblTg.TabIndex = 38;
+            this.lblTg.Text = "label1";
             // 
             // btnDel
             // 
@@ -139,7 +150,7 @@ namespace MVP.Views
             this.btnDel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDel.Image = global::MVP.Properties.Resources.icons8_delete_32;
-            this.btnDel.Location = new System.Drawing.Point(192, 63);
+            this.btnDel.Location = new System.Drawing.Point(192, 91);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(33, 32);
             this.btnDel.TabIndex = 37;
@@ -156,7 +167,7 @@ namespace MVP.Views
             this.lblSach.Size = new System.Drawing.Size(228, 50);
             this.lblSach.TabIndex = 0;
             this.lblSach.Text = "label1";
-            this.lblSach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblSach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCItemSachChon
             // 
@@ -166,7 +177,7 @@ namespace MVP.Views
             this.Margin = new System.Windows.Forms.Padding(10, 3, 15, 15);
             this.Name = "UCItemSachChon";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(232, 102);
+            this.Size = new System.Drawing.Size(232, 130);
             this.Load += new System.EventHandler(this.UCItemSachChon_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -181,6 +192,7 @@ namespace MVP.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblSach;
         private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Label lblTg;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTienSach;

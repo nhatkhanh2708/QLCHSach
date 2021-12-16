@@ -8,5 +8,6 @@ namespace Service.IServices
         public int AddSach(SachDTO s);
         public void UpdateStatus(int id);
         public IEnumerable<SachDTO> GetsByName_NccId(string sach, int nccId);
+        public IEnumerable<SachDTO> GetsByName(string sach);
     }
 }

@@ -72,5 +72,11 @@ namespace Service.Services
             var entities = _sachRepository.GetsByName_NccId(sach, nccId);
             return _mapper.Map<IEnumerable<Sach>, IEnumerable<SachDTO>>(entities);
         }
+
+        public IEnumerable<SachDTO> GetsByName(string sach)
+        {
+            var entities = _sachRepository.GetsByName(sach);
+            return _mapper.Map<IEnumerable<Sach>, IEnumerable<SachDTO>>(entities);
+        }
     }
 }

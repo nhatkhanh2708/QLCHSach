@@ -33,7 +33,7 @@ namespace MVP.Views
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThemSach = new System.Windows.Forms.Button();
             this.btnRmAll = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnTaoHDXN = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace MVP.Views
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnThemSach);
             this.panel2.Controls.Add(this.btnRmAll);
-            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.btnTaoHDXN);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.lblTongTien);
             this.panel2.Controls.Add(this.label15);
@@ -144,24 +144,24 @@ namespace MVP.Views
             this.btnRmAll.Visible = false;
             this.btnRmAll.Click += new System.EventHandler(this.btnRmAll_Click);
             // 
-            // btnThem
+            // btnTaoHDXN
             // 
-            this.btnThem.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnThem.FlatAppearance.BorderSize = 2;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThem.Image = global::MVP.Properties.Resources.icons8_add_32;
-            this.btnThem.Location = new System.Drawing.Point(804, 644);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(229, 55);
-            this.btnThem.TabIndex = 54;
-            this.btnThem.Text = "Tạo hóa đơn";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnTaoHDXN.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnTaoHDXN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaoHDXN.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnTaoHDXN.FlatAppearance.BorderSize = 2;
+            this.btnTaoHDXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoHDXN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTaoHDXN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTaoHDXN.Image = global::MVP.Properties.Resources.icons8_add_32;
+            this.btnTaoHDXN.Location = new System.Drawing.Point(804, 644);
+            this.btnTaoHDXN.Name = "btnTaoHDXN";
+            this.btnTaoHDXN.Size = new System.Drawing.Size(229, 55);
+            this.btnTaoHDXN.TabIndex = 54;
+            this.btnTaoHDXN.Text = "Tạo hóa đơn";
+            this.btnTaoHDXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTaoHDXN.UseVisualStyleBackColor = false;
+            this.btnTaoHDXN.Click += new System.EventHandler(this.btnTaoHDXN_Click);
             // 
             // label13
             // 
@@ -468,7 +468,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel flpSachDaChon;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnTaoHDXN;
         private System.Windows.Forms.Button btnRmAll;
         private System.Windows.Forms.Button btnThemSach;
     }

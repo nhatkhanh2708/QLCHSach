@@ -11,6 +11,7 @@ namespace MVP.Views
     public partial class UCSach : UserControl, ISachView
     {
         private IEnumerable<SachDTO> _listSach;
+        //private IEnumerable<SachDTO> _listSachByName;
         private IEnumerable<SachTacGiaDTO> _listSachTG;
         private IEnumerable<TacGiaDTO> _listTG;
         private SachPresenter _sachPresenter;
@@ -86,24 +87,39 @@ namespace MVP.Views
         {
             flp.Controls.Clear();
             var listS = _listSach.Where(p => p.TenSach.StartsWith(txtTimKiem.Text)).ToList();
-            var results = _listSachTG.Join(_listTG,
+            /*var results = _listSachTG.Join(_listTG,
                       wo => wo.TacGiaId,
                       p => p.Id,
                       (stg, tg) => new { stg, tg }
-                    );
+                    );*/
             List<string> listtg = new List<string>();
             for (int i = 0; i < listS.Count(); i++)
             {
-                for (int j = 0; j < results.Count(); j++)
+                var results = (
+                        from tg in _listTG
+                        join stg in _listSachTG on tg.Id equals stg.TacGiaId
+                        where (stg.SachId == listS.ElementAt(i).Id)
+                        select new {tg.ButDanh}
+                    ).ToList();
+                for(int j = 0; j< results.Count; j++)
+                {
+                    listtg.Add(results.ElementAt(j).ButDanh);
+                }
+                /*for (int j = 0; j < results.Count(); j++)
                 {
                     if (results.ElementAt(j).stg.SachId == listS.ElementAt(i).Id)
                     {
                         listtg.Add(results.ElementAt(j).tg.ButDanh);
                     }
-                }
+                }*/
                 flp.Controls.Add(new UCItemSach(listS.ElementAt(i), listtg, getPanelContainer));
                 listtg = new List<string>();
             }
+        }
+
+        public void GetsByName(IEnumerable<SachDTO> listSach)
+        {
+            //_listSachByName = listSach;
         }
     }
 }

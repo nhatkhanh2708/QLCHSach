@@ -7,5 +7,6 @@ namespace Model.IRepositories
     {
         public int Add_ReturnId(Sach entity);
         public IEnumerable<Sach> GetsByName_NccId(string sach, int nccId);
+        public IEnumerable<Sach> GetsByName(string sach);
     }
 }

@@ -10,11 +10,15 @@ namespace MVP.Presenters
         private readonly IThemHDNhapView _themHDNhapView;
         private readonly INccService _nccService;
         private readonly ISachService _sachService;
+        private readonly ISachTacGiaService _sachTGService;
+        private readonly ITacGiaService _tgService;
         public ThemHDNhapPresenter(IThemHDNhapView themHDNhapView)
         {
             _themHDNhapView = themHDNhapView;
             _nccService = (INccService)Startup.ServiceProvider.GetService(typeof(INccService));
             _sachService = (ISachService)Startup.ServiceProvider.GetService(typeof(ISachService));
+            _sachTGService = (ISachTacGiaService)Startup.ServiceProvider.GetService(typeof(ISachTacGiaService));
+            _tgService = (ITacGiaService)Startup.ServiceProvider.GetService(typeof(ITacGiaService));
         }
 
         public void GetsAllNcc()
@@ -32,6 +36,9 @@ namespace MVP.Presenters
             _themHDNhapView.GetsSachByName_NccId(_sachService.GetsByName_NccId(sach, nccId));
         }
 
-
+        public void GetsAllSTG()
+        {
+            _themHDNhapView.GetsAllSTG(_tgService.GetsAll(), _sachTGService.GetsAll());
+        }
     }
 }

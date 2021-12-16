@@ -12,14 +12,16 @@ namespace MVP.Views
         private int _slNhap;
         private FlowLayoutPanel _flp;
         public int id;
+        private string _tg;
         private readonly IThemHDNhapView _themHDNhapView;
-        public UCItemSachChon(IThemHDNhapView themHDNhapView, FlowLayoutPanel flp, SachDTO sachDTO, int slnhap)
+        public UCItemSachChon(IThemHDNhapView themHDNhapView, FlowLayoutPanel flp, SachDTO sachDTO, string tg, int slnhap)
         {
             InitializeComponent();
             _sach = sachDTO;
             _slNhap = slnhap;
             _flp = flp;
             _themHDNhapView = themHDNhapView;
+            _tg = tg;
         }
 
         private void UCItemSachChon_Load(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace MVP.Views
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             var tiensach = _sach.GiaNhap * _slNhap;
             lblTienSach.Text = "-"+double.Parse(tiensach.ToString()).ToString("#,###", cul.NumberFormat);
+            lblTg.Text = _tg;
         }
 
         private void btnDel_Click(object sender, EventArgs e)

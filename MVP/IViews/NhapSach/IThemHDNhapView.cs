@@ -10,7 +10,8 @@ namespace MVP.IViews
         public void GetsAllNCC(IEnumerable<NccDTO> listNcc);
         public void GetsSachByNccId(IEnumerable<SachDTO> listSach);
         public void GetsSachByName_NccId(IEnumerable<SachDTO> listSach);
-        public void SelectedSach(SachDTO s);
+        public void SelectedSach(SachDTO s, string tg);
         public void RmSelected(int id, decimal total);
+        public void GetsAllSTG(IEnumerable<TacGiaDTO> listTG, IEnumerable<SachTacGiaDTO> listSTG);
     }
 }
