@@ -40,8 +40,6 @@ namespace MVP.Views
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.pnlContainer.SuspendLayout();
@@ -104,8 +102,6 @@ namespace MVP.Views
             this.pnlBody.Controls.Add(this.btnRefesh);
             this.pnlBody.Controls.Add(this.btnTimKiem);
             this.pnlBody.Controls.Add(this.btnAdd);
-            this.pnlBody.Controls.Add(this.txtTimKiem);
-            this.pnlBody.Controls.Add(this.label3);
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1275, 800);
@@ -187,29 +183,6 @@ namespace MVP.Views
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimKiem.Location = new System.Drawing.Point(361, 27);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PlaceholderText = "Tìm kiếm";
-            this.txtTimKiem.Size = new System.Drawing.Size(554, 30);
-            this.txtTimKiem.TabIndex = 10;
-            this.txtTimKiem.TabStop = false;
-            this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(361, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(554, 4);
-            this.label3.TabIndex = 9;
-            // 
             // UCNhap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -223,7 +196,6 @@ namespace MVP.Views
             this.pnlTitle.ResumeLayout(false);
             this.pnlContainer.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
-            this.pnlBody.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +213,5 @@ namespace MVP.Views
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Label label3;
     }
 }

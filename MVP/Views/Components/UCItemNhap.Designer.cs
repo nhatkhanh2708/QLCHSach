@@ -29,17 +29,17 @@ namespace MVP.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTongTien = new System.Windows.Forms.Label();
+            this.lblNcc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,24 +48,24 @@ namespace MVP.Views
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // lblId
             // 
-            this.label2.BackColor = System.Drawing.Color.SlateBlue;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "#1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblId.BackColor = System.Drawing.Color.SlateBlue;
+            this.lblId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblId.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblId.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblId.Location = new System.Drawing.Point(0, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(356, 30);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "#1";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblId.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
@@ -85,7 +85,7 @@ namespace MVP.Views
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.lblTongTien);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 68);
@@ -93,19 +93,19 @@ namespace MVP.Views
             this.panel5.Size = new System.Drawing.Size(356, 38);
             this.panel5.TabIndex = 4;
             // 
-            // label1
+            // lblTongTien
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(59, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 38);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "500.000";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTongTien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongTien.Location = new System.Drawing.Point(59, 0);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(297, 38);
+            this.lblTongTien.TabIndex = 3;
+            this.lblTongTien.Text = "500.000";
+            this.lblTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -120,7 +120,7 @@ namespace MVP.Views
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.lblTongTien);
+            this.panel4.Controls.Add(this.lblNcc);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 30);
@@ -128,17 +128,17 @@ namespace MVP.Views
             this.panel4.Size = new System.Drawing.Size(356, 38);
             this.panel4.TabIndex = 3;
             // 
-            // lblTongTien
+            // lblNcc
             // 
-            this.lblTongTien.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTongTien.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTongTien.Location = new System.Drawing.Point(59, 0);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(297, 38);
-            this.lblTongTien.TabIndex = 3;
-            this.lblTongTien.Text = "NCC Nam Sơn";
-            this.lblTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNcc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNcc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblNcc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNcc.Location = new System.Drawing.Point(59, 0);
+            this.lblNcc.Name = "lblNcc";
+            this.lblNcc.Size = new System.Drawing.Size(297, 38);
+            this.lblNcc.TabIndex = 3;
+            this.lblNcc.Text = "NCC Nam Sơn";
+            this.lblNcc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -154,7 +154,7 @@ namespace MVP.Views
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.lblDate);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -163,17 +163,17 @@ namespace MVP.Views
             this.panel3.Size = new System.Drawing.Size(356, 30);
             this.panel3.TabIndex = 1;
             // 
-            // label4
+            // lblDate
             // 
-            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(58, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 30);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "01/12/2021";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDate.Location = new System.Drawing.Point(58, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(300, 30);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "01/12/2021";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -197,6 +197,7 @@ namespace MVP.Views
             this.Name = "UCItemNhap";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(360, 141);
+            this.Load += new System.EventHandler(this.UCItemNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -207,17 +208,17 @@ namespace MVP.Views
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.Label lblNcc;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label6;
     }
 }

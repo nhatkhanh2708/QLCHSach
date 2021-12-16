@@ -1,29 +1,44 @@
-﻿using Service.DTOs;
+﻿using MVP.IViews;
+using MVP.Presenters;
+using Service.DTOs;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCNhap : UserControl
+    public partial class UCNhap : UserControl, INhapView
     {
         private TaiKhoanDTO _taikhoan;
+        private NhapPresenter _nhapPresenter;
+        private IEnumerable<NccDTO> _listNcc;
+        private IEnumerable<HdNhapDTO> _listHdNhap;
         public UCNhap(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
             _taikhoan = taiKhoanDTO;
+            _nhapPresenter = new NhapPresenter(this);
         }
 
         private void UCNhap_Load(object sender, EventArgs e)
         {
+            _nhapPresenter.GetsAllNcc();
+            _nhapPresenter.GetsAllHdNhap();
             loadflp();
             hideScrollBar();
         }
 
         private void loadflp()
         {
-            for (int i = 0; i < 20; i++)
+            var listTemp = _listNcc.Join(_listHdNhap,
+                    p => p.Id,
+                    q => q.NccId,
+                    ( nc, hd) => new {nc, hd}
+                );
+            for (int i = 0; i < listTemp.Count(); i++)
             {
-                flp.Controls.Add(new UCItemNhap(getPanelContainer));
+                flp.Controls.Add(new UCItemNhap(getPanelContainer, listTemp.ElementAt(i).nc, listTemp.ElementAt(i).hd));
             }
         }
 
@@ -64,6 +79,16 @@ namespace MVP.Views
         private void btnMore_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void GetsNcc(IEnumerable<NccDTO> listNcc)
+        {
+            _listNcc = listNcc;
+        }
+
+        public void GetsHdNhap(IEnumerable<HdNhapDTO> listHdNhap)
+        {
+            _listHdNhap = listHdNhap;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace MVP.Views
 {
     public partial class UCXacNhanHDNhap : UserControl, IXacNhanHDNhapView
     {
+        private bool isComplete = false;
         private Dictionary<int, int> _listSelected;
         CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
         private decimal _totalPrice = 0;
@@ -35,7 +36,12 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+
+            }
+            else
+                Dispose();
         }
 
         private void UCXacNhanHDNhap_Load(object sender, EventArgs e)
@@ -96,6 +102,7 @@ namespace MVP.Views
             {
                 btnInHD.Visible = true;
                 btnThanhtoan.Visible = false;
+                isComplete = true;
             }
         }
 
@@ -107,7 +114,7 @@ namespace MVP.Views
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-
+            // in hoa don
         }
 
         private void btnThanhtoan_Click(object sender, EventArgs e)

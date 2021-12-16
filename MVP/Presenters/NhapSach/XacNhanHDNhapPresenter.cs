@@ -58,7 +58,7 @@ namespace MVP.Presenters
                 ctHdNhap.SoLuong = sachSelected.ElementAt(i).Value;
                 _ctNhapService.Add(ctHdNhap);
             }
-            _xacNhanHDNhapView.Notification(Notification.ADD_SUCCESSED, null, Resources.success, true);
+            _xacNhanHDNhapView.Notification("Thanh toán thành công", null, Resources.success, true);
         }
     }
 }
