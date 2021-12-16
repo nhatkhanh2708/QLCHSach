@@ -1,8 +1,6 @@
-﻿using Model.Entities;
-using MVP.IViews;
+﻿using MVP.IViews;
 using MVP.Presenters;
 using Service.DTOs;
-using Service.IServices;
 using System;
 using System.Windows.Forms;
 
@@ -13,14 +11,11 @@ namespace MVP.Views
         private TaiKhoanDTO _taiKhoanDTO;
         private Form _fLogin;
         private MainPresenter _mainPresenter;
-        private ITaiKhoanService _taiKhoanService = (ITaiKhoanService) Startup.ServiceProvider.GetService(typeof(ITaiKhoanService));
-        //public Main(TaiKhoanDTO taiKhoanDTO, Form flogin)
-        public Main()
+        public Main(TaiKhoanDTO taiKhoanDTO, Form flogin)
         {
             InitializeComponent();
-            TaiKhoanDTO taiKhoanDTO = _taiKhoanService.GetById(1);
             _taiKhoanDTO = taiKhoanDTO;
-            Form _fLogin = new Form();// flogin;
+            _fLogin = flogin;
             _mainPresenter = new MainPresenter(this);
         }
 
@@ -176,7 +171,7 @@ namespace MVP.Views
         private void btnNhapSach_Click(object sender, EventArgs e)
         {
             hideBorder();
-            AddUCMain(new UCNhap());
+            AddUCMain(new UCNhap(_taiKhoanDTO));
             btnNhapSach.FlatAppearance.BorderSize = 1;
         }
 
@@ -223,7 +218,7 @@ namespace MVP.Views
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
-            //_fLogin.Show();
+            _fLogin.Show();
         }
 
         private void pnlImgLogo_Click(object sender, EventArgs e)

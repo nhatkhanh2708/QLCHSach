@@ -158,7 +158,7 @@ namespace MVP.Views
             // 
             // lblTG
             // 
-            this.lblTG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.lblTG.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblTG.Location = new System.Drawing.Point(116, 43);
             this.lblTG.Name = "lblTG";

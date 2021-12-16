@@ -27,18 +27,29 @@ namespace MVP.Views
         private void UCItemSachChon_Load(object sender, EventArgs e)
         {
             lblSach.Text = _sach.TenSach;
-            lblSlNhap.Text = "+"+_slNhap.ToString();
+            lblSlNhap.Text = "+" + _slNhap.ToString();
             id = _sach.Id;
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             var tiensach = _sach.GiaNhap * _slNhap;
-            lblTienSach.Text = "-"+double.Parse(tiensach.ToString()).ToString("#,###", cul.NumberFormat);
+            lblTienSach.Text = "-" + double.Parse(tiensach.ToString()).ToString("#,###", cul.NumberFormat);
             lblTg.Text = _tg;
+            if (_themHDNhapView != null && _flp != null)
+            {
+                btnDel.Visible = true;
+            }
+            else
+            {
+                btnDel.Visible = false;
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            _themHDNhapView.RmSelected(_sach.Id, _sach.GiaNhap * _slNhap);
-            _flp.Controls.Remove(this);
+            if(_themHDNhapView != null && _flp != null)
+            {
+                _themHDNhapView.RmSelected(_sach.Id, _sach.GiaNhap * _slNhap);
+                _flp.Controls.Remove(this);
+            }
         }
     }
 }

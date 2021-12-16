@@ -46,6 +46,9 @@ namespace MVP.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -94,6 +97,7 @@ namespace MVP.Views
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInHD.UseVisualStyleBackColor = false;
             this.btnInHD.Visible = false;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // btnThanhtoan
             // 
@@ -112,17 +116,20 @@ namespace MVP.Views
             this.btnThanhtoan.Text = " Thanh toán";
             this.btnThanhtoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThanhtoan.UseVisualStyleBackColor = false;
+            this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
             // 
             // flp
             // 
             this.flp.AutoScroll = true;
             this.flp.Location = new System.Drawing.Point(27, 234);
             this.flp.Name = "flp";
+            this.flp.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.flp.Size = new System.Drawing.Size(1234, 454);
             this.flp.TabIndex = 52;
             // 
             // lblTongSoSach
             // 
+            this.lblTongSoSach.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTongSoSach.Location = new System.Drawing.Point(861, 166);
             this.lblTongSoSach.Name = "lblTongSoSach";
             this.lblTongSoSach.Size = new System.Drawing.Size(400, 33);
@@ -150,6 +157,7 @@ namespace MVP.Views
             // 
             // lblTongTien
             // 
+            this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTongTien.Location = new System.Drawing.Point(182, 163);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(400, 33);
@@ -231,6 +239,9 @@ namespace MVP.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblDate);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnBack);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -238,6 +249,32 @@ namespace MVP.Views
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1275, 83);
             this.panel3.TabIndex = 5;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Location = new System.Drawing.Point(1097, 27);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(164, 33);
+            this.lblDate.TabIndex = 48;
+            this.lblDate.Text = "Tên sách";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label9.Location = new System.Drawing.Point(1097, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(164, 4);
+            this.label9.TabIndex = 47;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Image = global::MVP.Properties.Resources.icons8_calendar_32;
+            this.label12.Location = new System.Drawing.Point(1048, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 30);
+            this.label12.TabIndex = 46;
             // 
             // label1
             // 
@@ -303,5 +340,8 @@ namespace MVP.Views
         private System.Windows.Forms.FlowLayoutPanel flp;
         private System.Windows.Forms.Button btnThanhtoan;
         private System.Windows.Forms.Button btnInHD;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
     }
 }

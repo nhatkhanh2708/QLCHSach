@@ -24,6 +24,12 @@ namespace Service.Services
             _hdNhapRepository.Add(entity);
         }
 
+        public int AddHdNhap(HdNhapDTO dto)
+        {
+            var entity = _mapper.Map<HdNhapDTO, HoaDonNhap>(dto);
+            return _hdNhapRepository.Add_ReturnId(entity);
+        }
+
         public void Delete(int id)
         {
             var entity = _hdNhapRepository.GetById(id);

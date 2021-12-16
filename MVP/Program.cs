@@ -16,8 +16,7 @@ namespace Model.Entities
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Startup.ConfigureServices();
-            //Application.Run(new Login());
-            Application.Run(new Main());
+            Application.Run(new Login());
         }
     }
 }

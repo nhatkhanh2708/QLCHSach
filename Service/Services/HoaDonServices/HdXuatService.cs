@@ -24,6 +24,12 @@ namespace Service.Services
             _hdXuatRepository.Add(entity);
         }
 
+        public int AddHdXuat(HdXuatDTO dto)
+        {
+            var entity = _mapper.Map<HdXuatDTO, HoaDonXuat>(dto);
+            return _hdXuatRepository.Add_ReturnId(entity);
+        }
+
         public void Delete(int id)
         {
             var entity = _hdXuatRepository.GetById(id);

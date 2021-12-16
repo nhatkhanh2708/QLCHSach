@@ -1,16 +1,16 @@
 ﻿using Service.DTOs;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace MVP.Views
 {
     public partial class UCNhap : UserControl
     {
-        public UCNhap()
+        private TaiKhoanDTO _taikhoan;
+        public UCNhap(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
+            _taikhoan = taiKhoanDTO;
         }
 
         private void UCNhap_Load(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace MVP.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UCThemHDNhap ucThemHDNhap = new UCThemHDNhap();
+            UCThemHDNhap ucThemHDNhap = new UCThemHDNhap(_taikhoan);
             ucThemHDNhap.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucThemHDNhap);
             pnlContainer.Controls.SetChildIndex(ucThemHDNhap, 0);

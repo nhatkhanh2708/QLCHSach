@@ -23,11 +23,13 @@ namespace MVP.Views
         private IEnumerable<SachTacGiaDTO> _listSTG;
         private IEnumerable<TacGiaDTO> _listTG;
         private string _tg;
-        public UCThemHDNhap()
+        private TaiKhoanDTO _taikhoan;
+        public UCThemHDNhap(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
             _themHDNhapPresenter = new ThemHDNhapPresenter(this);
             listSelected = new Dictionary<int, int>();
+            _taikhoan = taiKhoanDTO;
         }
 
         private void btnBack_Click(object sender, System.EventArgs e)
@@ -76,13 +78,6 @@ namespace MVP.Views
                 (panel2.Height - ucNotifi.Height) / 2);
             panel2.Controls.Add(ucNotifi);
             panel2.Controls.SetChildIndex(ucNotifi, 0);
-            /*if (flag)
-            {
-                lblSLHienCo.Text = "";
-                lblTenSach.Text = "";
-                lblGiaNhap.Text = "";
-                numerSLNhap.Value = 0;
-            }*/
         }
 
         public void GetsAllNCC(IEnumerable<NccDTO> listNcc)
@@ -230,7 +225,7 @@ namespace MVP.Views
         {
             if(listSelected.Count > 0)
             {
-                totalPrice -= total;
+                totalPrice -= total;                
                 lblTongTien.Text = totalPrice == 0 ? "0 VND" : double.Parse(totalPrice.ToString()).ToString("#,###", cul.NumberFormat) + " VND";
                 listSelected.Remove(id);
             }   
@@ -249,11 +244,11 @@ namespace MVP.Views
         private void btnTaoHDXN_Click(object sender, EventArgs e)
         {
             if (listSelected.Count > 0)
-            {
-                UCXacNhanHDNhap ucXNHDNhap = new UCXacNhanHDNhap();
+            {                
+                UCXacNhanHDNhap ucXNHDNhap = new UCXacNhanHDNhap(_taikhoan, listSelected, _NccId, _listTG, _listSTG, totalPrice);
                 ucXNHDNhap.Dock = DockStyle.Fill;
-                this.Controls.Add(ucXNHDNhap);
-                this.Controls.SetChildIndex(ucXNHDNhap, 0);
+                Controls.Add(ucXNHDNhap);
+                Controls.SetChildIndex(ucXNHDNhap, 0);
             }
             else
             {

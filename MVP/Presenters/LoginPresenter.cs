@@ -23,7 +23,7 @@ namespace MVP.Presenters
                 var acc = _taiKhoanService.isLogin(username, password);
                 if (acc != null)
                 {
-                    //new Main(acc, flogin).Show();
+                    new Main(acc, flogin).Show();
                     flogin.Hide();
                 }
                 else
