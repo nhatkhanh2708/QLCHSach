@@ -24,12 +24,15 @@ namespace MVP.Views
         private IEnumerable<TacGiaDTO> _listTG;
         private string _tg;
         private TaiKhoanDTO _taikhoan;
-        public UCThemHDNhap(TaiKhoanDTO taiKhoanDTO)
+        private UCXacNhanHDNhap ucXNHDNhap;
+        private UCNhap _ucNhap;
+        public UCThemHDNhap(UCNhap ucNhap, TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
             _themHDNhapPresenter = new ThemHDNhapPresenter(this);
             listSelected = new Dictionary<int, int>();
             _taikhoan = taiKhoanDTO;
+            _ucNhap = ucNhap;
         }
 
         private void btnBack_Click(object sender, System.EventArgs e)
@@ -245,7 +248,7 @@ namespace MVP.Views
         {
             if (listSelected.Count > 0)
             {                
-                UCXacNhanHDNhap ucXNHDNhap = new UCXacNhanHDNhap(_taikhoan, listSelected, _NccId, _listTG, _listSTG, totalPrice);
+                ucXNHDNhap = new UCXacNhanHDNhap(this, _taikhoan, listSelected, _NccId, _listTG, _listSTG, totalPrice);
                 ucXNHDNhap.Dock = DockStyle.Fill;
                 Controls.Add(ucXNHDNhap);
                 Controls.SetChildIndex(ucXNHDNhap, 0);
@@ -260,6 +263,15 @@ namespace MVP.Views
         {
             _listTG = listTG;
             _listSTG = listSTG;
+        }
+
+        public void CompleteCreatedBill(bool isComplete)
+        {
+            if(isComplete)
+            {
+                _ucNhap.LoadBillNew(isComplete);
+                Dispose();
+            }
         }
     }
 }

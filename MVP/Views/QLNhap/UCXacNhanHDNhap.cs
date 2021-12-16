@@ -22,7 +22,8 @@ namespace MVP.Views
         private TaiKhoanDTO _taikhoan;        
         private XacNhanHDNhapPresenter _xacNhanHDNhapPresenter;
         private SachDTO _sach;
-        public UCXacNhanHDNhap(TaiKhoanDTO taiKhoanDTO, Dictionary<int, int> listSelected, int nccId, IEnumerable<TacGiaDTO> listTG, IEnumerable<SachTacGiaDTO> listSTG, decimal totalPrice)
+        private UCThemHDNhap _ucThemHdNhap;
+        public UCXacNhanHDNhap(UCThemHDNhap ucThemHDNhap, TaiKhoanDTO taiKhoanDTO, Dictionary<int, int> listSelected, int nccId, IEnumerable<TacGiaDTO> listTG, IEnumerable<SachTacGiaDTO> listSTG, decimal totalPrice)
         {
             InitializeComponent();
             _taikhoan = taiKhoanDTO;
@@ -32,13 +33,15 @@ namespace MVP.Views
             _listSTG = listSTG;
             _totalPrice = totalPrice;
             _xacNhanHDNhapPresenter = new XacNhanHDNhapPresenter(this);
+            _ucThemHdNhap = ucThemHDNhap;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (isComplete)
             {
-
+                _ucThemHdNhap.CompleteCreatedBill(isComplete);
+                Dispose();
             }
             else
                 Dispose();

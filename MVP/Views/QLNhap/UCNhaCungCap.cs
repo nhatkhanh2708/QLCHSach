@@ -46,7 +46,7 @@ namespace MVP.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UCThemNCC ucThemNCC = new UCThemNCC();
+            UCThemNCC ucThemNCC = new UCThemNCC(this);
             ucThemNCC.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucThemNCC);
             pnlContainer.Controls.SetChildIndex(ucThemNCC, 0);
@@ -56,7 +56,17 @@ namespace MVP.Views
         {
             for (int i = 0; i < listNcc.Count(); i++)
             {
-                flp.Controls.Add(new UCItemNcc(listNcc.ElementAt(i), getPanelContainer));
+                flp.Controls.Add(new UCItemNcc(this, listNcc.ElementAt(i), getPanelContainer));
+            }
+        }
+
+        public void LoadNccNew(bool isComplete)
+        {
+            if(isComplete)
+            {
+                txtTimKiem.Controls.Clear();
+                flp.Controls.Clear();
+                loadAllNcc();
             }
         }
 
@@ -77,7 +87,7 @@ namespace MVP.Views
             flp.Controls.Clear();
             for (int i = 0; i < listNcc.Count(); i++)
             {
-                flp.Controls.Add(new UCItemNcc(listNcc.ElementAt(i), getPanelContainer));
+                flp.Controls.Add(new UCItemNcc(this, listNcc.ElementAt(i), getPanelContainer));
             }
         }
     }

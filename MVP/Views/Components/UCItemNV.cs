@@ -9,11 +9,13 @@ namespace MVP.Views
     {        
         private NhanVienDTO _nhanVienDTO;
         private Panel _pnlContainer;
-        public UCItemNV(NhanVienDTO nhanVienDTO, Panel pnlContainer)
+        private UCNhanVien _ucNv;
+        public UCItemNV(UCNhanVien ucNv, NhanVienDTO nhanVienDTO, Panel pnlContainer)
         {
             InitializeComponent();
             _pnlContainer = pnlContainer;
             _nhanVienDTO = nhanVienDTO;
+            _ucNv = ucNv;
         }
 
         private void UCItemNV_Load(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace MVP.Views
 
         private void lblTenNv_Click(object sender, EventArgs e)
         {
-            UCChiTietNV ucChiTietNV = new UCChiTietNV(_nhanVienDTO);
+            UCChiTietNV ucChiTietNV = new UCChiTietNV(_ucNv, _nhanVienDTO);
             ucChiTietNV.Dock = DockStyle.Fill;
             _pnlContainer.Controls.Add(ucChiTietNV);
             _pnlContainer.Controls.SetChildIndex(ucChiTietNV, 0);

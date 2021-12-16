@@ -58,10 +58,19 @@ namespace MVP.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UCThemTaiKhoan ucThemTK = new UCThemTaiKhoan();
+            UCThemTaiKhoan ucThemTK = new UCThemTaiKhoan(this);
             ucThemTK.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucThemTK);
             pnlContainer.Controls.SetChildIndex(ucThemTK, 0);
+        }
+
+        public void LoadTK(bool isComplete)
+        {
+            if (isComplete)
+            {
+                flp.Controls.Clear();
+                loadTaiKhoan();
+            }
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)

@@ -196,7 +196,7 @@ namespace MVP.Views
             this.flpSachDaChon.AutoScroll = true;
             this.flpSachDaChon.Location = new System.Drawing.Point(652, 242);
             this.flpSachDaChon.Name = "flpSachDaChon";
-            this.flpSachDaChon.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.flpSachDaChon.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.flpSachDaChon.Size = new System.Drawing.Size(574, 317);
             this.flpSachDaChon.TabIndex = 50;
             // 

@@ -124,7 +124,7 @@ namespace MVP.Views
             this.flp.AutoScroll = true;
             this.flp.Location = new System.Drawing.Point(27, 234);
             this.flp.Name = "flp";
-            this.flp.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
+            this.flp.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.flp.Size = new System.Drawing.Size(1234, 454);
             this.flp.TabIndex = 52;
             // 

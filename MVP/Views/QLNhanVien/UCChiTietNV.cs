@@ -11,15 +11,18 @@ namespace MVP.Views
 {
     public partial class UCChiTietNV : UserControl, IChiTietNVView
     {
+        private bool isComplete = false;
         private NhanVienDTO _nvDTO;
         private NhanVienDTO temp;
         private ChiTietNVPresenter _chiTietNVPresenter;
-        public UCChiTietNV(NhanVienDTO nhanVienDTO)
+        private UCNhanVien _ucNv;
+        public UCChiTietNV(UCNhanVien ucNv, NhanVienDTO nhanVienDTO)
         {
             InitializeComponent();
             _nvDTO = nhanVienDTO;
             temp = (NhanVienDTO)_nvDTO.Clone();
             _chiTietNVPresenter = new ChiTietNVPresenter(this);
+            _ucNv = ucNv;
         }
 
         private void UCChiTietNV_Load(object sender, EventArgs e)
@@ -64,7 +67,13 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+                _ucNv.LoadNv(isComplete);
+                Dispose();
+            }
+            else
+                Dispose();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -140,6 +149,7 @@ namespace MVP.Views
                 dtpNgayBatDau.Enabled = false;
                 dtpNgaySinh.Enabled = false;
                 _nvDTO = (NhanVienDTO)temp.Clone();
+                isComplete = true;
             }            
         }
 

@@ -9,15 +9,18 @@ namespace MVP.Views
 {
     public partial class UCChiTietNCC : UserControl, ICtNccView
     {
+        private bool isComplete = false;
         private NccDTO _nccDTO;
         private NccDTO temp;
         private CtNccPresenter _ctNccPresenter;
-        public UCChiTietNCC(NccDTO nccDTO)
+        private UCNhaCungCap _ucNcc;
+        public UCChiTietNCC(UCNhaCungCap ucNcc, NccDTO nccDTO)
         {
             InitializeComponent();
             _nccDTO = nccDTO;
             temp = (NccDTO)_nccDTO.Clone();
             _ctNccPresenter = new CtNccPresenter(this);
+            _ucNcc = ucNcc;
         }
 
         private void UCChiTietNCC_Load(object sender, EventArgs e)
@@ -46,7 +49,13 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+                _ucNcc.LoadNccNew(isComplete);
+                Dispose();
+            }
+            else
+                Dispose();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -100,6 +109,7 @@ namespace MVP.Views
                 btnUpdate.Visible = false;
                 btnHuy.Visible = false;
                 _nccDTO = (NccDTO)temp.Clone();
+                isComplete = true;
             }
         }
     }

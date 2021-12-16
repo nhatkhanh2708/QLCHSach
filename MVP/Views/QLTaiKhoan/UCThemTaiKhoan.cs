@@ -11,11 +11,14 @@ namespace MVP.Views
 {
     public partial class UCThemTaiKhoan : UserControl, IThemTaiKhoanView
     {
+        private bool isComplete = false;
         private ThemTaiKhoanPresenter _themTaiKhoanPresenter;
-        public UCThemTaiKhoan()
+        private UCTaiKhoan _ucTK;
+        public UCThemTaiKhoan(UCTaiKhoan ucTK)
         {
             InitializeComponent();
             _themTaiKhoanPresenter = new ThemTaiKhoanPresenter(this);
+            _ucTK = ucTK;
         }
 
         private void UCThemTaiKhoan_Load(object sender, EventArgs e)
@@ -37,7 +40,12 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+                _ucTK.LoadTK(isComplete);
+            }
+            else
+                Dispose();
         }
 
         public void Notification(string title, string description, Image img, bool flag)
@@ -49,7 +57,11 @@ namespace MVP.Views
             panel1.Controls.Add(ucNotifi);
             panel1.Controls.SetChildIndex(ucNotifi, 0);
             if (flag)
+            {
+                isComplete = true;
                 refresh();
+            }
+                
         }
 
         private void refresh()

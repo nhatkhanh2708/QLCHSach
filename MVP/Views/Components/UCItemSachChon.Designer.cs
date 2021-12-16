@@ -56,7 +56,7 @@ namespace MVP.Views
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 126);
+            this.panel1.Size = new System.Drawing.Size(242, 126);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -117,7 +117,7 @@ namespace MVP.Views
             this.lblSlNhap.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblSlNhap.Location = new System.Drawing.Point(33, 0);
             this.lblSlNhap.Name = "lblSlNhap";
-            this.lblSlNhap.Size = new System.Drawing.Size(112, 27);
+            this.lblSlNhap.Size = new System.Drawing.Size(148, 27);
             this.lblSlNhap.TabIndex = 16;
             this.lblSlNhap.Text = "+100";
             // 
@@ -136,7 +136,7 @@ namespace MVP.Views
             this.lblTg.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.lblTg.Location = new System.Drawing.Point(0, 50);
             this.lblTg.Name = "lblTg";
-            this.lblTg.Size = new System.Drawing.Size(228, 24);
+            this.lblTg.Size = new System.Drawing.Size(242, 24);
             this.lblTg.TabIndex = 38;
             this.lblTg.Text = "label1";
             // 
@@ -150,7 +150,7 @@ namespace MVP.Views
             this.btnDel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDel.Image = global::MVP.Properties.Resources.icons8_delete_32;
-            this.btnDel.Location = new System.Drawing.Point(192, 91);
+            this.btnDel.Location = new System.Drawing.Point(206, 91);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(33, 32);
             this.btnDel.TabIndex = 37;
@@ -164,7 +164,7 @@ namespace MVP.Views
             this.lblSach.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSach.Location = new System.Drawing.Point(0, 0);
             this.lblSach.Name = "lblSach";
-            this.lblSach.Size = new System.Drawing.Size(228, 50);
+            this.lblSach.Size = new System.Drawing.Size(242, 50);
             this.lblSach.TabIndex = 0;
             this.lblSach.Text = "label1";
             this.lblSach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +177,7 @@ namespace MVP.Views
             this.Margin = new System.Windows.Forms.Padding(10, 3, 15, 15);
             this.Name = "UCItemSachChon";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(232, 130);
+            this.Size = new System.Drawing.Size(246, 130);
             this.Load += new System.EventHandler(this.UCItemSachChon_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

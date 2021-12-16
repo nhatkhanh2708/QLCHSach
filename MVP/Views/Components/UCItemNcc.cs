@@ -9,11 +9,13 @@ namespace MVP.Views
     {
         private NccDTO _nccDTO;
         private Panel _pnlContainer;
-        public UCItemNcc(NccDTO nccDTO, Panel pnlContainer)
+        private UCNhaCungCap _ucNcc;
+        public UCItemNcc(UCNhaCungCap ucNcc, NccDTO nccDTO, Panel pnlContainer)
         {
             InitializeComponent();
             _nccDTO = nccDTO;
             _pnlContainer = pnlContainer;
+            _ucNcc = ucNcc;
         }
 
         private void UCItemNcc_Load(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace MVP.Views
 
         private void lblTenNcc_Click(object sender, EventArgs e)
         {
-            UCChiTietNCC ucChiTietNCC = new UCChiTietNCC(_nccDTO);
+            UCChiTietNCC ucChiTietNCC = new UCChiTietNCC(_ucNcc, _nccDTO);
             ucChiTietNCC.Dock = DockStyle.Fill;
             _pnlContainer.Controls.Add(ucChiTietNCC);
             _pnlContainer.Controls.SetChildIndex(ucChiTietNCC, 0);

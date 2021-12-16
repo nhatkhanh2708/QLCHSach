@@ -20,7 +20,7 @@ namespace MVP.Views
 
         private void label2_Click(object sender, EventArgs e)
         {
-            UCChiTietHDNhap ucChiTietNhap = new UCChiTietHDNhap();
+            UCChiTietHDNhap ucChiTietNhap = new UCChiTietHDNhap(_ncc, _hdNhap);
             ucChiTietNhap.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucChiTietNhap);
             pnlContainer.Controls.SetChildIndex(ucChiTietNhap, 0);

@@ -63,10 +63,11 @@ namespace MVP.Views
                       p => p.Id,
                       (stg, tg) => new { stg, tg }
                     );
-            List<string> listtg = new List<string>();
+            List<string> listtg;
             for (int i = 0; i < listSach.Count(); i++)
             {
-                for(int j=0; j<results.Count(); j++)
+                listtg = new List<string>();
+                for (int j=0; j<results.Count(); j++)
                 {
                     if(results.ElementAt(j).stg.SachId == listSach.ElementAt(i).Id)
                     {
@@ -74,7 +75,7 @@ namespace MVP.Views
                     }
                 }
                 flp.Controls.Add(new UCItemSach(_listSach.ElementAt(i), listtg, getPanelContainer));
-                listtg = new List<string>();
+                
             }
         }
 

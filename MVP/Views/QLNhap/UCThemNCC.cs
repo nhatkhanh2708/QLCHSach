@@ -8,11 +8,14 @@ namespace MVP.Views
 {
     public partial class UCThemNCC : UserControl, IThemNCCView
     {
+        private bool isComplete = false;
         private ThemNCCPresenter _themnccPresenter;
-        public UCThemNCC()
+        private UCNhaCungCap _ucNcc;
+        public UCThemNCC(UCNhaCungCap ucNcc)
         {
             InitializeComponent();
             _themnccPresenter = new ThemNCCPresenter(this);
+            _ucNcc = ucNcc;
         }
 
         private void UCThemNCC_Load(object sender, EventArgs e)
@@ -23,7 +26,15 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+                _ucNcc.LoadNccNew(isComplete);
+                Dispose();
+            }
+            else
+            {
+                Dispose();
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -52,7 +63,10 @@ namespace MVP.Views
             panel2.Controls.Add(ucNotifi);
             panel2.Controls.SetChildIndex(ucNotifi, 0);
             if (flag)
+            {
+                isComplete = true;
                 refresh();
+            }
         }
     }
 }

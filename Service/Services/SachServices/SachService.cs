@@ -78,5 +78,12 @@ namespace Service.Services
             var entities = _sachRepository.GetsByName(sach);
             return _mapper.Map<IEnumerable<Sach>, IEnumerable<SachDTO>>(entities);
         }
+
+        public void UpdateSoLuong(int sachId, int soluong)
+        {
+            var entity = _sachRepository.GetById(sachId);
+            entity.SoLuong += soluong;
+            _sachRepository.Update(entity);
+        }
     }
 }

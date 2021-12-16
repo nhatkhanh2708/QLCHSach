@@ -8,11 +8,14 @@ namespace MVP.Views
 {
     public partial class UCThemNV : UserControl, IThemNhanVienView
     {
+        private bool isComplete = false;
         private ThemNhanVienPresenter _themNhanVienPresenter;
-        public UCThemNV()
+        private UCNhanVien _ucNv;
+        public UCThemNV(UCNhanVien ucNv)
         {
             InitializeComponent();
             _themNhanVienPresenter = new ThemNhanVienPresenter(this);
+            _ucNv = ucNv;
         }
 
         private void UCThemNV_Load(object sender, EventArgs e)
@@ -25,7 +28,13 @@ namespace MVP.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isComplete)
+            {
+                _ucNv.LoadNv(isComplete);
+                Dispose();
+            }
+            else
+                Dispose();
         }
 
         public void Notification(string title, string description, Image img, bool flag)
@@ -37,7 +46,11 @@ namespace MVP.Views
             panel1.Controls.Add(ucNotifi);
             panel1.Controls.SetChildIndex(ucNotifi, 0);
             if (flag)
+            {
+                isComplete = true;
                 refresh();
+            }
+                
         }
 
         private void btnThem_Click(object sender, EventArgs e)

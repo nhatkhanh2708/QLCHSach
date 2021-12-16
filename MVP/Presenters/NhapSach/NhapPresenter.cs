@@ -19,7 +19,7 @@ namespace MVP.Presenters
 
         public void GetsAllHdNhap()
         {
-            _nhapView.GetsHdNhap(_hdNhapService.GetsAll().OrderByDescending(p => p.NgayTao));
+            _nhapView.GetsHdNhap(_hdNhapService.GetsAll());
         }
 
         public void GetsAllNcc()

@@ -36,6 +36,7 @@ namespace MVP.Views
                     q => q.NccId,
                     ( nc, hd) => new {nc, hd}
                 );
+            listTemp = listTemp.OrderByDescending(p => p.hd.NgayTao);
             for (int i = 0; i < listTemp.Count(); i++)
             {
                 flp.Controls.Add(new UCItemNhap(getPanelContainer, listTemp.ElementAt(i).nc, listTemp.ElementAt(i).hd));
@@ -60,7 +61,7 @@ namespace MVP.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UCThemHDNhap ucThemHDNhap = new UCThemHDNhap(_taikhoan);
+            UCThemHDNhap ucThemHDNhap = new UCThemHDNhap(this, _taikhoan);
             ucThemHDNhap.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(ucThemHDNhap);
             pnlContainer.Controls.SetChildIndex(ucThemHDNhap, 0);
@@ -73,7 +74,18 @@ namespace MVP.Views
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
+            flp.Controls.Clear();
+            loadflp();
+        }
 
+        public void LoadBillNew(bool isComplete)
+        {
+            if (isComplete)
+            {
+                flp.Controls.Clear();
+                _nhapPresenter.GetsAllHdNhap();
+                loadflp();
+            }
         }
 
         private void btnMore_Click(object sender, EventArgs e)

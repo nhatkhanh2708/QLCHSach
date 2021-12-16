@@ -9,5 +9,6 @@ namespace Service.IServices
         public void UpdateStatus(int id);
         public IEnumerable<SachDTO> GetsByName_NccId(string sach, int nccId);
         public IEnumerable<SachDTO> GetsByName(string sach);
+        public void UpdateSoLuong(int sachId, int soluong);
     }
 }
