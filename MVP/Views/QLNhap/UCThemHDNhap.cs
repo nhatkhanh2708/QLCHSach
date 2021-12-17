@@ -183,8 +183,7 @@ namespace MVP.Views
         public void SelectedSach(SachDTO s, string tg)
         {
             temp = (SachDTO) s.Clone();
-            lblTenSach.Text = temp.TenSach;
-            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");           
+            lblTenSach.Text = temp.TenSach;          
             lblGiaNhap.Text = double.Parse(temp.GiaNhap.ToString()).ToString("#,###", cul.NumberFormat);
             lblSLHienCo.Text = temp.SoLuong.ToString();
             _tg = tg;

@@ -8,38 +8,33 @@ using System.Windows.Forms;
 
 namespace MVP.Views
 {
-    public partial class UCNhap : UserControl, INhapView
+    public partial class UCBan : UserControl, IBanView
     {
         private TaiKhoanDTO _taikhoan;
-        private NhapPresenter _nhapPresenter;
-        private IEnumerable<NccDTO> _listNcc;
-        private IEnumerable<HdNhapDTO> _listHdNhap;
-        public UCNhap(TaiKhoanDTO taiKhoanDTO)
+        private BanPresenter _banPresenter;
+        private IEnumerable<HdXuatDTO> _listHdXuat;
+        private NhanVienDTO _nv;
+        public UCBan(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
             _taikhoan = taiKhoanDTO;
-            _nhapPresenter = new NhapPresenter(this);
+            _banPresenter = new BanPresenter(this);
         }
 
         private void UCNhap_Load(object sender, EventArgs e)
         {
-            _nhapPresenter.GetsAllNcc();
-            _nhapPresenter.GetsAllHdNhap();
+            _banPresenter.GetsAllHdXuat();            
             loadflp();
             hideScrollBar();
         }
 
         private void loadflp()
         {
-            var listTemp = _listNcc.Join(_listHdNhap,
-                    p => p.Id,
-                    q => q.NccId,
-                    ( nc, hd) => new {nc, hd}
-                );
-            listTemp = listTemp.OrderByDescending(p => p.hd.NgayTao);
-            for (int i = 0; i < listTemp.Count(); i++)
+            for (int i = 0; i < _listHdXuat.Count(); i++)
             {
-                flp.Controls.Add(new UCItemNhap(getPanelContainer, listTemp.ElementAt(i).nc, listTemp.ElementAt(i).hd));
+                _banPresenter.GetNVById(_listHdXuat.ElementAt(i).TaiKhoanId);
+                if(_nv != null)
+                    flp.Controls.Add(new UCItemBan(getPanelContainer, _nv, _listHdXuat.ElementAt(i)));
             }
         }
 
@@ -61,10 +56,10 @@ namespace MVP.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UCThemHDNhap ucThemHDNhap = new UCThemHDNhap(this, _taikhoan);
-            ucThemHDNhap.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(ucThemHDNhap);
-            pnlContainer.Controls.SetChildIndex(ucThemHDNhap, 0);
+            UCThemHDBan ucThemHDBan = new UCThemHDBan(this, _taikhoan);
+            ucThemHDBan.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(ucThemHDBan);
+            pnlContainer.Controls.SetChildIndex(ucThemHDBan, 0);
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
@@ -78,7 +73,7 @@ namespace MVP.Views
             if (isComplete)
             {
                 flp.Controls.Clear();
-                _nhapPresenter.GetsAllHdNhap();
+                _banPresenter.GetsAllHdXuat();
                 loadflp();
             }
         }
@@ -88,14 +83,14 @@ namespace MVP.Views
 
         }
 
-        public void GetsNcc(IEnumerable<NccDTO> listNcc)
+        public void GetNV(NhanVienDTO nhanVienDTO)
         {
-            _listNcc = listNcc;
+            _nv = nhanVienDTO;
         }
 
-        public void GetsHdNhap(IEnumerable<HdNhapDTO> listHdNhap)
+        public void GetsHdXuat(IEnumerable<HdXuatDTO> listHdXuat)
         {
-            _listHdNhap = listHdNhap;
+            _listHdXuat = listHdXuat;
         }
     }
 }

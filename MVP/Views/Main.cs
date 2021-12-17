@@ -165,6 +165,7 @@ namespace MVP.Views
         private void btnBanSach_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCBan(_taiKhoanDTO));
             btnBanSach.FlatAppearance.BorderSize = 1;
         }
 

@@ -1,14 +1,11 @@
 ﻿using Model.Entities;
 using MVP.IViews;
 using MVP.Properties;
-using MVP.Utils;
 using Service.DTOs;
 using Service.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVP.Presenters
 {

@@ -1,7 +1,7 @@
 ﻿
 namespace MVP.Views
 {
-    partial class UCNhap
+    partial class UCBan
     {
         /// <summary> 
         /// Required designer variable.
@@ -81,7 +81,7 @@ namespace MVP.Views
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1275, 70);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Nhập sách";
+            this.lblTitle.Text = "Bán sách";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlContainer
@@ -166,13 +166,13 @@ namespace MVP.Views
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // UCNhap
+            // UCBan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel1);
-            this.Name = "UCNhap";
+            this.Name = "UCBan";
             this.Size = new System.Drawing.Size(1275, 875);
             this.Load += new System.EventHandler(this.UCNhap_Load);
             this.panel1.ResumeLayout(false);

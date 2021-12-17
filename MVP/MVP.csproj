@@ -36,6 +36,9 @@
     <Compile Update="Views\Components\UCItemNhap - Copy.Designer.cs">
       <DependentUpon>UCItem.Designer.cs</DependentUpon>
     </Compile>
+    <Compile Update="Views\QLBan\UCBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\QLSach\UCNhaXuatBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
