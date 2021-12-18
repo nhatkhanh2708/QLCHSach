@@ -100,7 +100,7 @@ namespace MVP.Views
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         public void Notification(string title, string description, Image img, bool flag)
@@ -127,6 +127,12 @@ namespace MVP.Views
         public void GetSachById(SachDTO sach)
         {
             _sach = sach;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Font f = new Font("Arial", 20, FontStyle.Bold);
+            e.Graphics.DrawString("hello", f, Brushes.Black, 150, 125);
         }
     }
 }

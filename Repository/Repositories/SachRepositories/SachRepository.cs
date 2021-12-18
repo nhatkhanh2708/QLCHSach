@@ -18,12 +18,36 @@ namespace Repository.Repositories
 
         public IEnumerable<Sach> GetsByName(string sach)
         {
-            return _context.Sachs.Where(p => p.TenSach.StartsWith(sach) && p.Status == true);
+            return _context.Sachs.Where(p => p.TenSach.StartsWith(sach) && p.Status == true)
+                .Select(p => new Sach()
+                {
+                    Id = p.Id,
+                    TenSach = p.TenSach,
+                    GiaBan = p.GiaBan,
+                    GiaNhap = p.GiaNhap,
+                    NccId = p.NccId,
+                    Status = p.Status,
+                    NxbId = p.NxbId,
+                    SoLuong = p.SoLuong
+                })
+                .ToList();
         }
 
         public IEnumerable<Sach> GetsByName_NccId(string sach, int nccId)
         {
-            return _context.Sachs.Where(p => p.TenSach.StartsWith(sach) && p.NccId == nccId && p.Status == true);
+            return _context.Sachs.Where(p => p.TenSach.StartsWith(sach) && p.NccId == nccId && p.Status == true)
+                .Select(p => new Sach()
+                {
+                    Id = p.Id,
+                    TenSach = p.TenSach,
+                    GiaBan = p.GiaBan,
+                    GiaNhap = p.GiaNhap,
+                    NccId = p.NccId,
+                    Status = p.Status,
+                    NxbId = p.NxbId,
+                    SoLuong = p.SoLuong
+                })
+                .ToList();
         }
     }
 }

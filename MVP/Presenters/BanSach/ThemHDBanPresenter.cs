@@ -21,7 +21,7 @@ namespace MVP.Presenters
 
         public void GetsAllSach()
         {
-            _themHDBanView.GetsAllSach(_sachService.GetsAll().Where(p => p.Status == true));
+            _themHDBanView.GetsAllSach(_sachService.GetsByName(""));
         }
 
         public void GetsAllSTG()

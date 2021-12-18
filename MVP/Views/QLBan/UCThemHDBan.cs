@@ -49,7 +49,7 @@ namespace MVP.Views
         {
             _themHDBanPresenter.GetsAllSach();
             _themHDBanPresenter.GetsAllSTG();
-            loadflp();
+            loadflp("");
         }
 
         private void hideScrollBar()
@@ -96,25 +96,26 @@ namespace MVP.Views
             panel2.Controls.SetChildIndex(ucNotifi, 0);
         }
 
-        private void loadflp()
+        private void loadflp(string tensach)
         {
+            var listSachSearch = _listSach.Where(p => p.TenSach.StartsWith(tensach));
             var _listTemp = _listTG.Join(_listSTG,
                 p => p.Id,
                 q => q.TacGiaId,
                 (tg, stg) => new { tg.ButDanh, stg.SachId }
                 );
-            for (int i = 0; i < _listSach.Count(); i++)
+            for (int i = 0; i < listSachSearch.Count(); i++)
             {
                 string tg = "";
                 for (int j = 0; j < _listTemp.Count(); j++)
                 {
-                    if (_listSach.ElementAt(i).Id == _listTemp.ElementAt(j).SachId)
+                    if (listSachSearch.ElementAt(i).Id == _listTemp.ElementAt(j).SachId)
                     {
                         tg += _listTemp.ElementAt(j).ButDanh + ", ";
                     }
                 }
                 tg = tg.Substring(0, tg.Length - 2);
-                flp.Controls.Add(new UCItemSachBan(this, _listSach.ElementAt(i), tg));
+                flp.Controls.Add(new UCItemSachBan(this, listSachSearch.ElementAt(i), tg));
             }
         }
 
@@ -214,6 +215,12 @@ namespace MVP.Views
                 _ucBan.LoadBillNew(isComplete);
                 Dispose();
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            flp.Controls.Clear();
+            loadflp(txtTimKiem.Text);
         }
     }
 }

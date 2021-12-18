@@ -1,6 +1,7 @@
 ﻿using Model.Entities;
 using MVP.IViews;
 using Service.IServices;
+using System.Linq;
 
 namespace MVP.Presenters
 {
@@ -21,15 +22,10 @@ namespace MVP.Presenters
         public void GetsAll()
         {
             _sachView.GetsAll(
-                _sachService.GetsByName(""),
+                _sachService.GetsAll().Where(p => p.Status == true),
                 _tgService.GetsAll(),
                 _sachTGService.GetsAll()
                 );
-        }
-
-        public void GetsByName(string sach)
-        {
-            _sachView.GetsByName(_sachService.GetsByName(sach));
         }
     }
 }

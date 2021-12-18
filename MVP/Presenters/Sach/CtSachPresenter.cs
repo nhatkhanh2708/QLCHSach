@@ -69,12 +69,14 @@ namespace MVP.Presenters
         public void Update(SachDTO sachdto, string tensach, List<int> listtgid, List<int> listtlid, int nxbId,
                 string giaban, string gianhap, string sl, System.Drawing.Image img)
         {
+            bool flag = false;
             var listSach = _sachService.GetsAll();
             foreach (SachDTO s in listSach)
             {
                 if (s.Equals(tensach))
                 {
                     _ctSachView.Notification(Notification.EDIT_FAILED, Notification.EXIST_NAME, Resources.fail, false);
+                    flag = true;
                     return;
                 }
             }
@@ -82,27 +84,32 @@ namespace MVP.Presenters
             if (!decimal.TryParse(giaban, out gban))
             {
                 _ctSachView.Notification(Notification.EDIT_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
             decimal gnhap;
             if (!decimal.TryParse(gianhap, out gnhap))
             {
                 _ctSachView.Notification(Notification.EDIT_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
             int soluong;
             if (!int.TryParse(sl, out soluong))
             {
                 _ctSachView.Notification(Notification.EDIT_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
 
             if (string.IsNullOrEmpty(tensach) || listtgid.Count < 1 || listtlid.Count < 1 || gban < 0 || gnhap < 0 || gban < gnhap || soluong < 0)
             {
                 _ctSachView.Notification(Notification.EDIT_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
-            else
+
+            if(!flag)
             {
                 sachdto.TenSach = tensach;
                 sachdto.NxbId = nxbId;

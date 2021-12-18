@@ -37,12 +37,14 @@ namespace MVP.Presenters
         public void Add(string tensach, List<int> listtgid, List<int> listtlid, int nxbId,
                 string giaban, string gianhap, string sl, int nccId, System.Drawing.Image img)
         {
+            bool flag = false;
             var listSach = _sachService.GetsAll();
             foreach (SachDTO s in listSach)
             {
                 if (s.Equals(tensach))
                 {
                     _themSachView.Notification(Notification.ADD_FAILED, Notification.EXIST_NAME, Resources.fail, false);
+                    flag = true;
                     return;
                 }
             }
@@ -50,27 +52,31 @@ namespace MVP.Presenters
             if(!decimal.TryParse(giaban, out gban))
             {
                 _themSachView.Notification(Notification.ADD_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
             decimal gnhap;
             if(!decimal.TryParse(gianhap, out gnhap))
             {
                 _themSachView.Notification(Notification.ADD_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
             int soluong;
             if(!int.TryParse(sl, out soluong))
             {
                 _themSachView.Notification(Notification.ADD_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
 
             if (string.IsNullOrEmpty(tensach) || listtgid.Count < 1 || listtlid.Count < 1 || gban < 0 || gnhap < 0 || gban < gnhap || soluong < 0)
             {
                 _themSachView.Notification(Notification.ADD_FAILED, "Do nhập sai điều kiện !", Resources.fail, false);
+                flag = true;
                 return;
             }
-            else
+            if(!flag)
             {
                 var sachdto = new SachDTO();
                 sachdto.TenSach = tensach;
