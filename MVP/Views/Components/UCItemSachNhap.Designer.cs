@@ -79,7 +79,7 @@ namespace MVP.Views
             // 
             this.lblGiaNhap.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblGiaNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGiaNhap.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblGiaNhap.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblGiaNhap.Location = new System.Drawing.Point(38, 74);
             this.lblGiaNhap.Name = "lblGiaNhap";
             this.lblGiaNhap.Size = new System.Drawing.Size(98, 30);

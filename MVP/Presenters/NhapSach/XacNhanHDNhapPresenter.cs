@@ -29,8 +29,8 @@ namespace MVP.Presenters
         public void GetTenNV_Ncc(int nvId, int nccId)
         {
             _xacNhanHDNhapView.GetTenNV_Ncc(
-                    _nhanVienService.GetById(nvId).HoTen,
-                    _nccService.GetById(nccId).TenNCC
+                    _nhanVienService.GetById(nvId),
+                    _nccService.GetById(nccId)
                 );
         }
 
@@ -47,6 +47,7 @@ namespace MVP.Presenters
             hdNhap.TaiKhoanId = taikhoanId;
             hdNhap.TongTien = totalPrice;
             var hdNhapId = _hdNhapService.AddHdNhap(hdNhap);
+            _xacNhanHDNhapView.GetHDNhapNew(_hdNhapService.GetById(hdNhapId));
             for(int i =0;i<sachSelected.Count; i++)
             {
                 CtNhapDTO ctHdNhap = new CtNhapDTO();

@@ -16,7 +16,6 @@ namespace MVP.Presenters
         private readonly IHdXuatService _hdXuatService;
         private readonly ICtXuatService _ctXuatService;
         private readonly ISachService _sachService;
-        private int _GetHdXuatId = -1;
         public XacNhanHDBanPresenter(IXacNhanHDBanView xacNhanHDBanView)
         {
             _xacNhanHDBanView = xacNhanHDBanView;
@@ -42,7 +41,7 @@ namespace MVP.Presenters
             hdXuat.TaiKhoanId = taikhoanId;
             hdXuat.TongTien = totalPrice;
             var hdXuatId = _hdXuatService.AddHdXuat(hdXuat);
-            _GetHdXuatId = hdXuatId;
+            _xacNhanHDBanView.GetHDXuatNew(_hdXuatService.GetById(hdXuatId));
             for (int i = 0; i < sachSelected.Count; i++)
             {
                 CtXuatDTO ctHdXuat = new CtXuatDTO();
@@ -53,43 +52,6 @@ namespace MVP.Presenters
                 _sachService.UpdateSoLuong(sachSelected.ElementAt(i).Key, -(sachSelected.ElementAt(i).Value));
             }
             _xacNhanHDBanView.Notification("Thanh toán thành công", null, Resources.success, true);
-        }
-
-        public void PrintInvoice(Dictionary<int, int> listSelected, int nvId, decimal totalPrice, int totalSach,
-            IEnumerable<SachDTO> listSach, IEnumerable<TacGiaDTO> listTG, IEnumerable<SachTacGiaDTO> listSTG)
-        {
-            if(_GetHdXuatId != -1)
-            {
-                var tennv = _nhanVienService.GetById(nvId).HoTen;
-                var _listTemp = listTG.Join(listSTG,
-                p => p.Id,
-                q => q.TacGiaId,
-                (tg, stg) => new { tg.ButDanh, stg.SachId }
-                );
-                for (int i = 0; i < listSelected.Count(); i++)
-                {
-                    var sach = listSach.FirstOrDefault(p => p.Id == listSelected.ElementAt(i).Key);
-                    string tg = "";
-                    for (int j = 0; j < _listTemp.Count(); j++)
-                    {
-                        if (listSelected.ElementAt(i).Key == _listTemp.ElementAt(j).SachId)
-                        {
-                            tg += _listTemp.ElementAt(j).ButDanh + ", ";
-                        }
-                    }
-                    tg = tg.Substring(0, tg.Length - 2);
-                }
-                
-                
-                
-                
-                
-                _xacNhanHDBanView.Notification("In hóa đơn thành công", null, Resources.success, true);
-            }
-            else
-            {
-                _xacNhanHDBanView.Notification("In hóa đơn không thành công", null, Resources.fail, false);
-            }
         }
     }
 }

@@ -32,6 +32,7 @@ namespace MVP.Views
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             var tiensach = _sach.GiaNhap * _slNhap;
             lblTienSach.Text = "-" + double.Parse(tiensach.ToString()).ToString("#,###", cul.NumberFormat);
+            lblGiaNhap.Text = double.Parse(_sach.GiaNhap.ToString()).ToString("#,###", cul.NumberFormat);
             lblTg.Text = _tg;
             if (_themHDNhapView != null && _flp != null)
             {

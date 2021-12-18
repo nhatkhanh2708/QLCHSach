@@ -31,6 +31,7 @@ namespace MVP.Views
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
             var tiensach = _sach.GiaBan * _slBan;
             lblTienSach.Text = "+" + double.Parse(tiensach.ToString()).ToString("#,###", cul.NumberFormat);
+            lblGiaBan.Text = double.Parse(_sach.GiaBan.ToString()).ToString("#,###", cul.NumberFormat);
             lblTg.Text = _tg;
             if (_themHDBanView != null && _flp != null)
             {

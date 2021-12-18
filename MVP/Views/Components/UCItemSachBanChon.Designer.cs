@@ -36,6 +36,8 @@ namespace MVP.Views
             this.lblTienSach = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblGiaBan = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSlBan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTg = new System.Windows.Forms.Label();
@@ -77,7 +79,7 @@ namespace MVP.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 52);
+            this.panel2.Size = new System.Drawing.Size(207, 52);
             this.panel2.TabIndex = 39;
             // 
             // panel4
@@ -87,7 +89,7 @@ namespace MVP.Views
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 27);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(191, 27);
+            this.panel4.Size = new System.Drawing.Size(207, 27);
             this.panel4.TabIndex = 1;
             // 
             // lblTienSach
@@ -113,13 +115,35 @@ namespace MVP.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblGiaBan);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblSlBan);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(191, 27);
+            this.panel3.Size = new System.Drawing.Size(207, 27);
             this.panel3.TabIndex = 0;
+            // 
+            // lblGiaBan
+            // 
+            this.lblGiaBan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblGiaBan.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGiaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblGiaBan.Location = new System.Drawing.Point(123, 0);
+            this.lblGiaBan.Name = "lblGiaBan";
+            this.lblGiaBan.Size = new System.Drawing.Size(84, 27);
+            this.lblGiaBan.TabIndex = 18;
+            this.lblGiaBan.Text = "100.000";
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Image = global::MVP.Properties.Resources.icons8_price_tag_20;
+            this.label1.Location = new System.Drawing.Point(97, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 27);
+            this.label1.TabIndex = 17;
             // 
             // lblSlBan
             // 
@@ -128,9 +152,9 @@ namespace MVP.Views
             this.lblSlBan.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblSlBan.Location = new System.Drawing.Point(33, 0);
             this.lblSlBan.Name = "lblSlBan";
-            this.lblSlBan.Size = new System.Drawing.Size(155, 27);
+            this.lblSlBan.Size = new System.Drawing.Size(64, 27);
             this.lblSlBan.TabIndex = 16;
-            this.lblSlBan.Text = "+100";
+            this.lblSlBan.Text = "+1000";
             // 
             // label2
             // 
@@ -200,5 +224,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTg;
         private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Label lblGiaBan;
+        private System.Windows.Forms.Label label1;
     }
 }

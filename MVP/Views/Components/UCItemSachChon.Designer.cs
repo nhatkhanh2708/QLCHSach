@@ -35,6 +35,8 @@ namespace MVP.Views
             this.lblTienSach = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblGiaNhap = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSlNhap = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTg = new System.Windows.Forms.Label();
@@ -66,7 +68,7 @@ namespace MVP.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 52);
+            this.panel2.Size = new System.Drawing.Size(206, 52);
             this.panel2.TabIndex = 39;
             // 
             // panel4
@@ -76,7 +78,7 @@ namespace MVP.Views
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 27);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(191, 27);
+            this.panel4.Size = new System.Drawing.Size(206, 27);
             this.panel4.TabIndex = 1;
             // 
             // lblTienSach
@@ -102,13 +104,35 @@ namespace MVP.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblGiaNhap);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblSlNhap);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(191, 27);
+            this.panel3.Size = new System.Drawing.Size(206, 27);
             this.panel3.TabIndex = 0;
+            // 
+            // lblGiaNhap
+            // 
+            this.lblGiaNhap.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblGiaNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGiaNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblGiaNhap.Location = new System.Drawing.Point(123, 0);
+            this.lblGiaNhap.Name = "lblGiaNhap";
+            this.lblGiaNhap.Size = new System.Drawing.Size(83, 27);
+            this.lblGiaNhap.TabIndex = 18;
+            this.lblGiaNhap.Text = "100.000";
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Image = global::MVP.Properties.Resources.icons8_price_tag_20;
+            this.label1.Location = new System.Drawing.Point(97, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 27);
+            this.label1.TabIndex = 17;
             // 
             // lblSlNhap
             // 
@@ -117,9 +141,9 @@ namespace MVP.Views
             this.lblSlNhap.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblSlNhap.Location = new System.Drawing.Point(33, 0);
             this.lblSlNhap.Name = "lblSlNhap";
-            this.lblSlNhap.Size = new System.Drawing.Size(148, 27);
+            this.lblSlNhap.Size = new System.Drawing.Size(64, 27);
             this.lblSlNhap.TabIndex = 16;
-            this.lblSlNhap.Text = "+100";
+            this.lblSlNhap.Text = "+1000";
             // 
             // label2
             // 
@@ -200,5 +224,7 @@ namespace MVP.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblSlNhap;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGiaNhap;
     }
 }

@@ -68,7 +68,6 @@ namespace MVP.Views
             this.btnInHD.Text = " In hóa đơn";
             this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInHD.UseVisualStyleBackColor = false;
-            this.btnInHD.Visible = false;
             this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // flp
