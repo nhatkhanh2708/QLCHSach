@@ -40,7 +40,7 @@ namespace MVP.Views
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFunct = new System.Windows.Forms.Panel();
             this.pnlSubTK = new System.Windows.Forms.Panel();
-            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnThongKeSach = new System.Windows.Forms.Button();
             this.btnDoanhThu = new System.Windows.Forms.Button();
             this.btnTK = new System.Windows.Forms.Button();
             this.pnlSubQLTK = new System.Windows.Forms.Panel();
@@ -210,7 +210,7 @@ namespace MVP.Views
             // pnlSubTK
             // 
             this.pnlSubTK.BackColor = System.Drawing.Color.SlateBlue;
-            this.pnlSubTK.Controls.Add(this.btnHoaDon);
+            this.pnlSubTK.Controls.Add(this.btnThongKeSach);
             this.pnlSubTK.Controls.Add(this.btnDoanhThu);
             this.pnlSubTK.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubTK.Location = new System.Drawing.Point(0, 846);
@@ -218,22 +218,22 @@ namespace MVP.Views
             this.pnlSubTK.Size = new System.Drawing.Size(274, 90);
             this.pnlSubTK.TabIndex = 24;
             // 
-            // btnHoaDon
+            // btnThongKeSach
             // 
-            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoaDon.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btnHoaDon.Location = new System.Drawing.Point(0, 40);
-            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnHoaDon.Size = new System.Drawing.Size(274, 40);
-            this.btnHoaDon.TabIndex = 1;
-            this.btnHoaDon.Text = "Hóa đơn";
-            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.UseVisualStyleBackColor = true;
-            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+            this.btnThongKeSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeSach.FlatAppearance.BorderSize = 0;
+            this.btnThongKeSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeSach.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btnThongKeSach.Location = new System.Drawing.Point(0, 40);
+            this.btnThongKeSach.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnThongKeSach.Name = "btnThongKeSach";
+            this.btnThongKeSach.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnThongKeSach.Size = new System.Drawing.Size(274, 40);
+            this.btnThongKeSach.TabIndex = 1;
+            this.btnThongKeSach.Text = "Sách";
+            this.btnThongKeSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeSach.UseVisualStyleBackColor = true;
+            this.btnThongKeSach.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnDoanhThu
             // 
@@ -767,7 +767,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFunct;
         private System.Windows.Forms.Panel pnlSubTK;
-        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnThongKeSach;
         private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.Panel pnlSubQLTK;

@@ -98,7 +98,7 @@ namespace MVP.Views
             btnTaiKhoan.FlatAppearance.BorderSize = 0;
             btnQuyen.FlatAppearance.BorderSize = 0;
             btnDoanhThu.FlatAppearance.BorderSize = 0;
-            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnThongKeSach.FlatAppearance.BorderSize = 0;
         }
 
         private void AddUCMain(Control ucMain)
@@ -207,13 +207,15 @@ namespace MVP.Views
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             hideBorder();
+            AddUCMain(new UCThongKeDoanhThu());
             btnDoanhThu.FlatAppearance.BorderSize = 1;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             hideBorder();
-            btnHoaDon.FlatAppearance.BorderSize = 1;
+            AddUCMain(new UCThongKeSach());
+            btnThongKeSach.FlatAppearance.BorderSize = 1;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
