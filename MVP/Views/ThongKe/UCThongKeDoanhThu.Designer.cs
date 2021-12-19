@@ -35,12 +35,11 @@ namespace MVP.Views
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlChart = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
-            this.flp = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnMore = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlTitle.SuspendLayout();
@@ -99,22 +98,28 @@ namespace MVP.Views
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlBody.Controls.Add(this.pnlChart);
             this.pnlBody.Controls.Add(this.label3);
             this.pnlBody.Controls.Add(this.label2);
             this.pnlBody.Controls.Add(this.dateTo);
             this.pnlBody.Controls.Add(this.dateFrom);
-            this.pnlBody.Controls.Add(this.flp);
-            this.pnlBody.Controls.Add(this.btnMore);
             this.pnlBody.Controls.Add(this.btnTimKiem);
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1275, 802);
             this.pnlBody.TabIndex = 5;
             // 
+            // pnlChart
+            // 
+            this.pnlChart.Location = new System.Drawing.Point(3, 77);
+            this.pnlChart.Name = "pnlChart";
+            this.pnlChart.Size = new System.Drawing.Size(1269, 722);
+            this.pnlChart.TabIndex = 20;
+            // 
             // label3
             // 
             this.label3.Image = global::MVP.Properties.Resources.icons8_calendar_32;
-            this.label3.Location = new System.Drawing.Point(634, 19);
+            this.label3.Location = new System.Drawing.Point(728, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 38);
             this.label3.TabIndex = 19;
@@ -122,7 +127,7 @@ namespace MVP.Views
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(872, 19);
+            this.label2.Location = new System.Drawing.Point(966, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 30);
             this.label2.TabIndex = 18;
@@ -131,40 +136,17 @@ namespace MVP.Views
             // 
             // dateTo
             // 
-            this.dateTo.Location = new System.Drawing.Point(903, 26);
+            this.dateTo.Location = new System.Drawing.Point(997, 26);
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(178, 31);
             this.dateTo.TabIndex = 17;
             // 
             // dateFrom
             // 
-            this.dateFrom.Location = new System.Drawing.Point(687, 26);
+            this.dateFrom.Location = new System.Drawing.Point(781, 26);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(179, 31);
             this.dateFrom.TabIndex = 16;
-            // 
-            // flp
-            // 
-            this.flp.AutoScroll = true;
-            this.flp.Location = new System.Drawing.Point(25, 120);
-            this.flp.Name = "flp";
-            this.flp.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.flp.Size = new System.Drawing.Size(1225, 661);
-            this.flp.TabIndex = 15;
-            // 
-            // btnMore
-            // 
-            this.btnMore.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnMore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMore.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnMore.FlatAppearance.BorderSize = 2;
-            this.btnMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMore.Image = global::MVP.Properties.Resources.icons8_more_32;
-            this.btnMore.Location = new System.Drawing.Point(1195, 16);
-            this.btnMore.Name = "btnMore";
-            this.btnMore.Size = new System.Drawing.Size(55, 55);
-            this.btnMore.TabIndex = 14;
-            this.btnMore.UseVisualStyleBackColor = false;
             // 
             // btnTimKiem
             // 
@@ -174,11 +156,12 @@ namespace MVP.Views
             this.btnTimKiem.FlatAppearance.BorderSize = 2;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Image = global::MVP.Properties.Resources.icons8_magnifying_glass_32;
-            this.btnTimKiem.Location = new System.Drawing.Point(1109, 16);
+            this.btnTimKiem.Location = new System.Drawing.Point(1203, 16);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(55, 55);
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // UCThongKeDoanhThu
             // 
@@ -205,12 +188,11 @@ namespace MVP.Views
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.FlowLayoutPanel flp;
-        private System.Windows.Forms.Button btnMore;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.DateTimePicker dateTo;
         private System.Windows.Forms.DateTimePicker dateFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlChart;
     }
 }

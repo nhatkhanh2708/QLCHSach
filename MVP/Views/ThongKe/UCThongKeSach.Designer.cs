@@ -35,10 +35,8 @@ namespace MVP.Views
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.flp = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMore = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.pnlContainer.SuspendLayout();
@@ -96,23 +94,12 @@ namespace MVP.Views
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlBody.Controls.Add(this.flp);
             this.pnlBody.Controls.Add(this.btnMore);
             this.pnlBody.Controls.Add(this.btnTimKiem);
-            this.pnlBody.Controls.Add(this.btnAdd);
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1275, 802);
             this.pnlBody.TabIndex = 5;
-            // 
-            // flp
-            // 
-            this.flp.AutoScroll = true;
-            this.flp.Location = new System.Drawing.Point(25, 120);
-            this.flp.Name = "flp";
-            this.flp.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.flp.Size = new System.Drawing.Size(1225, 661);
-            this.flp.TabIndex = 15;
             // 
             // btnMore
             // 
@@ -142,24 +129,6 @@ namespace MVP.Views
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnAdd.FlatAppearance.BorderSize = 2;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Image = global::MVP.Properties.Resources.icons8_add_32;
-            this.btnAdd.Location = new System.Drawing.Point(27, 16);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(124, 55);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = " Thêm";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
             // UCThongKeSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -183,9 +152,7 @@ namespace MVP.Views
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.FlowLayoutPanel flp;
         private System.Windows.Forms.Button btnMore;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnAdd;
     }
 }
