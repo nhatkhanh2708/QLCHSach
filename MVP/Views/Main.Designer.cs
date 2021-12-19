@@ -230,7 +230,7 @@ namespace MVP.Views
             this.btnThongKeSach.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnThongKeSach.Size = new System.Drawing.Size(274, 40);
             this.btnThongKeSach.TabIndex = 1;
-            this.btnThongKeSach.Text = "Sách";
+            this.btnThongKeSach.Text = "Doanh thu";
             this.btnThongKeSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKeSach.UseVisualStyleBackColor = true;
             this.btnThongKeSach.Click += new System.EventHandler(this.btnHoaDon_Click);
@@ -247,7 +247,7 @@ namespace MVP.Views
             this.btnDoanhThu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnDoanhThu.Size = new System.Drawing.Size(274, 40);
             this.btnDoanhThu.TabIndex = 0;
-            this.btnDoanhThu.Text = "Doanh thu";
+            this.btnDoanhThu.Text = "Chung";
             this.btnDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoanhThu.UseVisualStyleBackColor = true;
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);

@@ -207,14 +207,14 @@ namespace MVP.Views
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             hideBorder();
-            AddUCMain(new UCThongKeDoanhThu());
+            AddUCMain(new UCThongKeSach());
             btnDoanhThu.FlatAppearance.BorderSize = 1;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             hideBorder();
-            AddUCMain(new UCThongKeSach());
+            AddUCMain(new UCThongKeDoanhThu());
             btnThongKeSach.FlatAppearance.BorderSize = 1;
         }
 

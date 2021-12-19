@@ -41,6 +41,7 @@ namespace MVP.Views
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.pnlContainer.SuspendLayout();
@@ -98,6 +99,7 @@ namespace MVP.Views
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlBody.Controls.Add(this.button1);
             this.pnlBody.Controls.Add(this.pnlChart);
             this.pnlBody.Controls.Add(this.label3);
             this.pnlBody.Controls.Add(this.label2);
@@ -119,7 +121,7 @@ namespace MVP.Views
             // label3
             // 
             this.label3.Image = global::MVP.Properties.Resources.icons8_calendar_32;
-            this.label3.Location = new System.Drawing.Point(728, 19);
+            this.label3.Location = new System.Drawing.Point(651, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 38);
             this.label3.TabIndex = 19;
@@ -127,7 +129,7 @@ namespace MVP.Views
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(966, 19);
+            this.label2.Location = new System.Drawing.Point(889, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 30);
             this.label2.TabIndex = 18;
@@ -136,14 +138,14 @@ namespace MVP.Views
             // 
             // dateTo
             // 
-            this.dateTo.Location = new System.Drawing.Point(997, 26);
+            this.dateTo.Location = new System.Drawing.Point(920, 26);
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(178, 31);
             this.dateTo.TabIndex = 17;
             // 
             // dateFrom
             // 
-            this.dateFrom.Location = new System.Drawing.Point(781, 26);
+            this.dateFrom.Location = new System.Drawing.Point(704, 26);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(179, 31);
             this.dateFrom.TabIndex = 16;
@@ -156,12 +158,27 @@ namespace MVP.Views
             this.btnTimKiem.FlatAppearance.BorderSize = 2;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Image = global::MVP.Properties.Resources.icons8_magnifying_glass_32;
-            this.btnTimKiem.Location = new System.Drawing.Point(1203, 16);
+            this.btnTimKiem.Location = new System.Drawing.Point(1116, 13);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(55, 55);
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::MVP.Properties.Resources.icons8_pie_chart_24;
+            this.button1.Location = new System.Drawing.Point(1208, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 55);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UCThongKeDoanhThu
             // 
@@ -194,5 +211,6 @@ namespace MVP.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlChart;
+        private System.Windows.Forms.Button button1;
     }
 }
